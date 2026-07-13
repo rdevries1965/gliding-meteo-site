@@ -1,0 +1,100 @@
+{
+  "release_version": "8.5",
+  "generated_at_utc": "2026-07-12T16:34:59Z",
+  "mode": "confidence_context_only",
+  "public": true,
+  "source": {
+    "weather": "site/data/weather.json",
+    "analysis": "site/data/analysis.json",
+    "learning": "site/archive/forecast_learning_summary.json",
+    "calibration": "site/archive/forecast_calibration_summary.json",
+    "skill_components": "site/archive/forecast_skill_components.json",
+    "regional_skill": "site/archive/regional_skill_weglide.json",
+    "seasonal_learning": "site/archive/seasonal_learning_weglide.json",
+    "model_skill": "site/archive/model_source_skill_weglide.json",
+    "pilot_outcomes": "site/archive/pilot_outcome_analytics.json",
+    "data_quality": "site/archive/data_quality_monitor.json",
+    "public_reliability": "site/data/public_reliability_indicator.json"
+  },
+  "forecast_date": "2026-07-13",
+  "base_confidence": {
+    "available": true,
+    "score": 89,
+    "source": "analysis"
+  },
+  "confidence_v2": {
+    "score": 60,
+    "label": "moderate",
+    "trend": "unknown",
+    "usable_for_public": true
+  },
+  "components": {
+    "base_forecast_confidence": {
+      "score": 89,
+      "weight": 0.35,
+      "available": true,
+      "note": "Existing confidence from analysis."
+    },
+    "historical_accuracy": {
+      "score": null,
+      "weight": 0.2,
+      "available": false,
+      "note": "Historical accuracy unavailable or sample size insufficient."
+    },
+    "lead_time_skill": {
+      "score": null,
+      "weight": 0.15,
+      "available": false,
+      "note": "Lead-time skill unavailable; no verified forecast runs."
+    },
+    "seasonal_skill": {
+      "score": null,
+      "weight": 0.1,
+      "available": false,
+      "note": "Seasonal skill for summer has no usable sample."
+    },
+    "regional_skill": {
+      "score": null,
+      "weight": 0.1,
+      "available": false,
+      "note": "Regional skill for EHHV has no usable sample."
+    },
+    "model_source_skill": {
+      "score": null,
+      "weight": 0.05,
+      "available": false,
+      "note": "Model source skill unavailable or sample size insufficient."
+    },
+    "data_quality": {
+      "score": 0,
+      "weight": 0.05,
+      "available": true,
+      "note": "Data quality monitor status: warning."
+    }
+  },
+  "adjustments": {
+    "sample_size_penalty": -10,
+    "data_quality_penalty": -8,
+    "high_uncertainty_penalty": 0,
+    "recent_trend_adjustment": 0
+  },
+  "public_text": {
+    "short": "De briefing heeft een redelijke betrouwbaarheid, maar lokale afwijkingen blijven mogelijk.",
+    "details": "Confidence 2.0 combineert actuele forecast confidence met historische skill en datakwaliteit waar beschikbaar.",
+    "caution": "Confidence 2.0 is contextinformatie en wijzigt het vliegadvies niet."
+  },
+  "safety": {
+    "does_not_change_forecast": true,
+    "does_not_change_go_status": true,
+    "does_not_overwrite_existing_confidence": true,
+    "context_only": true,
+    "no_internal_recommendations_exposed": true
+  },
+  "notes": [
+    "Confidence component unavailable: historical_accuracy (Historical accuracy unavailable or sample size insufficient.)",
+    "Confidence component unavailable: lead_time_skill (Lead-time skill unavailable; no verified forecast runs.)",
+    "Confidence component unavailable: seasonal_skill (Seasonal skill for summer has no usable sample.)",
+    "Confidence component unavailable: regional_skill (Regional skill for EHHV has no usable sample.)",
+    "Confidence component unavailable: model_source_skill (Model source skill unavailable or sample size insufficient.)"
+  ]
+}

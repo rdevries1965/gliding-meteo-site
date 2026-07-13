@@ -1,0 +1,54 @@
+{
+  "release_version": "4.6A",
+  "generated_at": "2026-07-13T08:24:21.683004Z",
+  "forecast_date": "2026-07-14",
+  "summary": {
+    "forecast_stability": "LOW",
+    "forecast_uncertainty": "LOW",
+    "uncertainty_pct": 44,
+    "operational_volatility_pct": 44,
+    "operational_volatility": "MODERATE",
+    "bust_risk_pct": 30,
+    "bust_risk": "MODERATE",
+    "upside_surprise_pct": 46,
+    "upside_surprise": "MODERATE"
+  },
+  "xc_range_km": {
+    "p20": 6,
+    "p50": 10,
+    "p80": 14,
+    "interpretation": "p20/p50/p80 represent low/median/high plausible XC distance range"
+  },
+  "confidence_cone": {
+    "base_realistic_km": 10,
+    "spread_km": 4,
+    "low_case_km": 6,
+    "median_case_km": 10,
+    "high_case_km": 14
+  },
+  "drivers": {
+    "overall_model_agreement_pct": 89,
+    "task_confidence_pct": 69,
+    "verification_score": 68.0,
+    "distance_error_km": 300,
+    "forecast_health": 52,
+    "precip_pct": 22,
+    "od_risk_pct": 10,
+    "wind_kmh": 17.1,
+    "cu_potential_pct": 60,
+    "street_probability_pct": 50,
+    "calibration_confidence_adjustment_pct": -10
+  },
+  "operational_guidance": {
+    "if_conservative": "Plan alsof 6 km haalbaar is.",
+    "if_realistic": "Plan rond 10 km.",
+    "if_aggressive": "Alleen uitbreiden richting 14 km als straatbeeld en basis bevestigd worden.",
+    "risk_note": "Bust-risk niet dominant, normale afkortopties blijven voldoende."
+  },
+  "notes": [
+    "4.6A creates probabilistic forecast uncertainty.",
+    "Distances are heuristic probability bands, not formal ensemble percentiles.",
+    "4.6B will feed p20/p50/p80 into task_engine.py.",
+    "Future releases can use real ensemble spread and WeGlide verification."
+  ]
+}

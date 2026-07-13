@@ -1,0 +1,52 @@
+{
+  "release_version": "8.4",
+  "generated_at_utc": "2026-07-12T16:14:02Z",
+  "mode": "deterministic_explanation",
+  "public": true,
+  "source": {
+    "weather": "site/data/weather.json",
+    "analysis": "site/data/analysis.json",
+    "adaptive_forecast": "site/data/adaptive_forecast.json",
+    "regional_forecasts": "site/data/regional_forecasts.json",
+    "public_reliability": "site/data/public_reliability_indicator.json"
+  },
+  "forecast_date": "2026-07-13",
+  "classification": "Conditional go",
+  "score": 82.0,
+  "confidence_score": 89,
+  "headline": "Bruikbare dag, maar met duidelijke aandachtspunten.",
+  "summary": "De briefing is Conditional go: de dag lijkt bruikbaar, maar de marge hangt af van een bruikbare wolkenbasis en voldoende thermiek. Belangrijkste aandachtspunt: historische verificatie voor dit type dag is nog beperkt. Gebruik actuele waarnemingen om timing en lokale bruikbaarheid te bevestigen.",
+  "key_drivers": [
+    "Wolkenbasis ondersteunt een bruikbare overlanddag.",
+    "Thermieksterkte is voldoende voor regionaal vliegen.",
+    "Wind lijkt licht en weinig beperkend.",
+    "XC-potentie ondersteunt een regionale opdracht.",
+    "Neerslagrisico lijkt beperkt."
+  ],
+  "limiting_factors": [
+    "Historische verificatie voor dit type dag is nog beperkt."
+  ],
+  "operational_advice": [
+    "Gebruik d0-update of actuele waarnemingen voor de definitieve beslissing.",
+    "Kies eerst een regionale opdracht en schaal pas op als basis en thermiek werkelijk ontstaan."
+  ],
+  "confidence_explanation": "De modelzekerheid is hoog, maar lokale omstandigheden blijven bepalend.",
+  "regional_note": "Regionale indicaties zijn beschikbaar voor 4 velden; de hoofdbriefing blijft gebaseerd op EHHV/Hilversum.",
+  "reliability_note": "Betrouwbaarheid: nog onvoldoende historische data.",
+  "details": {
+    "cloudbase_m": 1387,
+    "thermal_ms": 2.3,
+    "wind_speed_kmh": 14,
+    "expected_task_range_km": 230,
+    "precipitation_risk": 2,
+    "overdevelopment_risk": null,
+    "cloud_cover": 20
+  },
+  "safety": {
+    "does_not_change_forecast": true,
+    "deterministic_text_only": true,
+    "no_external_ai_call": true,
+    "no_internal_diagnostics_exposed": true
+  },
+  "notes": []
+}

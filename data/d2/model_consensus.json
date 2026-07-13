@@ -1,0 +1,63 @@
+{
+  "release_version": "4.5A",
+  "generated_at": "2026-07-13T08:24:42.345800Z",
+  "forecast_date": "2026-07-15",
+  "models": {
+    "ICON": {
+      "thermal_ms": 3.3,
+      "cloudbase_m": 2204,
+      "wind_kmh": 16,
+      "confidence": 78
+    },
+    "GFS": {
+      "thermal_ms": 2.8,
+      "cloudbase_m": 2018,
+      "wind_kmh": 21,
+      "confidence": 66
+    },
+    "HARMONIE": {
+      "thermal_ms": 3.2,
+      "cloudbase_m": 2021,
+      "wind_kmh": 17,
+      "confidence": 74
+    }
+  },
+  "consensus": {
+    "thermal_consensus": "STRONG",
+    "cloudbase_consensus": "STRONG",
+    "wind_consensus": "VERY STRONG",
+    "overall_consensus": "VERY STRONG",
+    "overall_agreement_pct": 85,
+    "thermal_agreement_pct": 75,
+    "cloudbase_agreement_pct": 75,
+    "wind_agreement_pct": 90,
+    "forecast_uncertainty": "LOW",
+    "task_confidence_pct": 67,
+    "xc_probability_pct": 67
+  },
+  "dominant_model": "ICON",
+  "outlier_model": "GFS",
+  "recommended_model_weighting": {
+    "ICON": 0.42,
+    "HARMONIE": 0.34,
+    "GFS": 0.24
+  },
+  "derived_conditions": {
+    "cu_potential_pct": 60,
+    "street_probability_pct": 50,
+    "od_risk_pct": 10,
+    "wind_direction_deg": 44
+  },
+  "applied_calibration": {
+    "cloudbase_bias": "TOO_PESSIMISTIC",
+    "thermal_bias": "TOO_PESSIMISTIC",
+    "wind_bias": "TOO_PESSIMISTIC"
+  },
+  "notes": [
+    "4.5A introduces synthetic multi-model consensus.",
+    "Real multi-model ingestion will follow in 4.6+.",
+    "Consensus is currently generated from calibrated analysis layers.",
+    "Outlier detection identifies potentially unreliable model behavior.",
+    "Future releases will add probabilistic tasking and ensemble spread."
+  ]
+}

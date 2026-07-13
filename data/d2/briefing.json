@@ -1,0 +1,178 @@
+{
+  "release_version": "6.0B",
+  "generation": {
+    "ai_ok": false,
+    "ai_attempts": 3,
+    "ai_error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "fallback_used": true
+  },
+  "operational": {
+    "status": "CONDITIONAL GO",
+    "status_definition": "Bruikbare overlanddag tot ongeveer 300 km.",
+    "reference_aircraft": "18m / Discus 2c performanceklasse",
+    "task": "Out-and-return circa 252 km of driehoek circa 216 km.",
+    "flight_window": [
+      {
+        "time": "10:00",
+        "quality": "poor",
+        "label": "beperkt"
+      },
+      {
+        "time": "11:00",
+        "quality": "poor",
+        "label": "beperkt"
+      },
+      {
+        "time": "12:00",
+        "quality": "usable",
+        "label": "bruikbaar"
+      },
+      {
+        "time": "13:00",
+        "quality": "usable",
+        "label": "bruikbaar"
+      },
+      {
+        "time": "14:00",
+        "quality": "usable",
+        "label": "bruikbaar"
+      },
+      {
+        "time": "15:00",
+        "quality": "usable",
+        "label": "bruikbaar"
+      },
+      {
+        "time": "16:00",
+        "quality": "usable",
+        "label": "bruikbaar"
+      },
+      {
+        "time": "17:00",
+        "quality": "poor",
+        "label": "beperkt"
+      },
+      {
+        "time": "18:00",
+        "quality": "poor",
+        "label": "beperkt"
+      }
+    ],
+    "thermal_start": "11:00-12:00 LT",
+    "thermal_usable_from": "12:00 LT",
+    "thermal_end": "16:30-17:30 LT",
+    "warnings": [
+      "Forecast source health: POOR"
+    ],
+    "risk_panel": [
+      {
+        "label": "Cloudbase",
+        "value": 2062,
+        "unit": " m",
+        "level": "goed"
+      },
+      {
+        "label": "Thermiek",
+        "value": 3.0,
+        "unit": " m/s",
+        "level": "goed"
+      },
+      {
+        "label": "Neerslag",
+        "value": 6,
+        "unit": "%",
+        "level": "laag"
+      },
+      {
+        "label": "OD-risico",
+        "value": 10,
+        "unit": "%",
+        "level": "laag"
+      },
+      {
+        "label": "Model agreement",
+        "value": 100,
+        "unit": "%",
+        "level": "hoog"
+      },
+      {
+        "label": "Forecast health",
+        "value": 52,
+        "unit": "%",
+        "level": "POOR"
+      }
+    ],
+    "source_cards": [
+      {
+        "name": "GFS",
+        "available": false,
+        "status": "FALLBACK",
+        "health": "DEGRADED",
+        "description": "NOAA GFS via Open-Meteo",
+        "endpoint": "https://api.open-meteo.com/v1/gfs",
+        "response_ms": null,
+        "fetched_at_utc": "2026-07-13T08:23:16+00:00",
+        "fallback_used": true,
+        "fallback_to": "ECMWF",
+        "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=120)"
+      },
+      {
+        "name": "ECMWF",
+        "available": true,
+        "status": "OK",
+        "health": "GOOD",
+        "description": "ECMWF IFS via Open-Meteo",
+        "endpoint": "https://api.open-meteo.com/v1/ecmwf",
+        "response_ms": 659,
+        "fetched_at_utc": "2026-07-13T08:23:17+00:00",
+        "fallback_used": false,
+        "fallback_to": null,
+        "error": null
+      }
+    ],
+    "deep_dive_cards": [
+      {
+        "label": "Trigger temp",
+        "value": 20.7,
+        "unit": "°C"
+      },
+      {
+        "label": "Boundary layer",
+        "value": 2578,
+        "unit": " m"
+      },
+      {
+        "label": "Cu-potentie",
+        "value": 60,
+        "unit": "%"
+      },
+      {
+        "label": "Wolkenstraten",
+        "value": 50,
+        "unit": "%"
+      },
+      {
+        "label": "OD-risico",
+        "value": 10,
+        "unit": "%"
+      },
+      {
+        "label": "Model agreement",
+        "value": 100,
+        "unit": "%"
+      },
+      {
+        "label": "Forecast health",
+        "value": 52,
+        "unit": "%"
+      }
+    ],
+    "confidence_explanation": [
+      "forecast source health is POOR (52%)",
+      "1 bron(nen) gebruiken fallback",
+      "modelovereenkomst is goed",
+      "betrouwbaarheid is relatief goed voor een convectieve briefing"
+    ]
+  },
+  "text": "## Samenvatting\nStatus: **CONDITIONAL GO**. Bruikbare overlanddag tot ongeveer 300 km.\n\nXC-score: **9.0/10**. Operationele score: **8.2/10**. Betrouwbaarheid: **89%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **3.0 m/s**. Cloudbase circa **2062 m AGL**.\n\n## Taakadvies\nBeste richting: **ZW**. Indicatie: out-and-return circa **252 km** of driehoek circa **216 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **Forecast source health: POOR**. Neerslagkans: **6%**. OD-risico: **10%**. Model agreement: **100% (hoog)**. Forecast health: **52% (POOR)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
+}

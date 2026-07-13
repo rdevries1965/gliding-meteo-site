@@ -1,0 +1,44 @@
+{
+  "release_version": "7.5",
+  "generated_at_utc": "2026-07-12T11:58:57Z",
+  "public": true,
+  "source": {
+    "learning_summary": "site/archive/forecast_learning_summary.json",
+    "calibration_summary": "site/archive/forecast_calibration_summary.json",
+    "model_source_skill": "site/archive/model_source_skill_weglide.json"
+  },
+  "sample": {
+    "verified_forecast_days": 0,
+    "verified_forecast_runs": 0,
+    "sample_size": "insufficient"
+  },
+  "reliability": {
+    "label": "Nog onvoldoende data",
+    "score_pct": null,
+    "trend": "unknown",
+    "confidence_note": "Nog onvoldoende historische verificatie beschikbaar."
+  },
+  "lead_time": {
+    "d2": {
+      "label": "onbekend",
+      "score_pct": null
+    },
+    "d1": {
+      "label": "onbekend",
+      "score_pct": null
+    },
+    "d0": {
+      "label": "onbekend",
+      "score_pct": null
+    }
+  },
+  "public_text": {
+    "short": "Betrouwbaarheid: nog onvoldoende historische data.",
+    "details": "Deze indicatie wordt opgebouwd uit eerdere voorspellingen en latere verificatie met werkelijke zweefvliegactiviteit."
+  },
+  "safety": {
+    "no_internal_diagnostics_exposed": true,
+    "no_recommendations_exposed": true,
+    "does_not_change_forecast": true
+  }
+}

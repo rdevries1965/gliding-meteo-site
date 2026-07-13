@@ -1,0 +1,810 @@
+{
+  "release_version": "11.0B",
+  "generated_at_utc": "2026-07-13T08:23:20Z",
+  "mode": "shadow",
+  "base_date": "2026-07-13",
+  "forecast_date": "2026-07-14",
+  "forecast_offset": 1,
+  "forecast_date_source": "current_utc_date",
+  "summary": {
+    "total_sources": 24,
+    "available_sources": 24,
+    "failed_sources": 0,
+    "health_score": 100,
+    "health": "GOOD",
+    "providers": {
+      "BLIPMAPS NL4KMGFS": {
+        "total": 10,
+        "available": 10,
+        "failed": 0
+      },
+      "KNMI public": {
+        "total": 4,
+        "available": 4,
+        "failed": 0
+      },
+      "Weathercharts Bracknell UKMO": {
+        "total": 10,
+        "available": 10,
+        "failed": 0
+      }
+    }
+  },
+  "sources": [
+    {
+      "provider": "BLIPMAPS NL4KMGFS",
+      "source_id": "blipmaps_nl0_hilversum",
+      "source_type": "image",
+      "purpose": "Regional soaring meteogram reference from the BLIPMAPS GFS run.",
+      "url": "https://blipmaps.nl/NL4KMGFS/NL+0/meteogram_Hilversum.png",
+      "location": "Hilversum",
+      "forecast_offset": 0,
+      "valid_time": null,
+      "category": "supplemental_meteogram",
+      "expected_signals": [
+        "thermal_timing",
+        "cloudbase",
+        "cloud_streets",
+        "wind",
+        "inversion"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 1547,
+      "status_code": 200,
+      "content_type": "image/png",
+      "content_length": 360391,
+      "error": null,
+      "asset": {
+        "content_type": "image/png",
+        "content_length": 360391
+      }
+    },
+    {
+      "provider": "BLIPMAPS NL4KMGFS",
+      "source_id": "blipmaps_nl0_soesterberg",
+      "source_type": "image",
+      "purpose": "Regional soaring meteogram reference from the BLIPMAPS GFS run.",
+      "url": "https://blipmaps.nl/NL4KMGFS/NL+0/meteogram_Soesterberg.png",
+      "location": "Soesterberg",
+      "forecast_offset": 0,
+      "valid_time": null,
+      "category": "supplemental_meteogram",
+      "expected_signals": [
+        "thermal_timing",
+        "cloudbase",
+        "cloud_streets",
+        "wind",
+        "inversion"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 1220,
+      "status_code": 200,
+      "content_type": "image/png",
+      "content_length": 363891,
+      "error": null,
+      "asset": {
+        "content_type": "image/png",
+        "content_length": 363891
+      }
+    },
+    {
+      "provider": "BLIPMAPS NL4KMGFS",
+      "source_id": "blipmaps_nl0_terlet",
+      "source_type": "image",
+      "purpose": "Regional soaring meteogram reference from the BLIPMAPS GFS run.",
+      "url": "https://blipmaps.nl/NL4KMGFS/NL+0/meteogram_Terlet.png",
+      "location": "Terlet",
+      "forecast_offset": 0,
+      "valid_time": null,
+      "category": "supplemental_meteogram",
+      "expected_signals": [
+        "thermal_timing",
+        "cloudbase",
+        "cloud_streets",
+        "wind",
+        "inversion"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 1180,
+      "status_code": 200,
+      "content_type": "image/png",
+      "content_length": 371334,
+      "error": null,
+      "asset": {
+        "content_type": "image/png",
+        "content_length": 371334
+      }
+    },
+    {
+      "provider": "BLIPMAPS NL4KMGFS",
+      "source_id": "blipmaps_nl0_venlo",
+      "source_type": "image",
+      "purpose": "Regional soaring meteogram reference from the BLIPMAPS GFS run.",
+      "url": "https://blipmaps.nl/NL4KMGFS/NL+0/meteogram_Venlo.png",
+      "location": "Venlo",
+      "forecast_offset": 0,
+      "valid_time": null,
+      "category": "supplemental_meteogram",
+      "expected_signals": [
+        "thermal_timing",
+        "cloudbase",
+        "cloud_streets",
+        "wind",
+        "inversion"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 1223,
+      "status_code": 200,
+      "content_type": "image/png",
+      "content_length": 399573,
+      "error": null,
+      "asset": {
+        "content_type": "image/png",
+        "content_length": 399573
+      }
+    },
+    {
+      "provider": "BLIPMAPS NL4KMGFS",
+      "source_id": "blipmaps_nl0_borkenberge",
+      "source_type": "image",
+      "purpose": "Regional soaring meteogram reference from the BLIPMAPS GFS run.",
+      "url": "https://blipmaps.nl/NL4KMGFS/NL+0/meteogram_Borkenberge.png",
+      "location": "Borkenberge",
+      "forecast_offset": 0,
+      "valid_time": null,
+      "category": "supplemental_meteogram",
+      "expected_signals": [
+        "thermal_timing",
+        "cloudbase",
+        "cloud_streets",
+        "wind",
+        "inversion"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 1178,
+      "status_code": 200,
+      "content_type": "image/png",
+      "content_length": 395089,
+      "error": null,
+      "asset": {
+        "content_type": "image/png",
+        "content_length": 395089
+      }
+    },
+    {
+      "provider": "BLIPMAPS NL4KMGFS",
+      "source_id": "blipmaps_nl1_soesterberg",
+      "source_type": "image",
+      "purpose": "Regional soaring meteogram reference from the BLIPMAPS GFS run.",
+      "url": "https://blipmaps.nl/NL4KMGFS/NL+1/meteogram_Soesterberg.png",
+      "location": "Soesterberg",
+      "forecast_offset": 1,
+      "valid_time": null,
+      "category": "supplemental_meteogram",
+      "expected_signals": [
+        "thermal_timing",
+        "cloudbase",
+        "cloud_streets",
+        "wind",
+        "inversion"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 1187,
+      "status_code": 200,
+      "content_type": "image/png",
+      "content_length": 391911,
+      "error": null,
+      "asset": {
+        "content_type": "image/png",
+        "content_length": 391911
+      }
+    },
+    {
+      "provider": "BLIPMAPS NL4KMGFS",
+      "source_id": "blipmaps_nl1_borkenberge",
+      "source_type": "image",
+      "purpose": "Regional soaring meteogram reference from the BLIPMAPS GFS run.",
+      "url": "https://blipmaps.nl/NL4KMGFS/NL+1/meteogram_Borkenberge.png",
+      "location": "Borkenberge",
+      "forecast_offset": 1,
+      "valid_time": null,
+      "category": "supplemental_meteogram",
+      "expected_signals": [
+        "thermal_timing",
+        "cloudbase",
+        "cloud_streets",
+        "wind",
+        "inversion"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 1235,
+      "status_code": 200,
+      "content_type": "image/png",
+      "content_length": 424003,
+      "error": null,
+      "asset": {
+        "content_type": "image/png",
+        "content_length": 424003
+      }
+    },
+    {
+      "provider": "BLIPMAPS NL4KMGFS",
+      "source_id": "blipmaps_nl1_venlo",
+      "source_type": "image",
+      "purpose": "Regional soaring meteogram reference from the BLIPMAPS GFS run.",
+      "url": "https://blipmaps.nl/NL4KMGFS/NL+1/meteogram_Venlo.png",
+      "location": "Venlo",
+      "forecast_offset": 1,
+      "valid_time": null,
+      "category": "supplemental_meteogram",
+      "expected_signals": [
+        "thermal_timing",
+        "cloudbase",
+        "cloud_streets",
+        "wind",
+        "inversion"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 1221,
+      "status_code": 200,
+      "content_type": "image/png",
+      "content_length": 449224,
+      "error": null,
+      "asset": {
+        "content_type": "image/png",
+        "content_length": 449224
+      }
+    },
+    {
+      "provider": "BLIPMAPS NL4KMGFS",
+      "source_id": "blipmaps_nl1_hoogeveen",
+      "source_type": "image",
+      "purpose": "Regional soaring meteogram reference from the BLIPMAPS GFS run.",
+      "url": "https://blipmaps.nl/NL4KMGFS/NL+1/meteogram_Hoogeveen.png",
+      "location": "Hoogeveen",
+      "forecast_offset": 1,
+      "valid_time": null,
+      "category": "supplemental_meteogram",
+      "expected_signals": [
+        "thermal_timing",
+        "cloudbase",
+        "cloud_streets",
+        "wind",
+        "inversion"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 1180,
+      "status_code": 200,
+      "content_type": "image/png",
+      "content_length": 379524,
+      "error": null,
+      "asset": {
+        "content_type": "image/png",
+        "content_length": 379524
+      }
+    },
+    {
+      "provider": "BLIPMAPS NL4KMGFS",
+      "source_id": "blipmaps_nl1_axel",
+      "source_type": "image",
+      "purpose": "Regional soaring meteogram reference from the BLIPMAPS GFS run.",
+      "url": "https://blipmaps.nl/NL4KMGFS/NL+1/meteogram_Axel.png",
+      "location": "Axel",
+      "forecast_offset": 1,
+      "valid_time": null,
+      "category": "supplemental_meteogram",
+      "expected_signals": [
+        "thermal_timing",
+        "cloudbase",
+        "cloud_streets",
+        "wind",
+        "inversion"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 1191,
+      "status_code": 200,
+      "content_type": "image/png",
+      "content_length": 420379,
+      "error": null,
+      "asset": {
+        "content_type": "image/png",
+        "content_length": 420379
+      }
+    },
+    {
+      "provider": "KNMI public",
+      "source_id": "knmi_small_aviation_bulletin",
+      "source_type": "text",
+      "purpose": "Public small aviation weather bulletin reference.",
+      "url": "https://www.knmi.nl/nederland-nu/luchtvaart/weerbulletin-kleine-luchtvaart",
+      "location": "Netherlands",
+      "forecast_offset": null,
+      "valid_time": null,
+      "category": "supplemental_aviation_text",
+      "expected_signals": [
+        "small_aviation_bulletin",
+        "visibility",
+        "cloud",
+        "wind",
+        "weather"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 570,
+      "status_code": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": 15808,
+      "error": null,
+      "text": {
+        "length": 2488,
+        "excerpt": "KNMI - Weerbulletin kleine luchtvaart Naar de hoofd content Je gebruikt een verouderde browser. Voor een betere gebruikerservaring kun je jouw browser upgraden. English Home Nederland nu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Klimaat Producten & diensten Kennis & uitleg Research Over het KNMI Over het KNMI Bestuur Kerntaken Internationaal Werken bij Nieuws Agenda Pers Contact Zoek binnen de site binnen de hele site binnen het kennis- & datacentrum Trefwoord Zoek Menu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Sluiten Home Nederland nu Luchtvaart Weerbulletin kleine luchtvaart Code geel Weerbulletin kleine luchtvaart Luchtvaartmeteorologische informatie voor operationeel gebruik en vluchtvoorbereiding is beschikbaar op www.luchtvaartmeteo.nl. ZCZC FBNL50 EHDB 130523 WEERBULLETIN VOOR DE LUCHTVAART - . GELDIG 130600/131200 UTC . SITUATIE: ER STAAT EEN NOORDOOSTELIJKE STROMING WAARMEE GELEIDELIJK STEEDS DROGERE LUCHT WORDT AANGEVOERD. DE ATMOSFEER IS ONSTABIEL VAN OPBOUW TOT MAXIMAAL 3000-4000 VT. . SIGNIFICANT WEER: AANVANKELIJK IN DE OOSTELIJKE HELFT KANS OP NEVEL EN MIST. . WIND: NOORDOOSTELIJK 3-7 KN, AAN DE KUST EN BOVEN HET IJSSELMEER 8-14 KN. IN DE TWEEDE HELFT VAN DE PERIODE ENKELE KN TOENEMEND. . BEWOLKING: IN HET NOORDWESTEN BKN SC 1000-2000 VT, AANVANKELIJK LOKAAL BKN ST 500-1000 VT, TOPPEN 3000 VT. TEN ZUIDEN HIERVAN VOORAL IN DE OOSTELIJK HELFT BKN ST BENEDEN DE 500 VT, TOPPEN 1500 VT. TUSSEN 06 EN 09 UTC LOST DE BEWOLKING OP. IN HET WADDENGEBIED IS DE BEWOLKING MOGELIJK HARDNEKKIG. . ZICHT: MEER DAN 10 KM. IN NEVEL 1500-5000 M, IN MIST MINDER DAN 1500 M. . NULGRADEN NIVEAU: BOVEN FL100. . HOOGTEWINDEN EN TEMPERATUREN: 06 UTC: 12 UTC: 0500VT 030/10 +15 020/05 +25 1500VT 070/10 +16 030/05 +22 3000VT 130/05 +17 050/05 +18 FL 050 260/05 +14 200/05 +14 FL 100 290/05 +03 230/05 +04 . . THERMIEK: ZWAK, SPOEDIG MATIG. DROOG. IN HET NOORDELIJK DEEL VERZWAKT T.G.V. AFSCHERMING DOOR BEWOLKING. . MAX. TEMPERATUUR: VAN 22 GRADEN CELSIUS IN HET NOORDELIJK KUSTGEBIED TOT 31 GRADEN IN HET ZUIDOOSTEN. . VOORUITZICHTEN VOOR DE PERIODE VAN 131200/131800: IN HET WADDENGEBIED AANHOUDEND KANS OP ST/SC BEWOLKING. . DAGLICHTPERIODE: 03.21 TOT 20.10 UTC.= NNNN 13/07/2026 07.30 uur LT Pagina delen Meer informatie Luchtvaartmeteorologische informatie Vliegveldverwachtingen (TAF) Vliegveldwaarnemingen (AUTO) METAR Website Luchtvaartmeteo Volg ons op social media Copyright Privacy Cookies Toegankelijkheid",
+        "truncated": false
+      }
+    },
+    {
+      "provider": "KNMI public",
+      "source_id": "knmi_public_forecast",
+      "source_type": "text",
+      "purpose": "Public Netherlands forecast reference.",
+      "url": "https://www.knmi.nl/nederland-nu/weer/verwachtingen",
+      "location": "Netherlands",
+      "forecast_offset": null,
+      "valid_time": null,
+      "category": "supplemental_forecast_text",
+      "expected_signals": [
+        "public_forecast",
+        "wind",
+        "cloud",
+        "precipitation",
+        "temperature"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 31,
+      "status_code": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": 87402,
+      "error": null,
+      "text": {
+        "length": 5374,
+        "excerpt": "KNMI - Weer - Verwachtingen Naar de hoofd content Je gebruikt een verouderde browser. Voor een betere gebruikerservaring kun je jouw browser upgraden. English Home Nederland nu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Klimaat Producten & diensten Kennis & uitleg Research Over het KNMI Over het KNMI Bestuur Kerntaken Internationaal Werken bij Nieuws Agenda Pers Contact Zoek binnen de site binnen de hele site binnen het kennis- & datacentrum Trefwoord Zoek Menu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Sluiten Home Nederland nu Weer Verwachtingen Code geel Verwachtingen Bekijk waarschuwingen Bekijk waarnemingen Maandag overdag Nacht maandag - dinsdag Dinsdag overdag Vandaag & morgen Zonnig en warm zomerweer, in het noord(westen) eerst bewolkt Waarschuwingen Nationaal Hitteplan is actief voor het midden en zuiden, code geel. Vanochtend is er in het noorden en noordwesten veel bewolking, waar zeer plaatselijk motregen uit valt. In de loop van de ochtend wordt het van het zuidoosten uit op steeds meer plaatsen zonnig. Op de Waddeneilanden kan er bewolking vanaf zee blijven binnenkomen. De wind uit het noordoosten is zwak tot matig, aan de zuidwestkust later vrij krachtig. Vanmiddag is er volop zon en blijft het droog. In het Waddengebied is er meer bewolking. De maximumtemperatuur loopt uiteen van 22°C in het noordelijk kustgebied tot 31°C in het zuidoosten. De wind komt uit het noordoosten en is overwegend matig, aan zee en op het IJsselmeer vrij krachtig. Vanavond is het zonnig en droog. De wind is overwegend matig en komt uit het noorden tot noordoosten. Aan zee en op het IJsselmeer staat een vrij krachtige wind, langs de zuidwestkust is deze mogelijk krachtig, windkracht 6. Komende nacht is het droog. De minimumtemperatuur ligt rond 17°C. De wind komt uit het noordoosten en is zwak tot matig, in het noordelijk kustgebied en op het IJsselmeer af en toe vrij krachtig. Morgenochtend is het droog en overwegend zonnig. De wind komt uit het noordoosten en is matig, in het noordwestelijk kustgebied af en toe vrij krachtig. Morgenmiddag is het zonnig en droog. De maximumtemperatuur loopt uiteen van 23°C in het noordelijk kustgebied tot 32°C in het zuidoosten. De wind komt uit het noordoosten en is matig, aan de kust en op het IJsselmeer vrij krachtig. Morgenavond is het zonnig en droog. De wind komt het noordoosten en is matig, aan de kust en op het IJsselmeer vrij krachtig. (Bron: KNMI) 13/07/2026 09.07 uur LT Vooruitzichten Zonnig, droog en vooral in het midden en zuiden zeer warm met maximumtemperaturen boven 30 graden. In het noorden is het wat minder warm door wind vanaf zee. Vanaf vrijdag neemt de kans op enkele (onweers)buien toe, met name in het zuidoosten. Van het noordwesten uit wordt het dan geleidelijk minder warm. 13/07/2026 03.49 uur LT × KNMI-app Wilt u de weersverwachting voor uw eigen plaats? Download maandag 13 juli Max. 26° Min. 15° Neerslag 0 mm Neerslagkans 0% Windkracht NO 3 Zonneschijn 70% Zonkracht 6 Code geel Meer informatie Hitte dinsdag 14 juli Max. 30° Min. 17° Neerslag 0 mm Neerslagkans 10% Windkracht NO 3 Zonneschijn 70% Zonkracht 6 Code geel Meer informatie Hitte woensdag 15 juli Max. 30° Min. 17° Neerslag 0 mm Neerslagkans 10% Windkracht NO 3 Zonneschijn 70% Zonkracht 6 Code geel Meer informatie Hitte donderdag 16 juli Max. 30° Min. 17° Neerslag 0 mm Neerslagkans 20% Windkracht O 2 Zonneschijn 70% Zonkracht 6 Meer informatie Mogelijk hitte vrijdag 17 juli Max. 26/30° Min. 17° Neerslag 0/3 mm Neerslagkans 40% Windkracht N 3 Zonneschijn 30% Zonkracht 6 Meer informatie Mogelijk hitte zaterdag 18 juli Max. 22/26° Min. 16° Neerslag 0/1 mm Neerslagkans 30% Windkracht NW 3 Zonneschijn 30% Zonkracht 6 zondag 19 juli Max. 21/24° Min. 14° Neerslag 0 mm Neerslagkans 30% Windkracht NW 3 Zonneschijn 30% Zonkracht 6 maandag 13 juli Max. 26° Min. 15° Neerslag 0 mm Neerslagkans 0% Windkracht NO 3 Zonneschijn 70% Zonkracht 6 Code geel Hitte dinsdag 14 juli Max. 30°",
+        "truncated": true
+      }
+    },
+    {
+      "provider": "KNMI public",
+      "source_id": "knmi_airfield_observations",
+      "source_type": "text",
+      "purpose": "Public aviation airfield observations reference.",
+      "url": "https://www.knmi.nl/nederland-nu/luchtvaart/vliegveldwaarnemingen",
+      "location": "Netherlands",
+      "forecast_offset": null,
+      "valid_time": null,
+      "category": "supplemental_observation_text",
+      "expected_signals": [
+        "metar",
+        "taf",
+        "visibility",
+        "cloud",
+        "wind"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 31,
+      "status_code": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": 18326,
+      "error": null,
+      "text": {
+        "length": 4734,
+        "excerpt": "KNMI - Vliegveldwaarnemingen Nederland - (AUTO) METAR Naar de hoofd content Je gebruikt een verouderde browser. Voor een betere gebruikerservaring kun je jouw browser upgraden. English Home Nederland nu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Klimaat Producten & diensten Kennis & uitleg Research Over het KNMI Over het KNMI Bestuur Kerntaken Internationaal Werken bij Nieuws Agenda Pers Contact Zoek binnen de site binnen de hele site binnen het kennis- & datacentrum Trefwoord Zoek Menu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Sluiten Home Nederland nu Luchtvaart Vliegveldwaarnemingen Neder... Code geel Vliegveldwaarnemingen Nederland - (AUTO) METAR Luchtvaartmeteorologische informatie voor operationeel gebruik en vluchtvoorbereiding is beschikbaar op www.luchtvaartmeteo.nl. ZCZC SA130755 EHKD DE KOOY/DE KOOY NLD 1 m. METAR EHKD 130755Z AUTO 03007KT 350V070 9999 FEW007 SCT009 BKN010 19/17 Q1023 GRN BECMG FEW013 SCT015 BKN018= ZCZC SA130755 EHFD F3-FB-1 NLD 50 m. METAR EHFD 130755Z AUTO VRB13KT 9999 FEW005/// 16/15 Q1025 W///H15= ZCZC SA130755 EHAM AMSTERDAM/SCHIPHOL NLD -3 m. METAR EHAM 130755Z 06006KT 310V110 9999 FEW008 SCT013 BKN015 19/16 Q1023 BECMG SCT015= ZCZC SA130755 EHVL VLIELAND NLD 10 m. METAR EHVL 130755Z AUTO 03014KT 9999 SCT013 20/16 Q1023 BLU= ZCZC SA130755 EHJR K13-A NLD 37 m. METAR EHJR 130755Z AUTO 04018KT //// // ///////// 17/16 Q1023 RE// W18/H18= ZCZC SA130755 EHLE LELYSTAD/LELYSTAD NLD -3 m. METAR EHLE 130755Z AUTO 04007KT 340V080 9999 OVC012 19/15 Q1023 BECMG SCT018= ZCZC SA130755 EHLW LEEUWARDEN/LEEUWARDEN NLD 1 m. METAR EHLW 130755Z AUTO 02006KT 330V120 9999 BKN019 20/15 Q1023 WHT BECMG SCT020= ZCZC SA130755 EHDL ARNHEM/DEELEN NLD 48 m. METAR EHDL 130755Z AUTO 01007KT 9999 NCD 19/14 Q1022 BLU= ZCZC SA130755 EHGG GRONINGEN/EELDE NLD 5 m. METAR EHGG 130755Z AUTO VRB02KT 9999 OVC020 19/14 Q1023 NOSIG= ZCZC SA130755 EHSC LICHTEILAND GOEREE NLD 22 m. METAR EHSC 130755Z AUTO 04019KT 9999 ///////// 19/15 Q1022 W20/H13= ZCZC SA130755 EHSA EURO PLATFORM NLD 19 m. METAR EHSA 130755Z AUTO 02020KT 9999 ///////// 18/16 Q1023 W19/H14= ZCZC SA130755 EHWO WOENSDRECHT/WOENSDRECHT NLD 19 m. METAR EHWO 130755Z AUTO 05013KT 350V080 9999 NCD 21/13 Q1021 BLU NOSIG= ZCZC SA130755 EHRD ROTTERDAM/THE HAGUE AIRPORT NLD -5 m. METAR EHRD 130755Z AUTO 03009KT 350V070 9999 FEW015/// 21/16 Q1022 NOSIG= ZCZC SA130755 EHGR GILZE-RIJEN/GILZE-RIJEN NLD 14 m. METAR EHGR 130755Z AUTO 02011KT 310V110 9999 NCD 21/14 Q1022 BLU NOSIG= ZCZC SA130755 EHEH EINDHOVEN/EINDHOVEN NLD 22 m. METAR EHEH 130755Z AUTO 04010KT 350V070 9999 BKN310 21/13 Q1021 BLU NOSIG RMK TREND REMOTE BY EHWO= ZCZC SA130755 EHVK VOLKEL/VOLKEL NLD 21 m. METAR EHVK 130755Z AUTO 02008KT 360V070 9999 NCD 20/13 Q1022 BLU NOSIG= ZCZC SA130755 EHBK MAASTRICHT/MAASTRICHT-AACHEN NLD 114 m. METAR EHBK 130755Z AUTO 04008KT 340V070 9999 NSC 21/14 Q1021 NOSIG= ZCZC SA130755 EHKV K14-FA-1C NLD 41 m. METAR EHKV 130755Z AUTO 04021KT 9999 SCT005 OVC006 17/15 Q1024 W///H14= ZCZC SA130755 EHMG L9-FF-1 NLD 44 m. METAR EHMG 130755Z AUTO 06016KT 9999 FEW004 BKN005 BKN008 17/16 Q1024 W///H16= ZCZC SA130755 EHMA AWG-1 NLD 40 m. METAR EHMA 130755Z AUTO 05009KT 020V090 9999 BKN/// BKN/// 18/14 Q1023 W///H11= ZCZC SA130755 EHDV D15-FA-1 NLD 42 m. METAR EHDV 130755Z AUTO 03018KT 9999 FEW007/// 16/14 Q1026= ZCZC SA130755 EHAK A12-CPP NLD 48 m. METAR EHAK 130755Z AUTO 02016KT 350V050 9999 FEW006/// 15/15 Q1026 W///H15= ZCZC SA130755 EHJA J6-A NLD 45 m. METAR EHJA 130755Z AUTO 03017KT 9999 NCD 17/14 Q1025 W///H19= ZCZC SA130755 EHPG P11-B NLD 41 m. METAR EHPG 130755Z AUTO 04016KT 350V060 9999 SCT006 BKN007 OVC009 17/16 Q1023= ZCZC SA130755 EHHW BUITENGAATS/BG-OHVS2 42 m. METAR EHHW 130755Z AUTO 06011KT 9999 FEW005/// SCT006/// BKN007/// 17/16 Q1023= ZCZC SA130755 EHSG BSA NLD 43 m. METAR EHSG 130755Z AUTO 03020KT 330V060 //// // FEW008/// SCT011/// BKN014/// 19/16 Q1022 RE// W19/H17= ZCZC SA130755 EHQS HOLLANDSE KUST ZUID ALPHA NLD 44 m. METAR EHQ",
+        "truncated": true
+      }
+    },
+    {
+      "provider": "KNMI public",
+      "source_id": "knmi_guidance_model_assessment",
+      "source_type": "text",
+      "purpose": "Public guidance and model assessment reference.",
+      "url": "https://www.knmi.nl/nederland-nu/weer/waarschuwingen-en-verwachtingen/extra/guidance-modelbeoordeling",
+      "location": "Netherlands",
+      "forecast_offset": null,
+      "valid_time": null,
+      "category": "supplemental_guidance_text",
+      "expected_signals": [
+        "model_guidance",
+        "synoptic_development",
+        "uncertainty",
+        "precipitation"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 514,
+      "status_code": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": 19214,
+      "error": null,
+      "text": {
+        "length": 5743,
+        "excerpt": "KNMI - Guidance modelbeoordeling Naar de hoofd content Je gebruikt een verouderde browser. Voor een betere gebruikerservaring kun je jouw browser upgraden. English Home Nederland nu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Klimaat Producten & diensten Kennis & uitleg Research Over het KNMI Over het KNMI Bestuur Kerntaken Internationaal Werken bij Nieuws Agenda Pers Contact Zoek binnen de site binnen de hele site binnen het kennis- & datacentrum Trefwoord Zoek Menu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Sluiten Home Nederland nu Weer Guidance modelbeoordeling Code geel Guidance modelbeoordeling Modellen algemeen tot +48 uur, geldig tot dinsdag 14 juli 2026 24.00 locale tijd Guidance modelbeoordeling voor Nederland, de Nederlandse kustwateren en de Noordzee, gebaseerd op de HARMONIE run van 00 UTC en de overige genoemde modellen en gidsen met bijbehorende runtijd. Modelbeoordeling door meteoroloog Synoptische situatie: Een hogedrukgebied noord van Schotland blijft nagenoeg stationair. Een noord tot noordoostelijke stroming voert vannacht geleidelijk vochtigere lucht aan vanuit de Duitse Bocht over een groot deel van het land. Deze vochtige lucht is gekoppeld aan een lijlaagje dat momenteel boven het uiterste noordoosten ligt, in de kaarten geanalyseerd als occlusie. In het zuidoosten blijft de aanvoer vanaf het continent en is de lucht droger. Boven Denemarken ontstaat er een hoogtelaag dat maandag overdag langzaam naar het noordwesten van Duitsland beweegt. Maandagavond en in de nacht naar dinsdag trekt een (thermische) vore vanuit Duitsland over ons land zuidwestwaarts. Na passage wordt de stroming op dinsdag oost tot noordoost, waardoor een groter deel van het land te maken krijgt met warme lucht vanaf het continent. Modelbeoordeling: Een gebied met lage bewolking, behorende bij de occlusie, ligt boven het noorden en noordwesten. Ha43 heeft de positie inmiddels redelijk, maar nog steeds te ver zuidelijk. Het betreft een deels verzadigde laag tussen ca. 500 vt en 3000 vt wat enigszins een wisselend beeld geeft qua wolkenbasis. Ha43 berekent lokaal in de Duitse Bocht een basis aan dek. Dit is een aandachtspunt want er komt daar duidelijk steeds vochtigere lucht binnen (zie Td van EHHW). In het oosten zijn er voor dit veld uit plaatselijk (ondiepe) mistbanken ontstaan doordat er weinig gradient staat bij en ten zuiden van het lijlaag. Ook is er het afgelopen uur een band met St aan dek (mist) gevormd die zich rap zuidwestwaarts uitbreidt. Dit is niet in de Ha/EC uitvoer terug te vinden, behalve in die van ICON-D2. Dit betreft wel een dunne laag en zal dus de komende uren snel oplossen. Het grotere veld ten noordwesten hiervan lost in de loop van de ochtend op. In het noordwesten zou dit wel eens tot aan het begin van de middag kunnen duren (zie de Ha46 uitvoer), omdat het best een dikke laag is. Het westelijk Waddengebied blijft overdag gevoelig voor de aanvoer van St vanaf de Noordzee. Op dinsdag is de lucht droger en verwachten we geen lage bewolking meer. Een ander aandachtspunt zijn de temperaturen in het zuiden en zuidoosten, hiervoor code geel i.v.m. nationaal hitteplan. De afgelopen dagen was de Ha43 uitvoer ongeveer 1°C te warm. Maandag hangt de mate van opwarming boven het noorden en midden vooral af van hoe snel de bewolking opgelost is. De temperatuur komt daar mogelijk iets lager uit dan in de modeluitvoer, omdat de bewolking later oplost. Overigens is de temperatuur in de Ha46 uitvoer niet lager dan in Ha43. Op dinsdag wordt het met een meer aflandige wind in het midden en noorden enkele graden warmer. De Ha43 uitvoer is dan waarschijnlijk realistisch. Aandachtspunten Temperatuur: In het uiterste oosten is er lokaal meer ontkoppeling waardoor de minimumtemperatuur enkele graden lager is dan in de uitvoer (9°C). Zodra de bewolking binnenkomt loopt dit weer op naar 15-16°C. Het Nationaal Hitteplan is actief voor het midden en zuiden van het land. De temperatu",
+        "truncated": true
+      }
+    },
+    {
+      "provider": "Weathercharts Bracknell UKMO",
+      "source_id": "bracknell_index",
+      "source_type": "text",
+      "purpose": "Index page for current UKMO MSLP analysis and prognosis charts.",
+      "url": "https://www.weathercharts.org/ukmomslp.htm",
+      "location": "Northwest Europe",
+      "forecast_offset": null,
+      "valid_time": null,
+      "category": "supplemental_synoptic_index",
+      "expected_signals": [
+        "synoptic_pattern",
+        "fronts",
+        "pressure_systems",
+        "flow_trend"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 300,
+      "status_code": 200,
+      "content_type": "text/html",
+      "content_length": 12344,
+      "error": null,
+      "text": {
+        "length": 2019,
+        "excerpt": "UK Met Office Fax Charts - UKMOMSLP Analysis and Prognosis Charts from UK Meteorological Office , Exeter. MSLP Analysis and Prognosis. This website is not affiliated with or endorsed by the UK Meteorological Office. T+24 T+36 T+48 T+60 T+72 T+84 T+96 T+120 T+132 - T+168 --> Previous 24 Hours UKMO MSLP Analyses Charts 00z 06z 12z 18z MSLP Analysis MSLP Prognosis T+24 MSLP Prognosis T+36 MSLP Prognosis T+48 MSLP Prognosis T+60 MSLP Prognosis T+72 MSLP Prognosis T+84 MSLP Prognosis T+96 MSLP Prognosis T+120 500 mb and MSLP Prognosis T+132 to T+168 --> European Centre for Medium-Range Weather Forecasts (ECMWF) 00z Run . . . T+24 . . . T+48 . . . T+72 . . . T+96 . . . T+120 . . . 500mb Forecast . . . MSLP Forecast . . . 850mb Temperature 00z Run . . . T+144 . . T+168 . . T+192 . . T+216 . . T+240 . . . 500mb Forecast . . . MSLP Forecast . . . 850mb Temperature 12z Run . . . T+24 . . . T+48 . . . T+72 . . . T+96 . . . T+120 . . . 500mb Forecast . . . MSLP Forecast . . . 850mb Temperature 12z Run . . . T+144 . . T+168 . . T+192 . . T+216 . . T+240 . . . 500mb Forecast . . . MSLP Forecast . . . 850mb Temperature UKMO MSLP Analysis and Prognosis . . larger sized charts except ECMWF charts . . . Chart size 2147 x 1728 pixels. North Atlantic MSLP COLOUR Latest Synoptic Chart ( 00z - 06z - 12z - 18z ) . . 100W to 10E . . 15N to 70N . . . with plotted weather data . . Chart Size 2441 x 1600 pixels. North Atlantic MSLP COLOUR Latest Synoptic Chart ( 00z - 06z - 12z - 18z ) . . 100W to 10E . . 15N to 70N . . . with plotted weather data . . Chart Size 1074 x 737 pixels. © www.weathercharts.org miscellaneous keywords meteorological office egrr asxx fsxx fuxx facsimile faxsimile bracknell exeter fax analysis forecast prognosis metfax high low surface pressure wind thickness ukmet ukmo height storm cold warm front weather chart charts isobar weatherchart map noaa europe north south east west sea atlantic ocean depression anticyclone latest synoptic g8kpy 00 06 12 18 24 36 48 60 72 84 96 120 144 500 1000",
+        "truncated": false
+      }
+    },
+    {
+      "provider": "Weathercharts Bracknell UKMO",
+      "source_id": "bracknell_ppva",
+      "source_type": "image",
+      "purpose": "UKMO MSLP chart discovered through Bracknell print page https://www.weathercharts.org/ukmomslp/print_out/ppva.htm.",
+      "url": "https://www.weathercharts.net/ukmo_mslp_analysis/ppva.gif?31415",
+      "location": "Northwest Europe",
+      "forecast_offset": 0,
+      "valid_time": "T+0",
+      "category": "supplemental_synoptic_chart",
+      "expected_signals": [
+        "synoptic_pattern",
+        "fronts",
+        "pressure_systems",
+        "flow_trend"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 203,
+      "status_code": 200,
+      "content_type": "image/gif",
+      "content_length": 69484,
+      "error": null,
+      "asset": {
+        "content_type": "image/gif",
+        "content_length": 69484
+      }
+    },
+    {
+      "provider": "Weathercharts Bracknell UKMO",
+      "source_id": "bracknell_ppve",
+      "source_type": "image",
+      "purpose": "UKMO MSLP chart discovered through Bracknell print page https://www.weathercharts.org/ukmomslp/print_out/ppve.htm.",
+      "url": "https://www.weathercharts.net/ukmo_mslp_prognosis/ppve.gif?31415",
+      "location": "Northwest Europe",
+      "forecast_offset": 1,
+      "valid_time": "T+24",
+      "category": "supplemental_synoptic_chart",
+      "expected_signals": [
+        "synoptic_pattern",
+        "fronts",
+        "pressure_systems",
+        "flow_trend"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 114,
+      "status_code": 200,
+      "content_type": "image/gif",
+      "content_length": 60909,
+      "error": null,
+      "asset": {
+        "content_type": "image/gif",
+        "content_length": 60909
+      }
+    },
+    {
+      "provider": "Weathercharts Bracknell UKMO",
+      "source_id": "bracknell_ppvg",
+      "source_type": "image",
+      "purpose": "UKMO MSLP chart discovered through Bracknell print page https://www.weathercharts.org/ukmomslp/print_out/ppvg.htm.",
+      "url": "https://www.weathercharts.net/ukmo_mslp_prognosis/ppvg.gif?31415",
+      "location": "Northwest Europe",
+      "forecast_offset": 2,
+      "valid_time": "T+36",
+      "category": "supplemental_synoptic_chart",
+      "expected_signals": [
+        "synoptic_pattern",
+        "fronts",
+        "pressure_systems",
+        "flow_trend"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 152,
+      "status_code": 200,
+      "content_type": "image/gif",
+      "content_length": 61707,
+      "error": null,
+      "asset": {
+        "content_type": "image/gif",
+        "content_length": 61707
+      }
+    },
+    {
+      "provider": "Weathercharts Bracknell UKMO",
+      "source_id": "bracknell_ppvi",
+      "source_type": "image",
+      "purpose": "UKMO MSLP chart discovered through Bracknell print page https://www.weathercharts.org/ukmomslp/print_out/ppvi.htm.",
+      "url": "https://www.weathercharts.net/ukmo_mslp_prognosis/ppvi.gif?31415",
+      "location": "Northwest Europe",
+      "forecast_offset": 2,
+      "valid_time": "T+48",
+      "category": "supplemental_synoptic_chart",
+      "expected_signals": [
+        "synoptic_pattern",
+        "fronts",
+        "pressure_systems",
+        "flow_trend"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 172,
+      "status_code": 200,
+      "content_type": "image/gif",
+      "content_length": 61702,
+      "error": null,
+      "asset": {
+        "content_type": "image/gif",
+        "content_length": 61702
+      }
+    },
+    {
+      "provider": "Weathercharts Bracknell UKMO",
+      "source_id": "bracknell_ppvj",
+      "source_type": "image",
+      "purpose": "UKMO MSLP chart discovered through Bracknell print page https://www.weathercharts.org/ukmomslp/print_out/ppvj.htm.",
+      "url": "https://www.weathercharts.net/ukmo_mslp_prognosis/ppvj.gif?31415",
+      "location": "Northwest Europe",
+      "forecast_offset": 3,
+      "valid_time": "T+60",
+      "category": "supplemental_synoptic_chart",
+      "expected_signals": [
+        "synoptic_pattern",
+        "fronts",
+        "pressure_systems",
+        "flow_trend"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 146,
+      "status_code": 200,
+      "content_type": "image/gif",
+      "content_length": 64139,
+      "error": null,
+      "asset": {
+        "content_type": "image/gif",
+        "content_length": 64139
+      }
+    },
+    {
+      "provider": "Weathercharts Bracknell UKMO",
+      "source_id": "bracknell_ppvk",
+      "source_type": "image",
+      "purpose": "UKMO MSLP chart discovered through Bracknell print page https://www.weathercharts.org/ukmomslp/print_out/ppvk.htm.",
+      "url": "https://www.weathercharts.net/ukmo_mslp_prognosis/ppvk.gif?31415",
+      "location": "Northwest Europe",
+      "forecast_offset": 3,
+      "valid_time": "T+72",
+      "category": "supplemental_synoptic_chart",
+      "expected_signals": [
+        "synoptic_pattern",
+        "fronts",
+        "pressure_systems",
+        "flow_trend"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 117,
+      "status_code": 200,
+      "content_type": "image/gif",
+      "content_length": 63057,
+      "error": null,
+      "asset": {
+        "content_type": "image/gif",
+        "content_length": 63057
+      }
+    },
+    {
+      "provider": "Weathercharts Bracknell UKMO",
+      "source_id": "bracknell_ppvl",
+      "source_type": "image",
+      "purpose": "UKMO MSLP chart discovered through Bracknell print page https://www.weathercharts.org/ukmomslp/print_out/ppvl.htm.",
+      "url": "https://www.weathercharts.net/ukmo_mslp_prognosis/ppvl.gif?31415",
+      "location": "Northwest Europe",
+      "forecast_offset": 4,
+      "valid_time": "T+84",
+      "category": "supplemental_synoptic_chart",
+      "expected_signals": [
+        "synoptic_pattern",
+        "fronts",
+        "pressure_systems",
+        "flow_trend"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 148,
+      "status_code": 200,
+      "content_type": "image/gif",
+      "content_length": 61865,
+      "error": null,
+      "asset": {
+        "content_type": "image/gif",
+        "content_length": 61865
+      }
+    },
+    {
+      "provider": "Weathercharts Bracknell UKMO",
+      "source_id": "bracknell_ppvm",
+      "source_type": "image",
+      "purpose": "UKMO MSLP chart discovered through Bracknell print page https://www.weathercharts.org/ukmomslp/print_out/ppvm.htm.",
+      "url": "https://www.weathercharts.net/ukmo_mslp_prognosis/ppvm.gif?31415",
+      "location": "Northwest Europe",
+      "forecast_offset": 4,
+      "valid_time": "T+96",
+      "category": "supplemental_synoptic_chart",
+      "expected_signals": [
+        "synoptic_pattern",
+        "fronts",
+        "pressure_systems",
+        "flow_trend"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 160,
+      "status_code": 200,
+      "content_type": "image/gif",
+      "content_length": 61874,
+      "error": null,
+      "asset": {
+        "content_type": "image/gif",
+        "content_length": 61874
+      }
+    },
+    {
+      "provider": "Weathercharts Bracknell UKMO",
+      "source_id": "bracknell_ppvo",
+      "source_type": "image",
+      "purpose": "UKMO MSLP chart discovered through Bracknell print page https://www.weathercharts.org/ukmomslp/print_out/ppvo.htm.",
+      "url": "https://www.weathercharts.net/ukmo_mslp_prognosis/ppvo.gif?31415",
+      "location": "Northwest Europe",
+      "forecast_offset": 5,
+      "valid_time": "T+120",
+      "category": "supplemental_synoptic_chart",
+      "expected_signals": [
+        "synoptic_pattern",
+        "fronts",
+        "pressure_systems",
+        "flow_trend"
+      ],
+      "fetched_at_utc": "2026-07-13T08:23:20Z",
+      "affects_operational_forecast": false,
+      "available": true,
+      "status": "OK",
+      "health": "GOOD",
+      "response_ms": 144,
+      "status_code": 200,
+      "content_type": "image/gif",
+      "content_length": 60088,
+      "error": null,
+      "asset": {
+        "content_type": "image/gif",
+        "content_length": 60088
+      }
+    }
+  ],
+  "safety": {
+    "shadow_mode": true,
+    "does_not_change_forecast": true,
+    "does_not_change_go_no_go": true,
+    "does_not_change_xc_score": true,
+    "raw_forecast_values_preserved": true,
+    "binary_payloads_not_committed": true
+  },
+  "notes": [
+    "Supplemental sources are fetched for source awareness only.",
+    "This output is not consumed by forecast calculations, scoring, thresholds or briefing generation.",
+    "Image and GIF payloads are not committed; only status, links and metadata are stored."
+  ]
+}

@@ -1,0 +1,2524 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoZC operationele zweefvliegbriefing</title>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<style>
+:root{
+  --bg:#f3f6f9;
+  --panel:#ffffff;
+  --card:#f7f9fc;
+  --text:#1f2937;
+  --muted:#64748b;
+  --border:#d8e2ee;
+  --blue:#0050a4;
+  --blue2:#4da3ff;
+  --green:#17803c;
+  --orange:#d88900;
+  --red:#b42318;
+  --soft-blue:#eaf3ff;
+  --soft-green:#e8f7ee;
+  --soft-orange:#fff3dd;
+  --soft-red:#ffe9e6;
+}
+
+body.dark{
+  --bg:#0f1720;
+  --panel:#17212b;
+  --card:#203044;
+  --text:#eef4ff;
+  --muted:#9fb0c3;
+  --border:#324b63;
+  --blue:#6eb6ff;
+  --blue2:#4da3ff;
+  --soft-blue:#19334d;
+  --soft-green:#173626;
+  --soft-orange:#3b2d12;
+  --soft-red:#43211f;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,sans-serif;
+}
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  padding:10px;
+  background:var(--panel);
+  border-bottom:1px solid var(--border);
+  scrollbar-width:none;
+}
+
+.topbar::-webkit-scrollbar{
+  display:none;
+}
+
+.topbar a,
+.topbar button{
+  border:0;
+  border-radius:8px;
+  background:var(--blue);
+  color:white;
+  cursor:pointer;
+  font:inherit;
+  font-weight:700;
+  padding:8px 12px;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.topbar .presentation-button{
+  background:#083b76;
+}
+
+.topbar .print-button{
+  background:#334155;
+}
+
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible{
+  outline:3px solid var(--blue2);
+  outline-offset:3px;
+}
+
+.presentation-controls{
+  position:sticky;
+  top:52px;
+  z-index:90;
+  display:none;
+  gap:12px;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 14px;
+  border-bottom:1px solid var(--border);
+  background:var(--panel);
+  box-shadow:0 4px 14px rgba(15,23,42,.08);
+}
+
+.presentation-nav,
+.timer-controls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+}
+
+.presentation-controls button{
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:var(--blue);
+  color:white;
+  cursor:pointer;
+  font:inherit;
+  font-weight:800;
+  padding:8px 11px;
+}
+
+.presentation-progress,
+.briefing-timer{
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:var(--card);
+  color:var(--text);
+  font-weight:800;
+  padding:8px 12px;
+  white-space:nowrap;
+}
+
+.briefing-timer.warn{
+  border-color:#f59e0b;
+  background:var(--soft-orange);
+  color:#92400e;
+}
+
+.briefing-timer.over{
+  border-color:var(--red);
+  background:var(--soft-red);
+  color:var(--red);
+}
+
+.container{
+  max-width:1180px;
+  margin:20px auto;
+  padding:20px;
+  background:var(--panel);
+  border-radius:18px;
+  box-shadow:0 4px 20px rgba(15,23,42,.08);
+}
+
+.page-title{
+  margin:0;
+  color:var(--blue);
+  font-size:2.15rem;
+  letter-spacing:0;
+}
+
+.generated{
+  margin-top:8px;
+  color:var(--muted);
+  font-size:.98rem;
+  line-height:1.45;
+}
+
+.day-selector{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px;
+}
+
+.day-selector a{
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:var(--soft-blue);
+  color:var(--blue);
+  font-weight:800;
+  padding:10px 14px;
+  text-decoration:none;
+}
+
+.day-selector a.active{
+  background:var(--blue);
+  color:white;
+}
+
+.hero{
+  margin-top:18px;
+  border-radius:18px;
+  color:white;
+  padding:22px;
+}
+
+.hero.good{background:var(--green)}
+.hero.medium{background:var(--orange)}
+.hero.bad{background:var(--red)}
+.status-go{border-color:rgba(23,128,60,.24)}
+.status-conditional{border-color:rgba(216,137,0,.3)}
+.status-marginal{border-color:rgba(216,137,0,.3)}
+.status-nogo{border-color:rgba(180,35,24,.28)}
+.risk-low{border-left-color:var(--green)}
+.risk-medium{border-left-color:var(--orange)}
+.risk-high{border-left-color:var(--red)}
+.confidence-low{border-left-color:var(--red)}
+.confidence-medium{border-left-color:var(--orange)}
+.confidence-high{border-left-color:var(--green)}
+
+.hero-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);
+  gap:18px;
+  align-items:stretch;
+}
+
+.hero h2{
+  margin:0;
+  font-size:2.35rem;
+  letter-spacing:0;
+}
+
+.hero-subtitle{
+  margin-top:10px;
+  max-width:760px;
+  font-size:1.08rem;
+  line-height:1.6;
+}
+
+.hero-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px;
+}
+
+.hero-pill{
+  border:1px solid rgba(255,255,255,.3);
+  border-radius:999px;
+  background:rgba(255,255,255,.17);
+  font-weight:800;
+  padding:8px 12px;
+}
+
+.hero-kpi-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+
+.hero-kpi{
+  border:1px solid rgba(255,255,255,.24);
+  border-radius:12px;
+  background:rgba(255,255,255,.15);
+  min-height:78px;
+  padding:12px;
+}
+
+.hero-kpi .label{
+  font-size:.82rem;
+  opacity:.86;
+}
+
+.hero-kpi .value{
+  margin-top:6px;
+  font-size:1.3rem;
+  font-weight:800;
+  line-height:1.2;
+}
+
+.briefing-shell{
+  display:grid;
+  gap:18px;
+}
+
+.briefing-section{
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:var(--panel);
+  padding:18px;
+}
+
+.briefing-slide{
+  scroll-margin-top:86px;
+}
+
+.section-heading{
+  margin:0 0 12px 0;
+  color:var(--text);
+  font-size:1.35rem;
+  letter-spacing:0;
+}
+
+.section-kicker{
+  margin:0 0 12px 0;
+  color:var(--muted);
+  font-size:.95rem;
+  line-height:1.5;
+}
+
+.synopsis-card{
+  border-left:6px solid var(--blue);
+  border-radius:14px;
+  background:var(--soft-blue);
+  padding:16px 18px;
+  line-height:1.6;
+}
+
+.synopsis-line{
+  margin:0 0 8px 0;
+}
+
+.synopsis-line:last-child{
+  margin-bottom:0;
+}
+
+.ops-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+}
+
+.ops-item{
+  min-height:86px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:var(--card);
+  padding:12px;
+}
+
+.ops-item.wide{
+  grid-column:span 2;
+}
+
+.ops-item .label{
+  color:var(--muted);
+  font-size:.86rem;
+}
+
+.ops-item .value{
+  margin-top:8px;
+  color:var(--blue);
+  font-size:1.08rem;
+  font-weight:800;
+  line-height:1.25;
+}
+
+.warning-box{
+  border:1px solid #ffd08a;
+  border-radius:12px;
+  background:var(--soft-orange);
+  padding:12px;
+  line-height:1.5;
+}
+
+.timeline-track{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:10px;
+}
+
+.timeline-step{
+  position:relative;
+  min-height:136px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:var(--card);
+  padding:14px;
+}
+
+.timeline-step::before{
+  content:"";
+  position:absolute;
+  top:16px;
+  left:14px;
+  right:14px;
+  height:5px;
+  border-radius:999px;
+  background:var(--blue2);
+}
+
+.timeline-step.good::before{background:var(--green)}
+.timeline-step.usable::before{background:var(--orange)}
+.timeline-step.poor::before{background:var(--red)}
+
+.timeline-step .time{
+  margin-top:16px;
+  color:var(--muted);
+  font-size:.85rem;
+  font-weight:800;
+}
+
+.timeline-step .title{
+  margin-top:8px;
+  color:var(--text);
+  font-size:1.05rem;
+  font-weight:800;
+}
+
+.timeline-step .text{
+  margin-top:8px;
+  color:var(--text);
+  font-size:.94rem;
+  line-height:1.45;
+}
+
+.route-layout{
+  display:grid;
+  grid-template-columns:minmax(300px,.95fr) minmax(0,1.05fr);
+  gap:16px;
+  align-items:start;
+}
+
+.route-map{
+  min-height:360px;
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:
+    linear-gradient(90deg,rgba(0,80,164,.08) 1px,transparent 1px),
+    linear-gradient(0deg,rgba(0,80,164,.08) 1px,transparent 1px),
+    var(--card);
+  background-size:42px 42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
+
+.route-compass{
+  position:relative;
+  width:min(100%,380px);
+  aspect-ratio:1;
+  border:2px solid var(--border);
+  border-radius:50%;
+  background:rgba(255,255,255,.66);
+}
+
+body.dark .route-compass{
+  background:rgba(15,23,32,.58);
+}
+
+.route-center{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  background:var(--blue);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-weight:800;
+  line-height:1.15;
+}
+
+.route-bearing{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:43%;
+  height:4px;
+  transform-origin:left center;
+  border-radius:999px;
+  background:var(--orange);
+}
+
+.route-bearing.best{
+  height:7px;
+  background:var(--green);
+}
+
+.route-bearing::after{
+  content:"";
+  position:absolute;
+  right:-2px;
+  top:50%;
+  transform:translateY(-50%);
+  border-left:13px solid currentColor;
+  border-top:8px solid transparent;
+  border-bottom:8px solid transparent;
+  color:inherit;
+}
+
+.route-label{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:rotate(var(--rotation)) translateX(53%) rotate(calc(-1 * var(--rotation)));
+  transform-origin:left center;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:var(--panel);
+  color:var(--text);
+  font-size:.82rem;
+  font-weight:800;
+  padding:6px 9px;
+  white-space:nowrap;
+}
+
+.route-cards{
+  display:grid;
+  gap:10px;
+}
+
+.route-card{
+  border:1px solid var(--border);
+  border-left:7px solid var(--orange);
+  border-radius:12px;
+  background:var(--card);
+  padding:12px;
+}
+
+.route-card.best{
+  border-left-color:var(--green);
+}
+
+.route-card .title{
+  font-weight:800;
+}
+
+.route-card .meta{
+  margin-top:6px;
+  color:var(--muted);
+  line-height:1.45;
+}
+
+.briefing{
+  border-left:6px solid var(--blue2);
+  border-radius:12px;
+  background:var(--card);
+  padding:16px;
+  line-height:1.65;
+}
+
+.outlook-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+
+.outlook-card{
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:var(--card);
+  padding:14px;
+}
+
+.outlook-card .day{
+  color:var(--text);
+  font-weight:800;
+  font-size:1.05rem;
+}
+
+.outlook-card .status{
+  margin-top:6px;
+  color:var(--blue);
+  font-weight:800;
+}
+
+.outlook-card .summary{
+  margin-top:8px;
+  color:var(--muted);
+  line-height:1.45;
+}
+
+.reality-grid,
+.checklist-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;
+}
+
+.reality-card,
+.check-item{
+  border:1px solid var(--border);
+  border-left:7px solid var(--blue2);
+  border-radius:12px;
+  background:var(--card);
+  padding:13px;
+  min-height:104px;
+}
+
+.reality-card .label,
+.check-item .label{
+  color:var(--muted);
+  font-size:.86rem;
+  font-weight:800;
+}
+
+.reality-card .value,
+.check-item .value{
+  margin-top:8px;
+  color:var(--text);
+  font-size:1.05rem;
+  font-weight:800;
+  line-height:1.35;
+}
+
+.check-item .hint{
+  margin-top:7px;
+  color:var(--muted);
+  font-size:.9rem;
+  line-height:1.35;
+}
+
+.presentation-only-note{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:.92rem;
+}
+
+.section{
+  margin-top:0;
+  border:1px solid var(--border);
+  border-radius:16px;
+  overflow:hidden;
+}
+
+.section summary{
+  cursor:pointer;
+  padding:16px;
+  background:var(--card);
+  color:var(--blue);
+  font-size:1.16rem;
+  font-weight:800;
+}
+
+.section-content{
+  padding:16px;
+}
+
+.detail-grid{
+  display:grid;
+  gap:12px;
+}
+
+.nested-detail{
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.nested-detail summary{
+  padding:14px;
+  font-size:1.02rem;
+}
+
+.compact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:10px;
+}
+
+.compact-card{
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:var(--card);
+  padding:12px;
+}
+
+.compact-card .title{
+  color:var(--muted);
+  font-size:.86rem;
+}
+
+.compact-card .value{
+  margin-top:7px;
+  color:var(--blue);
+  font-size:1.08rem;
+  font-weight:800;
+  line-height:1.25;
+}
+
+.source-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:12px;
+}
+
+.source-card{
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:var(--card);
+  padding:12px;
+}
+
+.source-ok{color:var(--green);font-weight:800}
+.source-warn{color:var(--orange);font-weight:800}
+.source-bad{color:var(--red);font-weight:800}
+
+.windrose-wrap{
+  display:flex;
+  justify-content:center;
+  overflow-x:auto;
+}
+
+.windrose-svg{
+  width:300px;
+  max-width:100%;
+  height:auto;
+}
+
+.windrose-label{
+  font-size:13px;
+  font-weight:800;
+  fill:var(--text);
+}
+
+.windrose-score{
+  font-size:12px;
+  fill:white;
+  font-weight:800;
+}
+
+.flight-window-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:12px;
+}
+
+.flight-window-card{
+  border:1px solid var(--border);
+  border-left:7px solid var(--orange);
+  border-radius:12px;
+  background:var(--card);
+  padding:12px;
+}
+
+.flight-window-card.good{border-left-color:var(--green)}
+.flight-window-card.poor{border-left-color:var(--red)}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:12px;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:10px;
+  text-align:left;
+  vertical-align:top;
+}
+
+th{
+  background:var(--card);
+}
+
+.footer{
+  margin-top:26px;
+  color:var(--muted);
+  text-align:center;
+  font-size:.9rem;
+}
+
+body.presentation-mode{
+  background:#07111f;
+}
+
+body.presentation-mode .topbar{
+  gap:8px;
+  background:#07111f;
+  border-bottom-color:#1f3a5f;
+}
+
+body.presentation-mode .topbar a{
+  display:none;
+}
+
+body.presentation-mode .presentation-controls{
+  display:flex;
+}
+
+body.presentation-mode .container{
+  max-width:min(1500px,100vw);
+  min-height:calc(100vh - 110px);
+  margin:0 auto;
+  border-radius:0;
+  box-shadow:none;
+  background:var(--panel);
+}
+
+body.presentation-mode .page-title{
+  font-size:clamp(2rem,3.4vw,4rem);
+}
+
+body.presentation-mode .generated,
+body.presentation-mode .day-selector,
+body.presentation-mode #technical-details{
+  display:none;
+}
+
+body.presentation-mode [data-slide]{
+  display:none;
+}
+
+body.presentation-mode [data-slide].active-slide{
+  display:block;
+}
+
+body.presentation-mode .briefing-shell{
+  display:block;
+}
+
+body.presentation-mode .briefing-section,
+body.presentation-mode #decision{
+  min-height:calc(100vh - 250px);
+  border-radius:20px;
+  padding:clamp(20px,3vw,42px);
+}
+
+body.presentation-mode .hero{
+  margin-top:0;
+  padding:clamp(26px,4vw,58px);
+}
+
+body.presentation-mode .hero h2{
+  font-size:clamp(3rem,7vw,7rem);
+}
+
+body.presentation-mode .hero-subtitle{
+  font-size:clamp(1.25rem,2vw,2rem);
+}
+
+body.presentation-mode .hero-kpi .value,
+body.presentation-mode .ops-item .value,
+body.presentation-mode .compact-card .value{
+  font-size:clamp(1.25rem,2.1vw,2rem);
+}
+
+body.presentation-mode .section-heading{
+  font-size:clamp(2rem,3vw,3.4rem);
+}
+
+body.presentation-mode .synopsis-card,
+body.presentation-mode .briefing,
+body.presentation-mode .timeline-step .text,
+body.presentation-mode .outlook-card .summary{
+  font-size:clamp(1.08rem,1.4vw,1.55rem);
+}
+
+body.presentation-mode .timeline-track{
+  grid-template-columns:repeat(5,minmax(150px,1fr));
+}
+
+body.presentation-mode .route-map{
+  min-height:460px;
+}
+
+@media print{
+  body{
+    background:white;
+    color:#111827;
+  }
+
+  .topbar,
+  .presentation-controls,
+  .day-selector,
+  button,
+  #technical-details{
+    display:none !important;
+  }
+
+  .container{
+    max-width:none;
+    margin:0;
+    padding:0;
+    border-radius:0;
+    box-shadow:none;
+    background:white;
+  }
+
+  [data-slide]{
+    display:block !important;
+    break-inside:avoid;
+    page-break-inside:avoid;
+    margin-bottom:12px;
+  }
+
+  .hero,
+  .briefing-section{
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    background:white !important;
+    color:#111827 !important;
+    padding:14px;
+  }
+
+  .hero-pill,
+  .hero-kpi{
+    border-color:#d1d5db;
+    background:#f9fafb;
+    color:#111827;
+  }
+
+  .route-map{
+    min-height:220px;
+  }
+
+  .timeline-track,
+  .outlook-grid,
+  .ops-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  a{
+    color:#111827;
+    text-decoration:none;
+  }
+}
+
+@media(max-width:768px){
+  .presentation-controls{
+    position:static;
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .presentation-nav,
+  .timer-controls{
+    justify-content:space-between;
+  }
+
+  .container{
+    margin:0;
+    border-radius:0;
+    padding:16px;
+  }
+
+  .page-title{
+    font-size:1.75rem;
+  }
+
+  .hero h2{
+    font-size:1.65rem;
+  }
+
+  .hero-layout,
+  .route-layout{
+    grid-template-columns:1fr;
+  }
+
+  .timeline-track,
+  .outlook-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-kpi-grid,
+  .ops-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .ops-item.wide{
+    grid-column:span 2;
+  }
+
+  .route-map{
+    min-height:280px;
+  }
+
+  table{
+    font-size:.82rem;
+    display:block;
+    overflow-x:auto;
+  }
+
+  body.presentation-mode .briefing-section,
+  body.presentation-mode #decision{
+    min-height:auto;
+  }
+
+  body.presentation-mode .timeline-track{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(min-width:769px) and (max-width:1040px){
+  .hero-layout,
+  .route-layout{
+    grid-template-columns:1fr;
+  }
+
+  .ops-grid,
+  .timeline-track{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+</style>
+</head>
+
+<body>
+
+<script>
+const role = localStorage.getItem("gozc_role");
+
+if(!role){
+  window.location.href = "login.html";
+}
+
+const loginTime = parseInt(localStorage.getItem("gozc_login_time") || "0");
+const maxAgeHours = 12;
+const ageMs = Date.now() - loginTime;
+
+if(ageMs > maxAgeHours * 60 * 60 * 1000){
+  localStorage.removeItem("gozc_role");
+  localStorage.removeItem("gozc_login_time");
+  window.location.href = "login.html";
+}
+</script>
+
+<nav class="topbar">
+  <a href="#top">Top</a>
+  <a href="#decision">Beslissing</a>
+  <a href="#synopsis">Synopsis</a>
+  <a href="#operational-summary">Summary</a>
+  <a href="#timeline">Timeline</a>
+  <a href="#route">Routeadvies</a>
+  <a href="#outlook">3 dagen</a>
+  <a href="#reality">Reality</a>
+  <a href="#checklist">Checklist</a>
+  <a href="#technical-details">Details</a>
+  <button class="presentation-button" id="presentation-toggle" onclick="togglePresentationMode()" aria-label="Presentatiemodus inschakelen">Presentatiemodus</button>
+  <button class="print-button" onclick="printBriefing()" aria-label="Briefing printen of als PDF opslaan">Print briefing</button>
+  <button onclick="toggleDarkMode()">Donker/licht</button>
+</nav>
+
+<div class="presentation-controls" id="presentation-controls" aria-label="Presentatiebediening">
+  <div class="presentation-nav">
+    <button onclick="previousSlide()" aria-label="Vorige slide">Vorige</button>
+    <span class="presentation-progress" id="slide-progress">Slide 1 / 8</span>
+    <button onclick="nextSlide()" aria-label="Volgende slide">Volgende</button>
+    <button onclick="setPresentationMode(false)" aria-label="Normale weergave herstellen">Normale weergave</button>
+  </div>
+  <div class="timer-controls">
+    <span class="briefing-timer" id="briefing-timer">00:00 / 10:00</span>
+    <button onclick="startBriefingTimer()" aria-label="Briefingtimer starten">Start timer</button>
+    <button onclick="resetBriefingTimer()" aria-label="Briefingtimer resetten">Reset</button>
+  </div>
+</div>
+
+<div class="container" id="top">
+  <h1 class="page-title">GoZC operationele zweefvliegbriefing</h1>
+  <div class="generated" id="version">Release laden...</div>
+  <div class="generated" id="generated">Briefing update: laden...</div>
+
+  <div class="day-selector" id="day-selector"></div>
+  <section class="briefing-slide" id="decision" data-slide="decision" aria-label="Beslissing">
+    <div id="hero"></div>
+  </section>
+
+  <main class="briefing-shell">
+    <section class="briefing-section briefing-slide" id="synopsis" data-slide="synopsis">
+      <h2 class="section-heading">Synopsis</h2>
+      <div class="synopsis-card" id="daily-interpretation"></div>
+    </section>
+
+    <section class="briefing-section briefing-slide" id="operational-summary" data-slide="parameters">
+      <h2 class="section-heading">Operational Summary</h2>
+      <p class="section-kicker">Een cockpitkaart voor startbeslissing, taakkeuze en grootste aandachtspunt.</p>
+      <div class="ops-grid" id="operational-panel"></div>
+      <div id="warnings" style="margin-top:14px;"></div>
+    </section>
+
+    <section class="briefing-section briefing-slide" id="timeline" data-slide="timeline">
+      <h2 class="section-heading">Timeline</h2>
+      <p class="section-kicker">Dagverloop van thermiekopbouw tot afbouw, inclusief risico's.</p>
+      <div class="timeline-track" id="timeline-grid"></div>
+    </section>
+
+    <section class="briefing-section briefing-slide" id="route" data-slide="route">
+      <h2 class="section-heading">Routeadvies vanaf EHHV</h2>
+      <div class="route-layout">
+        <div class="route-map" id="route-map"></div>
+        <div>
+          <div class="briefing" id="task-conclusion"></div>
+          <div class="route-cards" id="task-sectors" style="margin-top:12px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="briefing-section briefing-slide" id="outlook" data-slide="outlook">
+      <h2 class="section-heading">3-daagse outlook</h2>
+      <div class="outlook-grid" id="outlook-cards"></div>
+    </section>
+
+    <section class="briefing-section briefing-slide" id="reality" data-slide="reality">
+      <h2 class="section-heading">Reality & Learning</h2>
+      <p class="section-kicker">Compacte reality-check: wat weten we uit recente WeGlide/verification output?</p>
+      <div class="reality-grid" id="reality-learning-grid"></div>
+      <div class="presentation-only-note" id="reality-learning-note"></div>
+    </section>
+
+    <section class="briefing-section briefing-slide" id="checklist" data-slide="checklist">
+      <h2 class="section-heading">Go/No-Go checklist</h2>
+      <p class="section-kicker">Laatste cockpitcontrole voor briefinggever, instructeur en vlieger. Deze checklist wijzigt de forecaststatus niet.</p>
+      <div class="checklist-grid" id="go-nogo-checklist"></div>
+    </section>
+
+    <details class="section" id="technical-details">
+      <summary>Details</summary>
+      <div class="section-content detail-grid">
+        <details class="nested-detail" id="forecast-explanation">
+          <summary>Waarom deze briefing?</summary>
+          <div class="section-content">
+            <div class="briefing" id="forecast-explanation-text"></div>
+            <div class="compact-grid" id="forecast-explanation-cards" style="margin-top:14px;"></div>
+            <div id="forecast-explanation-lists" style="margin-top:14px;"></div>
+            <div id="forecast-explanation-details" style="margin-top:14px;"></div>
+          </div>
+        </details>
+
+        <details class="nested-detail" id="confidence">
+          <summary>Confidence en betrouwbaarheid</summary>
+          <div class="section-content">
+            <div class="compact-grid" id="confidence-cards"></div>
+            <div id="confidence-v2-public" class="briefing" style="margin-top:14px;"></div>
+            <div id="public-reliability-cards" class="compact-grid" style="margin-top:14px;"></div>
+            <div id="public-reliability-text" class="briefing" style="margin-top:14px;"></div>
+            <div id="public-reliability-details" style="margin-top:14px;"></div>
+          </div>
+        </details>
+
+        <details class="nested-detail" id="knmi-detail">
+          <summary>KNMI</summary>
+          <div class="section-content" id="knmi-panel"></div>
+        </details>
+
+        <details class="nested-detail" id="blipmaps-detail">
+          <summary>BLIPMAPS</summary>
+          <div class="section-content" id="blipmaps-panel"></div>
+        </details>
+
+        <details class="nested-detail" id="meteograms-detail">
+          <summary>Meteogrammen en soundings</summary>
+          <div class="section-content" id="meteograms-panel"></div>
+        </details>
+
+        <details class="nested-detail" id="windows">
+          <summary>Flight windows</summary>
+          <div class="section-content">
+            <div class="compact-grid" id="window-summary"></div>
+            <div class="flight-window-grid" id="flight-windows" style="margin-top:12px;"></div>
+          </div>
+        </details>
+
+        <details class="nested-detail" id="task">
+          <summary>Taakafstanden</summary>
+          <div class="section-content">
+            <div class="compact-grid" id="task-summary"></div>
+          </div>
+        </details>
+
+        <details class="nested-detail" id="xcintel">
+          <summary>XC Intelligence</summary>
+          <div class="section-content">
+            <div class="compact-grid" id="xc-intel-cards"></div>
+            <div id="xc-intel-detail" style="margin-top:14px;"></div>
+          </div>
+        </details>
+
+        <details class="nested-detail" id="wind">
+          <summary>Windroos</summary>
+          <div class="section-content">
+            <div class="windrose-wrap" id="windrose"></div>
+          </div>
+        </details>
+
+        <details class="nested-detail" id="consensus">
+          <summary>Modelvergelijking</summary>
+          <div class="section-content">
+            <div class="compact-grid" id="consensus-cards"></div>
+            <div id="consensus-detail" style="margin-top:14px;"></div>
+          </div>
+        </details>
+
+        <details class="nested-detail" id="uncertainty">
+          <summary>Onzekerheid</summary>
+          <div class="section-content">
+            <div class="compact-grid" id="uncertainty-cards"></div>
+            <div id="uncertainty-detail" style="margin-top:14px;"></div>
+          </div>
+        </details>
+
+        <details class="nested-detail" id="verification">
+          <summary>Verificatie</summary>
+          <div class="section-content">
+            <div class="compact-grid" id="verification-cards"></div>
+            <div id="verification-detail" style="margin-top:14px;"></div>
+          </div>
+        </details>
+
+        <details class="nested-detail" id="briefing">
+          <summary>Bronbriefing</summary>
+          <div class="section-content">
+            <div class="briefing" id="briefing-text"></div>
+          </div>
+        </details>
+
+        <details class="nested-detail" id="sources">
+          <summary>Brondata</summary>
+          <div class="section-content">
+            <div class="compact-grid" id="deep-dive"></div>
+            <div class="source-grid" id="sources-grid" style="margin-top:14px;"></div>
+          </div>
+        </details>
+      </div>
+    </details>
+  </main>
+
+  <div class="footer">
+    Release 10.5 - Phase 1 Consolidation & Operational Release<br>
+  </div>
+</div>
+
+<script>
+function toggleDarkMode(){
+  document.body.classList.toggle("dark");
+  if(document.body.classList.contains("dark")){
+    localStorage.setItem("gozc_dark","1");
+  }else{
+    localStorage.removeItem("gozc_dark");
+  }
+}
+
+if(localStorage.getItem("gozc_dark")){
+  document.body.classList.add("dark");
+}
+
+const PRESENTATION_STORAGE_KEY = "gliding_meteo_presentation_mode";
+let currentSlideIndex = 0;
+let briefingTimerInterval = null;
+let briefingTimerStartedAt = null;
+const BRIEFING_TIMER_LIMIT_SECONDS = 10 * 60;
+
+function getSlides(){
+  return Array.from(document.querySelectorAll("[data-slide]"));
+}
+
+function updatePresentationToggle(){
+  const button = document.getElementById("presentation-toggle");
+  if(!button) return;
+  const enabled = document.body.classList.contains("presentation-mode");
+  button.textContent = enabled ? "Normale weergave" : "Presentatiemodus";
+  button.setAttribute("aria-label", enabled ? "Normale weergave herstellen" : "Presentatiemodus inschakelen");
+}
+
+function updateSlideView(){
+  const slides = getSlides();
+  if(!slides.length) return;
+  currentSlideIndex = Math.max(0, Math.min(currentSlideIndex, slides.length - 1));
+  slides.forEach((slide, index) => {
+    slide.classList.toggle("active-slide", index === currentSlideIndex);
+  });
+  const progress = document.getElementById("slide-progress");
+  if(progress){
+    progress.textContent = `Slide ${currentSlideIndex + 1} / ${slides.length}`;
+  }
+}
+
+function closeDetailsForPresentation(){
+  document.querySelectorAll("details").forEach(detail => {
+    detail.open = false;
+  });
+}
+
+function setPresentationMode(enabled, requestFullscreen=false){
+  document.body.classList.toggle("presentation-mode", enabled);
+  localStorage.setItem(PRESENTATION_STORAGE_KEY, enabled ? "true" : "false");
+  if(enabled){
+    closeDetailsForPresentation();
+    updateSlideView();
+    if(requestFullscreen && document.documentElement.requestFullscreen){
+      document.documentElement.requestFullscreen().catch(() => {});
+    }
+  }else{
+    getSlides().forEach(slide => slide.classList.remove("active-slide"));
+    if(document.fullscreenElement && document.exitFullscreen){
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+  updatePresentationToggle();
+}
+
+function togglePresentationMode(){
+  const enabled = !document.body.classList.contains("presentation-mode");
+  setPresentationMode(enabled, enabled);
+}
+
+function nextSlide(){
+  if(!document.body.classList.contains("presentation-mode")) return;
+  const slides = getSlides();
+  currentSlideIndex = Math.min(currentSlideIndex + 1, Math.max(slides.length - 1, 0));
+  updateSlideView();
+}
+
+function previousSlide(){
+  if(!document.body.classList.contains("presentation-mode")) return;
+  currentSlideIndex = Math.max(currentSlideIndex - 1, 0);
+  updateSlideView();
+}
+
+function firstSlide(){
+  currentSlideIndex = 0;
+  updateSlideView();
+}
+
+function lastSlide(){
+  const slides = getSlides();
+  currentSlideIndex = Math.max(slides.length - 1, 0);
+  updateSlideView();
+}
+
+function formatTimer(seconds){
+  const safeSeconds = Math.max(0, Math.floor(seconds));
+  const minutes = String(Math.floor(safeSeconds / 60)).padStart(2, "0");
+  const remainder = String(safeSeconds % 60).padStart(2, "0");
+  return `${minutes}:${remainder}`;
+}
+
+function updateBriefingTimer(){
+  const timer = document.getElementById("briefing-timer");
+  if(!timer) return;
+  const elapsed = briefingTimerStartedAt ? Math.floor((Date.now() - briefingTimerStartedAt) / 1000) : 0;
+  timer.textContent = `${formatTimer(elapsed)} / 10:00`;
+  timer.classList.toggle("warn", elapsed >= 8 * 60 && elapsed < BRIEFING_TIMER_LIMIT_SECONDS);
+  timer.classList.toggle("over", elapsed >= BRIEFING_TIMER_LIMIT_SECONDS);
+}
+
+function startBriefingTimer(){
+  if(!briefingTimerStartedAt){
+    briefingTimerStartedAt = Date.now();
+  }
+  clearInterval(briefingTimerInterval);
+  briefingTimerInterval = setInterval(updateBriefingTimer, 1000);
+  updateBriefingTimer();
+}
+
+function resetBriefingTimer(){
+  clearInterval(briefingTimerInterval);
+  briefingTimerInterval = null;
+  briefingTimerStartedAt = null;
+  updateBriefingTimer();
+}
+
+function printBriefing(){
+  window.print();
+}
+
+document.addEventListener("keydown", event => {
+  if(!document.body.classList.contains("presentation-mode")) return;
+  if(event.key === "ArrowRight" || event.key === " " || event.key === "PageDown"){
+    event.preventDefault();
+    nextSlide();
+  }else if(event.key === "ArrowLeft" || event.key === "PageUp"){
+    event.preventDefault();
+    previousSlide();
+  }else if(event.key === "Home"){
+    event.preventDefault();
+    firstSlide();
+  }else if(event.key === "End"){
+    event.preventDefault();
+    lastSlide();
+  }else if(event.key === "Escape"){
+    setPresentationMode(false);
+  }
+});
+
+document.addEventListener("fullscreenchange", () => {
+  if(!document.fullscreenElement && document.body.classList.contains("presentation-mode")){
+    setPresentationMode(false);
+  }
+});
+
+function getSelectedDay(){
+  const params = new URLSearchParams(window.location.search);
+  const day = params.get("day") || "d1";
+  return ["d0","d1","d2"].includes(day) ? day : "d1";
+}
+
+function dayLabel(day){
+  if(day === "d0") return "Vandaag";
+  if(day === "d1") return "Morgen";
+  if(day === "d2") return "Overmorgen";
+  return "Morgen";
+}
+
+function dataPath(day, filename){
+  return `data/${day}/${filename}`;
+}
+
+function renderDaySelector(selectedDay){
+  document.getElementById("day-selector").innerHTML =
+    ["d0","d1","d2"].map(day => `
+      <a href="app.html?day=${day}" class="${day === selectedDay ? "active" : ""}">
+        ${dayLabel(day)}
+      </a>
+    `).join("");
+}
+
+function sitePath(path){
+  let normalizedPath = String(path || "").trim().replaceAll("\\", "/");
+
+  if(/^https?:\/\//i.test(normalizedPath) || normalizedPath.startsWith("#")){
+    return normalizedPath;
+  }
+
+  if(normalizedPath.startsWith("site/")){
+    normalizedPath = normalizedPath.slice(5);
+  }
+
+  while(normalizedPath.startsWith("./")){
+    normalizedPath = normalizedPath.slice(2);
+  }
+
+  while(normalizedPath.startsWith("/")){
+    normalizedPath = normalizedPath.slice(1);
+  }
+
+  return normalizedPath;
+}
+
+function cacheBustUrl(path){
+  const url = sitePath(path);
+  const separator = url.includes("?") ? "&" : "?";
+  return `${url}${separator}v=${Date.now()}`;
+}
+
+async function loadJson(url){
+  const r = await fetch(cacheBustUrl(url));
+  return await r.json();
+}
+
+async function loadOptionalJson(url){
+  try{
+    const r = await fetch(cacheBustUrl(url));
+    if(!r.ok) return null;
+    return await r.json();
+  }catch(e){
+    console.warn("Optional JSON unavailable:", url, e);
+    return null;
+  }
+}
+
+function valueOrDash(value){
+  return value === null || value === undefined || value === "" ? "-" : value;
+}
+
+function asNumber(value){
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+}
+
+function roundValue(value, decimals=0){
+  const number = asNumber(value);
+  return number === null ? null : Number(number.toFixed(decimals));
+}
+
+function formatDateLong(value){
+  if(!value) return "onbekend";
+  const d = new Date(value);
+  if(isNaN(d.getTime())) return value;
+  return d.toLocaleDateString("nl-NL", {
+    weekday:"long",
+    day:"numeric",
+    month:"long",
+    year:"numeric"
+  });
+}
+
+function formatDateTime(value){
+  if(!value) return "onbekend";
+  const d = new Date(value);
+  if(isNaN(d.getTime())) return value;
+  return d.toLocaleString("nl-NL", {
+    weekday:"long",
+    day:"numeric",
+    month:"long",
+    year:"numeric",
+    hour:"2-digit",
+    minute:"2-digit"
+  });
+}
+
+function forecastAgeText(value){
+  if(!value) return "";
+  const d = new Date(value);
+  if(isNaN(d.getTime())) return "";
+  const diffMin = Math.round((Date.now() - d.getTime()) / 60000);
+  if(diffMin < 1) return "zojuist gemaakt";
+  if(diffMin < 60) return `${diffMin} minuten geleden`;
+  const diffHours = Math.round(diffMin / 60);
+  if(diffHours < 24) return `${diffHours} uur geleden`;
+  return `${Math.round(diffHours / 24)} dagen geleden`;
+}
+
+function normalizeStatus(value){
+  const s = String(value || "").trim().toLowerCase();
+  if(s === "go") return "Go";
+  if(s.includes("conditional")) return "Conditional Go";
+  if(s.includes("marginal") || s.includes("local")) return "Marginal";
+  if(s.includes("no go") || s.includes("nogo")) return "No Go";
+  return value || "Onbekend";
+}
+
+function statusClass(status){
+  const s = String(status || "").toLowerCase();
+  if(s.includes("go") && !s.includes("conditional") && !s.includes("no")) return "good";
+  if(s.includes("no go") || s.includes("nogo")) return "bad";
+  return "medium";
+}
+
+function statusSemanticClass(status){
+  const s = String(status || "").toLowerCase();
+  if(s.includes("no go") || s.includes("nogo")) return "status-nogo";
+  if(s.includes("conditional")) return "status-conditional";
+  if(s.includes("marginal")) return "status-marginal";
+  if(s.includes("go")) return "status-go";
+  return "";
+}
+
+function riskLevelClass(value){
+  const s = String(value || "").toLowerCase();
+  if(s.includes("geen dominant") || s.includes("laag") || s.includes("low")) return "risk-low";
+  if(s.includes("neerslag") || s.includes("od") || s.includes("cb") || s.includes("onweer") || s.includes("hoog") || s.includes("high")) return "risk-high";
+  return "risk-medium";
+}
+
+function confidenceClass(value){
+  const number = asNumber(value);
+  if(number !== null){
+    if(number >= 75) return "confidence-high";
+    if(number >= 50) return "confidence-medium";
+    return "confidence-low";
+  }
+  return "confidence-medium";
+}
+
+function formatScore(value){
+  const number = asNumber(value);
+  if(number === null) return "-";
+  if(number <= 10) return `${roundValue(number,1)}/10`;
+  return `${roundValue(number,0)}%`;
+}
+
+function formatPct(value){
+  const number = asNumber(value);
+  return number === null ? "-" : `${roundValue(number,0)}%`;
+}
+
+function formatKm(value){
+  const number = asNumber(value);
+  return number === null ? "-" : `${roundValue(number,0)} km`;
+}
+
+function formatM(value){
+  const number = asNumber(value);
+  return number === null ? "-" : `${roundValue(number,0)} m`;
+}
+
+function formatMs(value){
+  const number = asNumber(value);
+  return number === null ? "-" : `${roundValue(number,1)} m/s`;
+}
+
+function formatKmh(value){
+  const number = asNumber(value);
+  return number === null ? "-" : `${roundValue(number,0)} km/u`;
+}
+
+function compactCard(title,value){
+  return `
+    <div class="compact-card">
+      <div class="title">${title}</div>
+      <div class="value">${valueOrDash(value)}</div>
+    </div>
+  `;
+}
+
+function opsItem(title, value, extraClass=""){
+  return `
+    <div class="ops-item ${extraClass}">
+      <div class="label">${title}</div>
+      <div class="value">${valueOrDash(value)}</div>
+    </div>
+  `;
+}
+
+function badgeClass(value){
+  if(typeof value === "number"){
+    if(value >= 75) return "source-ok";
+    if(value >= 50) return "source-warn";
+    return "source-bad";
+  }
+  const s = String(value || "").toLowerCase();
+  if(s.includes("good") || s.includes("hoog") || s.includes("ok")) return "source-ok";
+  if(s.includes("moderate") || s.includes("matig") || s.includes("degraded")) return "source-warn";
+  return "source-bad";
+}
+
+function escapeHtml(value){
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    "\"":"&quot;",
+    "'":"&#39;"
+  }[char]));
+}
+
+function supplementalRecords(supplemental, providerText){
+  const needle = String(providerText || "").toLowerCase();
+  const records = Array.isArray(supplemental?.sources) ? supplemental.sources : [];
+  return records.filter(record => String(record.provider || "").toLowerCase().includes(needle));
+}
+
+function supplementalSourceLink(record){
+  const label = record.location || record.valid_time || record.source_id || record.provider || "bron";
+  return record.url
+    ? `<a href="${escapeHtml(record.url)}" target="_blank" rel="noopener">${escapeHtml(label)}</a>`
+    : escapeHtml(label);
+}
+
+function supplementalStatusRows(records, limit=8){
+  if(!records.length) return "";
+  const rows = records.slice(0, limit).map(record => `
+    <tr>
+      <td>${supplementalSourceLink(record)}</td>
+      <td><span class="${badgeClass(record.health)}">${escapeHtml(record.health || record.status || "-")}</span></td>
+      <td>${record.response_ms ? `${record.response_ms} ms` : "-"}</td>
+    </tr>
+  `).join("");
+  const extra = records.length > limit
+    ? `<p style="margin-top:8px;">+${records.length - limit} extra bronnen in supplemental_sources.json</p>`
+    : "";
+  return `
+    <table>
+      <tr><th>Bron</th><th>Health</th><th>Response</th></tr>
+      ${rows}
+    </table>
+    ${extra}
+  `;
+}
+
+function supplementalProviderCards(supplemental){
+  const providers = supplemental?.summary?.providers || {};
+  return Object.entries(providers).map(([provider, stats]) => {
+    const total = stats.total || 0;
+    const available = stats.available || 0;
+    const health = total && available === total ? "GOOD" : available ? "DEGRADED" : "FAILED";
+    return `
+      <div class="source-card">
+        <h4>${escapeHtml(provider)}</h4>
+        <div class="${badgeClass(health)}">${available}/${total} beschikbaar</div>
+        <div style="margin-top:6px;font-size:.9rem;">Shadow mode, geen invloed op forecast.</div>
+      </div>
+    `;
+  }).join("");
+}
+
+function directionArrow(deg){
+  const dirs = ["N","NO","O","ZO","Z","ZW","W","NW"];
+  const idx = Math.round(Number(deg || 0) / 45) % 8;
+  return dirs[idx];
+}
+
+function windDescription(analysis){
+  const speed = analysis.surface?.wind_speed_max_kmh ?? analysis.wind_profile?.max_kmh;
+  const dir = analysis.surface?.wind_direction_text || analysis.wind_profile?.dominant_direction_text || "-";
+  return `${dir} ${formatKmh(speed)}`;
+}
+
+function riskSummary(analysis, consensus){
+  const precip = asNumber(analysis.surface?.precip_chance_pct);
+  const od = asNumber(analysis.clouds?.od_risk_pct);
+  const cloudbase = asNumber(analysis.clouds?.base_agl_m);
+  const agreement = asNumber(consensus.consensus?.overall_agreement_pct);
+  const risks = [];
+
+  if(precip !== null && precip >= 40) risks.push(`neerslag ${formatPct(precip)}`);
+  if(od !== null && od >= 40) risks.push(`OD ${formatPct(od)}`);
+  if(cloudbase !== null && cloudbase < 1000) risks.push("lage basis");
+  if(agreement !== null && agreement < 55) risks.push("lage modelovereenkomst");
+  if(!risks.length) risks.push("geen dominant risico");
+  return risks.join(", ");
+}
+
+function taskAdviceText(task){
+  const best = task.best_sector || {};
+  const distance = task.distance_scenarios?.realistic_km;
+  const quality = task.task_quality || task.status || "-";
+  if(best.direction){
+    return `${best.direction}, ${formatKm(distance)} realistisch (${quality})`;
+  }
+  return `${formatKm(distance)} realistisch (${quality})`;
+}
+
+function generateSynopsis(weather, analysis, task, consensus){
+  const lines = [];
+  const wind = windDescription(analysis);
+  const temp = analysis.surface?.max_temp_c;
+  const dewpoint = analysis.surface?.dewpoint_avg_c;
+  const cloud = analysis.clouds?.coverage_pct;
+  const precip = analysis.surface?.precip_chance_pct;
+  const od = analysis.clouds?.od_risk_pct;
+  const model = weather.primary_model || analysis.forecast?.primary_model || "-";
+  const agreement = asNumber(consensus.consensus?.overall_agreement_pct);
+  const start = analysis.thermal?.start_estimate || task.timing?.launch_window || "-";
+  const best = task.timing?.best_xc_window
+    ? `${task.timing.best_xc_window.from}-${task.timing.best_xc_window.to}`
+    : task.timing?.race_window || "-";
+  const shutdown = analysis.thermal?.end || task.timing?.expected_shutdown || "-";
+
+  lines.push(`Drukbeeld: er staat geen expliciete drukkaart in de JSON; operationeel wordt het patroon geduid via ${model}, wind en vochtvelden.`);
+  lines.push(`Stroming/luchtmassa: ${wind}, max ${roundValue(temp,1) ?? "-"} C en dauwpunt rond ${roundValue(dewpoint,1) ?? "-"} C wijzen op een warme, vochtige convectieve luchtmassa.`);
+  lines.push(`Ontwikkeling: thermiek start rond ${start}, met beste werkvenster ${best} en afbouw rond ${shutdown}.`);
+  lines.push(`Bewolking: gemiddelde bedekking ${formatPct(cloud)}, Cu-potentie ${formatPct(analysis.clouds?.cu_potential_pct)} en straatkans ${formatPct(analysis.clouds?.streets_probability_pct)}.`);
+  lines.push(`Risico's: ${riskSummary(analysis, consensus)}; neerslag ${formatPct(precip)} en OD ${formatPct(od)}.`);
+  lines.push(`Modelbeeld: primaire bron ${model}, modelovereenkomst ${formatPct(agreement)}.`);
+  return lines.slice(0,8);
+}
+
+function renderHero(weather, analysis, task, consensus, selectedDay, forecastDateText){
+  const status = normalizeStatus(analysis.xc?.status || task.analysis_status || task.status);
+  const statusDefinition = analysis.xc?.status_definition || "Geen samenvatting beschikbaar.";
+  const score = analysis.xc?.operational_score ?? analysis.xc?.score;
+  const confidence = analysis.xc?.confidence_pct ?? consensus.consensus?.task_confidence_pct;
+  const bestWindow = task.timing?.best_xc_window
+    ? `${task.timing.best_xc_window.from}-${task.timing.best_xc_window.to}`
+    : task.timing?.race_window;
+  const taskDistance = task.distance_scenarios?.realistic_km ?? analysis.xc?.task_advice?.out_and_return_km;
+  const largestRisk = riskSummary(analysis, consensus);
+  const heroClass = statusClass(status);
+
+  document.getElementById("hero").innerHTML = `
+    <div class="hero ${heroClass} ${statusSemanticClass(status)}">
+      <div class="hero-layout">
+        <div>
+          <h2>${status}</h2>
+          <div class="hero-subtitle">${statusDefinition}</div>
+          <div class="hero-meta">
+            <div class="hero-pill">Forecastdatum: ${forecastDateText}</div>
+            <div class="hero-pill">Dataset: ${dayLabel(selectedDay)} (${selectedDay})</div>
+            <div class="hero-pill">Bron: ${weather.primary_model || analysis.forecast?.primary_model || "-"}</div>
+          </div>
+        </div>
+        <div class="hero-kpi-grid">
+          <div class="hero-kpi"><div class="label">Score</div><div class="value">${formatScore(score)}</div></div>
+          <div class="hero-kpi ${confidenceClass(confidence)}"><div class="label">Confidence</div><div class="value">${formatPct(confidence)}</div></div>
+          <div class="hero-kpi"><div class="label">Beste vliegvenster</div><div class="value">${valueOrDash(bestWindow)}</div></div>
+          <div class="hero-kpi"><div class="label">Verwachte taakafstand</div><div class="value">${formatKm(taskDistance)}</div></div>
+          <div class="hero-kpi ${riskLevelClass(largestRisk)}"><div class="label">Grootste risico</div><div class="value">${largestRisk}</div></div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderOperationalSummary(analysis, task, consensus){
+  const cloudbase = analysis.clouds?.base_agl_m ?? analysis.cloudbase_profile?.max_m;
+  const thermal = analysis.thermal?.avg_ms ?? analysis.thermal_profile?.max_ms;
+  const cu = analysis.clouds?.cu_potential_pct ?? task.xc_intelligence?.cu_potential_pct;
+  const launch = task.timing?.launch_window || analysis.thermal?.usable_from || "-";
+  const best = task.timing?.best_xc_window
+    ? `${task.timing.best_xc_window.from}-${task.timing.best_xc_window.to}`
+    : task.timing?.race_window || "-";
+  const warnings = [];
+  if(Array.isArray(task.notes)) warnings.push(...task.notes.slice(0,1));
+  if(consensus.consensus?.forecast_uncertainty) warnings.push(`Forecast uncertainty: ${consensus.consensus.forecast_uncertainty}`);
+
+  document.getElementById("operational-panel").innerHTML =
+    opsItem("Starttijd", launch) +
+    opsItem("Beste thermiekperiode", best) +
+    opsItem("Cloudbase", formatM(cloudbase)) +
+    opsItem("Thermieksterkte", formatMs(thermal)) +
+    opsItem("Wind", windDescription(analysis)) +
+    opsItem("Cu-ontwikkeling", `${formatPct(cu)} Cu / ${formatPct(analysis.clouds?.streets_probability_pct)} straten`) +
+    opsItem("Grootste risico", riskSummary(analysis, consensus), "wide") +
+    opsItem("Taakadvies", taskAdviceText(task), "wide");
+
+  document.getElementById("warnings").innerHTML = warnings.length
+    ? `<div class="warning-box">${warnings.join("<br>")}</div>`
+    : "";
+}
+
+function renderTimeline(task, analysis){
+  const windows = Array.isArray(task.timing?.flight_windows) ? task.timing.flight_windows : [];
+  const fallback = [
+    {label:"Opstart thermiek", from:"10:30", to:"12:00", quality:"MARGINAL", note:"eerste belletjes en opbouw"},
+    {label:"Startfase", from:"12:00", to:"13:00", quality:"USABLE", note:"eerste bruikbare thermiek"},
+    {label:"Piek", from:"13:00", to:"16:00", quality:"USABLE", note:"beste thermiek en taakvenster"},
+    {label:"Risico's", from:"15:00", to:"17:00", quality:asNumber(analysis.surface?.precip_chance_pct) > 45 ? "POOR" : "USABLE", note:riskSummary(analysis,{})},
+    {label:"Afbouw", from:"17:00", to:"18:00", quality:"MARGINAL", note:"thermiek loopt terug"}
+  ];
+  const source = windows.length ? windows : fallback;
+  const normalized = source.slice(0,5).map(item => {
+    const q = String(item.quality || "").toLowerCase();
+    const cls = q.includes("good") ? "good" : q.includes("poor") ? "poor" : "usable";
+    return `
+      <div class="timeline-step ${cls}">
+        <div class="time">${valueOrDash(item.from)}-${valueOrDash(item.to)}</div>
+        <div class="title">${item.label || item.phase || "-"}</div>
+        <div class="text">${item.note || item.reason || "-"}</div>
+      </div>
+    `;
+  });
+
+  document.getElementById("timeline-grid").innerHTML = normalized.join("");
+}
+
+function renderRouteAdvice(task){
+  const sectors = Array.isArray(task.sector_risks) ? task.sector_risks : [];
+  const routeMap = document.getElementById("route-map");
+  const routeCards = document.getElementById("task-sectors");
+
+  if(!sectors.length){
+    routeMap.innerHTML = `<div class="briefing">Geen routeadvies beschikbaar.</div>`;
+    routeCards.innerHTML = "";
+    return;
+  }
+
+  const bearings = sectors.map((sector, index) => {
+    const rotation = Number(sector.degrees || 0) - 90;
+    const best = sector.recommended || index === 0;
+    return `
+      <div class="route-bearing ${best ? "best" : ""}" style="transform:rotate(${rotation}deg);"></div>
+      <div class="route-label" style="--rotation:${rotation}deg;">
+        ${sector.sector || directionArrow(sector.degrees)}
+      </div>
+    `;
+  }).join("");
+
+  routeMap.innerHTML = `
+    <div class="route-compass">
+      ${bearings}
+      <div class="route-center">EHHV<br>Hilversum</div>
+    </div>
+  `;
+
+  routeCards.innerHTML = sectors.map((sector, index) => {
+    const best = sector.recommended || index === 0;
+    return `
+      <div class="route-card ${best ? "best" : ""}">
+        <div class="title">${best ? "Aanbevolen" : "Alternatief"}: ${sector.sector || "-"}</div>
+        <div class="meta">
+          Richting ${roundValue(sector.degrees,0) ?? "-"} graden,
+          indicatie ${formatKm(sector.distance_km)},
+          risico ${sector.risk || "-"},
+          confidence ${formatPct(sector.confidence)}.
+          Streeting: ${sector.street_alignment?.label || "-"}.
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+function renderOutlook(dayBundles){
+  const cards = dayBundles.map(bundle => {
+    const label = dayLabel(bundle.day);
+    const analysis = bundle.analysis || {};
+    const task = bundle.task || {};
+    const weather = bundle.weather || {};
+    const status = normalizeStatus(analysis.xc?.status || task.analysis_status || task.status);
+    const date = analysis.forecast?.date || task.forecast_date || weather.forecast_date || weather.ehhv?.date;
+    const distance = task.distance_scenarios?.realistic_km ?? analysis.xc?.task_advice?.out_and_return_km;
+    const score = analysis.xc?.operational_score ?? analysis.xc?.score;
+    const cloudbase = analysis.clouds?.base_agl_m;
+    const thermal = analysis.thermal?.avg_ms;
+    const wind = analysis.surface?.wind_speed_max_kmh;
+    const risk = riskSummary(analysis, {});
+    const trend = task.trend || analysis.trend || (bundle.day === selectedDay ? "actieve dataset" : "outlook");
+    return `
+      <div class="outlook-card">
+        <div class="day">${label}</div>
+        <div class="status">${status}</div>
+        <div class="summary">
+          ${formatDateLong(date)}<br>
+          Score ${formatScore(score)} · taak ${formatKm(distance)}<br>
+          Basis ${formatM(cloudbase)}, thermiek ${formatMs(thermal)}, wind ${formatKmh(wind)}<br>
+          Reden: ${task.operational_summary || analysis.xc?.status_definition || "korte reden niet beschikbaar"}<br>
+          Risico: ${risk}<br>
+          Trend: ${trend}
+        </div>
+      </div>
+    `;
+  });
+
+  document.getElementById("outlook-cards").innerHTML = cards.join("");
+}
+
+function renderConfidenceV2(confidenceV2){
+  const container = document.getElementById("confidence-v2-public");
+  if(!container || !confidenceV2) return;
+  const confidence = confidenceV2.confidence_v2 || {};
+  const publicText = confidenceV2.public_text || {};
+  const score = confidence.score === null || confidence.score === undefined ? "-" : `${confidence.score}%`;
+  container.innerHTML = `
+    <strong>Confidence 2.0</strong><br><br>
+    Score: ${score}<br>
+    Label: ${confidence.label || "unknown"}<br><br>
+    ${publicText.short || "Confidence 2.0 is nog niet beschikbaar."}<br><br>
+    <em>${publicText.caution || "Confidence 2.0 is contextinformatie en wijzigt het vliegadvies niet."}</em>
+  `;
+}
+
+function trendText(value){
+  if(value === "improving") return "verbeterend";
+  if(value === "declining") return "dalend";
+  if(value === "stable") return "stabiel";
+  return "onbekend";
+}
+
+function renderPublicReliability(indicator, explanation){
+  const cards = document.getElementById("public-reliability-cards");
+  const text = document.getElementById("public-reliability-text");
+  const details = document.getElementById("public-reliability-details");
+  if(!cards || !text || !details) return;
+
+  if(explanation && typeof explanation === "object"){
+    const status = explanation.status || {};
+    const texts = explanation.texts || {};
+    cards.innerHTML =
+      compactCard("Betrouwbaarheid", status.label || "-") +
+      compactCard("Score", status.score_pct === null || status.score_pct === undefined ? "-" : `${status.score_pct}%`) +
+      compactCard("Sample", status.sample_size || "-") +
+      compactCard("Trend", trendText(status.trend));
+    text.innerHTML = `
+      <strong>${texts.headline || "Historische betrouwbaarheid"}</strong><br><br>
+      ${texts.short || "Nog onvoldoende historische verificatie beschikbaar."}<br><br>
+      ${texts.trend_text || "Trend nog onbekend."}<br><br>
+      ${texts.caution || "De huidige briefing blijft gebaseerd op de actuele meteorologische analyse."}
+    `;
+    details.innerHTML = `
+      <details>
+        <summary>Wat betekent dit?</summary>
+        <div style="margin-top:10px;">
+          ${texts.explanation || ""}
+          <br><br>
+          ${texts.lead_time_text || ""}
+        </div>
+      </details>
+    `;
+    return;
+  }
+
+  if(!indicator || typeof indicator !== "object"){
+    cards.innerHTML = "";
+    text.innerHTML = "Nog geen historische betrouwbaarheid beschikbaar.";
+    details.innerHTML = "";
+    return;
+  }
+
+  const reliability = indicator.reliability || {};
+  const sample = indicator.sample || {};
+  const publicText = indicator.public_text || {};
+  cards.innerHTML =
+    compactCard("Betrouwbaarheid", reliability.label || "-") +
+    compactCard("Score", reliability.score_pct === null || reliability.score_pct === undefined ? "-" : `${reliability.score_pct}%`) +
+    compactCard("Geverifieerde runs", sample.verified_forecast_runs ?? "-") +
+    compactCard("Trend", trendText(reliability.trend));
+  text.innerHTML = publicText.short || "Betrouwbaarheid: nog onvoldoende historische data.";
+  details.innerHTML = publicText.details || "";
+}
+
+function renderForecastExplanation(explanation){
+  const section = document.getElementById("forecast-explanation");
+  const text = document.getElementById("forecast-explanation-text");
+  const cards = document.getElementById("forecast-explanation-cards");
+  const lists = document.getElementById("forecast-explanation-lists");
+  const details = document.getElementById("forecast-explanation-details");
+  if(!section || !text || !cards || !lists || !details) return;
+
+  if(!explanation || typeof explanation !== "object"){
+    section.style.display = "none";
+    return;
+  }
+
+  section.style.display = "";
+  const detailValues = explanation.details || {};
+  const keyDrivers = Array.isArray(explanation.key_drivers) ? explanation.key_drivers : [];
+  const limitingFactors = Array.isArray(explanation.limiting_factors) ? explanation.limiting_factors : [];
+  const advice = Array.isArray(explanation.operational_advice) ? explanation.operational_advice : [];
+
+  text.innerHTML = `
+    <strong>${explanation.headline || "Waarom deze briefing?"}</strong><br><br>
+    ${explanation.summary || "Er is nog geen toelichting beschikbaar."}<br><br>
+    ${explanation.confidence_explanation || ""}
+    ${explanation.reliability_note ? `<br><br>${explanation.reliability_note}` : ""}
+  `;
+
+  cards.innerHTML =
+    compactCard("Status", explanation.classification || "-") +
+    compactCard("Score", explanation.score ?? "-") +
+    compactCard("Confidence", explanation.confidence_score === null || explanation.confidence_score === undefined ? "-" : `${explanation.confidence_score}%`) +
+    compactCard("Forecastdatum", explanation.forecast_date || "-");
+
+  lists.innerHTML = `
+    <div class="compact-grid">
+      <div>
+        <h3>Positieve factoren</h3>
+        <ul>${keyDrivers.map(item=>`<li>${item}</li>`).join("") || "<li>Nog niet beschikbaar.</li>"}</ul>
+      </div>
+      <div>
+        <h3>Beperkingen</h3>
+        <ul>${limitingFactors.map(item=>`<li>${item}</li>`).join("") || "<li>Geen dominante beperking zichtbaar.</li>"}</ul>
+      </div>
+      <div>
+        <h3>Operationeel advies</h3>
+        <ul>${advice.map(item=>`<li>${item}</li>`).join("") || "<li>Gebruik actuele waarnemingen als extra controle.</li>"}</ul>
+      </div>
+    </div>
+  `;
+
+  details.innerHTML = `
+    <details>
+      <summary>Extractie uit brondata</summary>
+      <div style="margin-top:10px;">
+        Wolkenbasis: ${formatM(detailValues.cloudbase_m)}<br>
+        Thermiek: ${formatMs(detailValues.thermal_ms)}<br>
+        Wind: ${formatKmh(detailValues.wind_speed_kmh)}<br>
+        XC range: ${formatKm(detailValues.expected_task_range_km)}<br>
+        Neerslagrisico: ${formatPct(detailValues.precipitation_risk)}<br>
+        Bewolking: ${formatPct(detailValues.cloud_cover)}<br><br>
+        ${explanation.regional_note || ""}
+      </div>
+    </details>
+  `;
+}
+
+function firstAvailable(...values){
+  for(const value of values){
+    if(value !== null && value !== undefined && value !== "") return value;
+  }
+  return null;
+}
+
+function firstArrayItem(...arrays){
+  for(const array of arrays){
+    if(Array.isArray(array) && array.length) return array[0];
+  }
+  return null;
+}
+
+function renderRealityLearning(coupling, flightAnalytics, publicReliability, confidenceV2, verification){
+  const grid = document.getElementById("reality-learning-grid");
+  const note = document.getElementById("reality-learning-note");
+  if(!grid || !note) return;
+
+  const recentOutcome = firstArrayItem(
+    flightAnalytics?.recent_days,
+    flightAnalytics?.top_days?.by_max_distance,
+    flightAnalytics?.top_days?.by_flight_count,
+    coupling?.recent_cases,
+    coupling?.recent_days,
+    coupling?.matches
+  ) || coupling?.latest || {};
+
+  const date = firstAvailable(recentOutcome.forecast_date, recentOutcome.scoring_date, recentOutcome.date);
+  const flights = firstAvailable(recentOutcome.flight_count, recentOutcome.flights_total, flightAnalytics?.overall_outcomes?.total_flights);
+  const totalDistance = firstAvailable(recentOutcome.total_distance_km, recentOutcome.distance_km);
+  const maxDistance = firstAvailable(recentOutcome.max_distance_km, recentOutcome.best_distance_km);
+  const outcomeCategory = firstAvailable(recentOutcome.outcome_category, recentOutcome.category, "Nog geen WeGlide reality beschikbaar");
+  const match = firstAvailable(
+    recentOutcome.forecast_best_result,
+    recentOutcome.best_result,
+    recentOutcome.result,
+    verification?.scores?.quality,
+    "Nog geen verificatie beschikbaar"
+  );
+  const delta = firstAvailable(recentOutcome.forecast_mean_score_delta, recentOutcome.mean_score_delta, verification?.scores?.overall_score);
+  const reliability = publicReliability?.reliability || {};
+  const confidence = confidenceV2?.confidence_v2 || {};
+
+  grid.innerHTML = `
+    <div class="reality-card">
+      <div class="label">Laatste reality-dag</div>
+      <div class="value">${date ? formatDateLong(date) : "Nog geen WeGlide reality beschikbaar"}</div>
+    </div>
+    <div class="reality-card">
+      <div class="label">Vliegactiviteit</div>
+      <div class="value">${flights === null ? "Niet beschikbaar" : `${flights} vluchten`}</div>
+    </div>
+    <div class="reality-card">
+      <div class="label">Afstand / max</div>
+      <div class="value">${formatKm(totalDistance)} totaal · ${formatKm(maxDistance)} max</div>
+    </div>
+    <div class="reality-card">
+      <div class="label">Forecast vs reality</div>
+      <div class="value">${match}</div>
+    </div>
+    <div class="reality-card">
+      <div class="label">Outcome</div>
+      <div class="value">${outcomeCategory}</div>
+    </div>
+    <div class="reality-card">
+      <div class="label">Reliability / confidence</div>
+      <div class="value">${reliability.label || "Nog opgebouwd"} · ${confidence.score === null || confidence.score === undefined ? "Confidence 2.0 n.b." : `${confidence.score}%`}</div>
+    </div>
+  `;
+
+  note.textContent = delta === null || delta === undefined
+    ? "Reality & Learning toont alleen compacte context; admin bevat de volledige verificatiedetails."
+    : `Indicatie forecastdelta/context: ${typeof delta === "number" ? roundValue(delta,1) : delta}. Volledige diagnose blijft admin-only.`;
+}
+
+function checklistItem(label, value, hint, level="medium"){
+  const levelClass = level === "high" ? "risk-high" : level === "low" ? "risk-low" : "risk-medium";
+  return `
+    <div class="check-item ${levelClass}">
+      <div class="label">${label}</div>
+      <div class="value">${valueOrDash(value)}</div>
+      <div class="hint">${hint || "Controleer lokaal voor start."}</div>
+    </div>
+  `;
+}
+
+function levelFromThreshold(value, high, medium){
+  const number = asNumber(value);
+  if(number === null) return "medium";
+  if(number >= high) return "high";
+  if(number >= medium) return "medium";
+  return "low";
+}
+
+function renderGoNoGoChecklist(weather, analysis, task, consensus){
+  const target = document.getElementById("go-nogo-checklist");
+  if(!target) return;
+  const precip = analysis.surface?.precip_chance_pct;
+  const od = analysis.clouds?.od_risk_pct;
+  const wind = analysis.surface?.wind_speed_max_kmh ?? analysis.wind_profile?.max_kmh;
+  const cloudbase = analysis.clouds?.base_agl_m ?? analysis.cloudbase_profile?.max_m;
+  const start = task.timing?.launch_window || analysis.thermal?.usable_from || analysis.thermal?.start_estimate;
+  const returnWindow = task.timing?.expected_shutdown || analysis.thermal?.end;
+  const agreement = asNumber(consensus.consensus?.overall_agreement_pct);
+
+  target.innerHTML =
+    checklistItem("CB/onweer", `OD ${formatPct(od)}`, "Bij OD/CB-signalen: radar en actuele lucht actief meenemen.", levelFromThreshold(od, 40, 20)) +
+    checklistItem("Zicht", "Niet beschikbaar", "Zicht staat niet als harde JSON-metric in de briefing; controleer veldwaarneming.", "medium") +
+    checklistItem("Wind / grondwind", windDescription(analysis), "Let op sleepbedrijf, circuit, drift en veilige terugkeeropties.", levelFromThreshold(wind, 30, 18)) +
+    checklistItem("Basis", formatM(cloudbase), "Te lage basis beperkt uitwijkruimte en taakambitie.", cloudbase && cloudbase >= 1200 ? "low" : "medium") +
+    checklistItem("Neerslag / radar", formatPct(precip), "Radar en buienlijn blijven doorslaggevend vlak voor start.", levelFromThreshold(precip, 40, 20)) +
+    checklistItem("Starttijd", start || "Niet beschikbaar", "Plan conservatief als de thermiek later op gang komt.", start ? "low" : "medium") +
+    checklistItem("Uitwijk / terugkeer", returnWindow ? `Thermiek tot ${returnWindow}` : "Niet beschikbaar", "Houd veilige terugkeeropties open, vooral bij wind of OD.", returnWindow ? "low" : "medium") +
+    checklistItem("Instructeur / veldcondities", "Lokale beslissing", `Modelovereenkomst ${formatPct(agreement)}; instructeur en veldcondities blijven leidend.`, agreement !== null && agreement >= 65 ? "low" : "medium");
+}
+
+function renderWindrose(sectors){
+  const target = document.getElementById("windrose");
+  if(!target || !sectors || !sectors.length) return;
+  const center = 180;
+  const radius = 120;
+  let svg = `
+    <svg class="windrose-svg" viewBox="0 0 360 360">
+      <circle cx="${center}" cy="${center}" r="${radius}" fill="none" stroke="#888" stroke-width="2"/>
+  `;
+
+  sectors.forEach(s => {
+    const angle = (Number(s.degrees || 0) - 90) * Math.PI / 180;
+    const x = center + Math.cos(angle) * radius;
+    const y = center + Math.sin(angle) * radius;
+    let color = "#b42318";
+    if(s.risk === "LOW") color = "#17803c";
+    else if(s.risk === "MODERATE") color = "#d88900";
+    svg += `
+      <line x1="${center}" y1="${center}" x2="${x}" y2="${y}" stroke="${color}" stroke-width="6"/>
+      <circle cx="${x}" cy="${y}" r="22" fill="${color}"/>
+      <text x="${x}" y="${y + 4}" text-anchor="middle" class="windrose-score">${s.distance_km}</text>
+      <text x="${center + Math.cos(angle)*(radius+40)}" y="${center + Math.sin(angle)*(radius+40)}" text-anchor="middle" class="windrose-label">${s.sector}</text>
+    `;
+  });
+  svg += "</svg>";
+  target.innerHTML = svg;
+}
+
+function renderTechnicalPanels(weather, analysis, task, verification, consensus, uncertainty, briefing, supplementalSources={}){
+  const cloudbaseValue = analysis.clouds?.base_agl_m;
+  const thermalValue = analysis.thermal?.avg_ms;
+  const windValue = analysis.surface?.wind_speed_max_kmh;
+  const odValue = analysis.clouds?.od_risk_pct ?? analysis.surface?.precip_chance_pct;
+  const confidenceValue = consensus.consensus?.task_confidence_pct ?? analysis.xc?.confidence_pct;
+  const xcValue = task.distance_scenarios?.realistic_km;
+
+  document.getElementById("task-conclusion").innerHTML =
+    marked.parse(task.operational_conclusion || analysis.xc?.task_advice?.reference_aircraft || "Geen taakconclusie beschikbaar.");
+
+  document.getElementById("task-summary").innerHTML =
+    compactCard("Conservative", formatKm(task.distance_scenarios?.conservative_km)) +
+    compactCard("Realistic", formatKm(task.distance_scenarios?.realistic_km)) +
+    compactCard("Aggressive", formatKm(task.distance_scenarios?.aggressive_km)) +
+    compactCard("Triangle", formatKm(task.distance_scenarios?.triangle_km));
+
+  document.getElementById("window-summary").innerHTML =
+    compactCard("Race window", task.timing?.race_window || "-") +
+    compactCard("Shutdown", task.timing?.expected_shutdown || "-") +
+    compactCard("Start urgency", task.timing?.start_urgency?.level || "-") +
+    compactCard("OD urgency", task.timing?.od_timing?.urgency || "-");
+
+  const flightWindows = Array.isArray(task.timing?.flight_windows) ? task.timing.flight_windows : [];
+  document.getElementById("flight-windows").innerHTML = flightWindows.map(w => {
+    const q = String(w.quality || "").toLowerCase();
+    const cls = q.includes("good") ? "good" : q.includes("poor") ? "poor" : "";
+    return `
+      <div class="flight-window-card ${cls}">
+        <strong>${w.label || "-"}</strong><br>
+        ${w.from || "-"} - ${w.to || "-"}<br>
+        ${w.quality || "-"}<br>
+        ${w.note || ""}
+      </div>
+    `;
+  }).join("");
+
+  document.getElementById("xc-intel-cards").innerHTML =
+    compactCard("Blue gap risk", task.xc_intelligence?.blue_gap_risk?.risk || "-") +
+    compactCard("Consensus uncertainty", task.xc_intelligence?.consensus_uncertainty || "-") +
+    compactCard("Usable corridor", formatKm(task.xc_intelligence?.usable_corridor_km)) +
+    compactCard("Street probability", formatPct(task.xc_intelligence?.street_probability_pct));
+
+  document.getElementById("consensus-cards").innerHTML =
+    compactCard("Agreement", formatPct(consensus.consensus?.overall_agreement_pct)) +
+    compactCard("Uncertainty", consensus.consensus?.forecast_uncertainty || "-") +
+    compactCard("Task confidence", formatPct(consensus.consensus?.task_confidence_pct)) +
+    compactCard("XC probability", formatPct(consensus.consensus?.xc_probability_pct)) +
+    compactCard("Dominant", consensus.dominant_model || "-") +
+    compactCard("Outlier", consensus.outlier_model || "-");
+
+  let modelRows = "";
+  Object.entries(consensus.models || {}).forEach(([name, model]) => {
+    modelRows += `
+      <tr>
+        <td>${name}</td>
+        <td>${formatM(model.cloudbase_m)}</td>
+        <td>${formatMs(model.thermal_ms)}</td>
+        <td>${formatKmh(model.wind_kmh)}</td>
+        <td>${formatPct(model.confidence)}</td>
+      </tr>
+    `;
+  });
+  document.getElementById("consensus-detail").innerHTML = `
+    <table>
+      <tr><th>Model</th><th>Cloudbase</th><th>Thermiek</th><th>Wind</th><th>Confidence</th></tr>
+      ${modelRows || "<tr><td colspan='5'>Geen modelvergelijking beschikbaar.</td></tr>"}
+    </table>
+  `;
+
+  const uSummary = uncertainty.summary || {};
+  const uRange = uncertainty.xc_range_km || {};
+  const uGuidance = uncertainty.operational_guidance || {};
+  document.getElementById("uncertainty-cards").innerHTML =
+    compactCard("Forecast stability", uSummary.forecast_stability || "-") +
+    compactCard("Volatility", `${uSummary.operational_volatility || "-"} / ${formatPct(uSummary.operational_volatility_pct)}`) +
+    compactCard("Bust risk", `${uSummary.bust_risk || "-"} / ${formatPct(uSummary.bust_risk_pct)}`) +
+    compactCard("Upside", `${uSummary.upside_surprise || "-"} / ${formatPct(uSummary.upside_surprise_pct)}`) +
+    compactCard("P20", formatKm(uRange.p20)) +
+    compactCard("P50", formatKm(uRange.p50)) +
+    compactCard("P80", formatKm(uRange.p80));
+
+  document.getElementById("uncertainty-detail").innerHTML = `
+    <div class="briefing">
+      <strong>Probabilistische taakinschatting</strong><br><br>
+      <ul>
+        <li><strong>Conservatief:</strong> ${uGuidance.if_conservative || "-"}</li>
+        <li><strong>Realistisch:</strong> ${uGuidance.if_realistic || "-"}</li>
+        <li><strong>Agressief:</strong> ${uGuidance.if_aggressive || "-"}</li>
+        <li><strong>Risico:</strong> ${uGuidance.risk_note || "-"}</li>
+      </ul>
+    </div>
+  `;
+
+  document.getElementById("verification-cards").innerHTML =
+    compactCard("Verification", verification.scores?.quality || "-") +
+    compactCard("Overall score", formatPct(verification.scores?.overall_score)) +
+    compactCard("Cloudbase error", formatM(verification.errors?.cloudbase_error_m)) +
+    compactCard("Thermal error", formatMs(verification.errors?.thermal_error_ms)) +
+    compactCard("Wind error", formatKmh(verification.errors?.wind_error_kmh)) +
+    compactCard("Distance error", formatKm(verification.errors?.distance_error_km));
+
+  document.getElementById("verification-detail").innerHTML = `
+    <table>
+      <tr><th>Metric</th><th>Forecast</th><th>Reality</th></tr>
+      <tr><td>Cloudbase</td><td>${formatM(verification.forecast_summary?.cloudbase_m)}</td><td>${formatM(verification.reality_summary?.cloudbase_m)}</td></tr>
+      <tr><td>Thermiek</td><td>${formatMs(verification.forecast_summary?.thermal_ms)}</td><td>${formatMs(verification.reality_summary?.thermal_ms)}</td></tr>
+      <tr><td>Wind</td><td>${formatKmh(verification.forecast_summary?.wind_kmh)}</td><td>${formatKmh(verification.reality_summary?.wind_kmh)}</td></tr>
+      <tr><td>XC distance</td><td>${formatKm(verification.forecast_summary?.realistic_xc_km)}</td><td>${formatKm(verification.reality_summary?.actual_xc_km)}</td></tr>
+    </table>
+  `;
+
+  document.getElementById("confidence-cards").innerHTML =
+    compactCard("Forecast confidence", formatPct(analysis.xc?.confidence_pct)) +
+    compactCard("Model agreement", formatPct(consensus.consensus?.overall_agreement_pct)) +
+    compactCard("Verification score", formatPct(verification.scores?.overall_score)) +
+    compactCard("XC confidence", formatPct(task.best_sector?.confidence));
+
+  document.getElementById("deep-dive").innerHTML =
+    compactCard("Cloudbase", formatM(cloudbaseValue)) +
+    compactCard("Thermiek", formatMs(thermalValue)) +
+    compactCard("Wind", formatKmh(windValue)) +
+    compactCard("OD/neerslag", formatPct(odValue)) +
+    compactCard("Confidence", formatPct(confidenceValue)) +
+    compactCard("XC potentieel", formatKm(xcValue));
+
+  document.getElementById("briefing-text").innerHTML =
+    marked.parse(briefing.briefing_markdown || briefing.text || briefing.briefing || "Geen briefing beschikbaar.");
+
+  const knmi = weather.knmi || {};
+  const knmiSupplemental = supplementalRecords(supplementalSources, "KNMI");
+  const firstKnmiText = knmiSupplemental.find(record => record.text?.excerpt)?.text?.excerpt;
+  document.getElementById("knmi-panel").innerHTML = `
+    <div class="briefing">
+      Status: <strong>${knmi.status || "niet beschikbaar"}</strong><br>
+      Health: ${knmi.health || "-"}<br>
+      Laatste check: ${formatDateTime(knmi.checked_at_utc)}<br>
+      Bericht: ${knmi.message || "Geen KNMI-detailbericht in deze briefing."}
+      ${knmiSupplemental.length ? `<br><br><strong>Publieke KNMI referenties</strong>${supplementalStatusRows(knmiSupplemental, 4)}` : ""}
+      ${firstKnmiText ? `<details><summary>KNMI tekstfragment</summary><p>${escapeHtml(firstKnmiText)}</p></details>` : ""}
+    </div>
+  `;
+
+  const sources = weather.sources || analysis.sources?.external_sources || {};
+  const blipmapsSupplemental = supplementalRecords(supplementalSources, "BLIPMAPS");
+  const bracknellSupplemental = supplementalRecords(supplementalSources, "Bracknell");
+  document.getElementById("blipmaps-panel").innerHTML = `
+    <div class="briefing">
+      <a href="${sources.blipmaps_netherlands || "#"}" target="_blank" rel="noopener">BLIPMAPS Netherlands</a><br>
+      ${sources.bracknell ? `<a href="${sources.bracknell}" target="_blank" rel="noopener">Bracknell/UKMO kaarten</a>` : ""}
+      ${blipmapsSupplemental.length ? `<br><br><strong>BLIPMAPS meteograms</strong>${supplementalStatusRows(blipmapsSupplemental, 6)}` : ""}
+      ${bracknellSupplemental.length ? `<br><strong>Bracknell/UKMO charts</strong>${supplementalStatusRows(bracknellSupplemental, 4)}` : ""}
+    </div>
+  `;
+
+  const meteogramSupplemental = blipmapsSupplemental.filter(record => String(record.category || "").includes("meteogram"));
+  document.getElementById("meteograms-panel").innerHTML = `
+    <div class="briefing">
+      ${sources.meteogram_hilversum ? `<a href="${sources.meteogram_hilversum}" target="_blank" rel="noopener">Meteogram Hilversum</a><br>` : ""}
+      ${sources.meteogram_borkenberge ? `<a href="${sources.meteogram_borkenberge}" target="_blank" rel="noopener">Meteogram Borkenberge</a><br>` : ""}
+      Soundings zijn niet als aparte JSON-output aanwezig; gebruik deze sectie als bronverwijzing.
+      ${meteogramSupplemental.length ? `<br><br><strong>Supplemental meteogram checks</strong>${supplementalStatusRows(meteogramSupplemental, 8)}` : ""}
+    </div>
+  `;
+
+  const sourceCards = (weather.sources?.model_sources || analysis.sources?.model_sources || []).map(model => `
+    <div class="source-card">
+      <h4>${model.name || "-"}</h4>
+      <div class="${badgeClass(model.health)}">${model.status || "-"}</div>
+      <div style="margin-top:6px;font-size:.9rem;">
+        Health: ${model.health || "-"}<br>
+        Response: ${model.response_ms ? `${model.response_ms} ms` : "-"}<br>
+        Mode: ${model.fallback_used ? "fallback" : "direct"}
+      </div>
+    </div>
+  `).join("");
+
+  const supplementalSummary = supplementalSources?.summary || {};
+  const supplementalCards = supplementalSources?.mode === "shadow" ? `
+    <div class="source-card">
+      <h4>Supplemental sources</h4>
+      <div class="${badgeClass(supplementalSummary.health || "FAILED")}">${supplementalSummary.health || "-"}</div>
+      <div style="margin-top:6px;font-size:.9rem;">
+        ${supplementalSummary.available_sources ?? 0}/${supplementalSummary.total_sources ?? 0} beschikbaar<br>
+        Shadow mode
+      </div>
+    </div>
+    ${supplementalProviderCards(supplementalSources)}
+  ` : "";
+
+  document.getElementById("sources-grid").innerHTML = `
+    <div class="source-card">
+      <h4>Primaire bron</h4>
+      <div class="${badgeClass("good")}">${weather.primary_model || analysis.forecast?.primary_model || "-"}</div>
+    </div>
+    <div class="source-card">
+      <h4>Model agreement</h4>
+      <div class="${badgeClass(consensus.consensus?.overall_agreement_pct || 0)}">${formatPct(consensus.consensus?.overall_agreement_pct)}</div>
+    </div>
+    <div class="source-card">
+      <h4>Release data</h4>
+      <div>Weather ${weather.release_version || "-"}<br>Analysis ${analysis.release_version || "-"}<br>Task ${task.release_version || "-"}</div>
+    </div>
+    ${sourceCards}
+    ${supplementalCards}
+  `;
+}
+
+const selectedDay = getSelectedDay();
+renderDaySelector(selectedDay);
+
+async function init(){
+  const [
+    weather,
+    analysis,
+    briefing,
+    task,
+    verification,
+    consensus,
+    uncertainty,
+    publicReliability,
+    publicReliabilityExplanation,
+    forecastExplanation,
+    confidenceV2,
+    supplementalSources,
+    meteoFlightOutcomeCoupling,
+    weglideFlightAnalytics,
+    d0Weather,
+    d0Analysis,
+    d0Task,
+    d1Weather,
+    d1Analysis,
+    d1Task,
+    d2Weather,
+    d2Analysis,
+    d2Task
+  ] = await Promise.all([
+    loadJson(dataPath(selectedDay, "weather.json")),
+    loadJson(dataPath(selectedDay, "analysis.json")),
+    loadJson(dataPath(selectedDay, "briefing.json")),
+    loadJson(dataPath(selectedDay, "task.json")),
+    loadJson(dataPath(selectedDay, "verification.json")),
+    loadJson(dataPath(selectedDay, "model_consensus.json")),
+    loadJson(dataPath(selectedDay, "uncertainty.json")),
+    loadOptionalJson("/data/public_reliability_indicator.json"),
+    loadOptionalJson("/data/public_reliability_explanation.json"),
+    loadOptionalJson("/data/forecast_explanation.json"),
+    loadOptionalJson("/data/confidence_v2.json"),
+    loadOptionalJson("/data/supplemental_sources.json"),
+    loadOptionalJson("/archive/meteo_flight_outcome_coupling.json"),
+    loadOptionalJson("/archive/weglide_nl_flight_analytics.json"),
+    loadOptionalJson("/data/d0/weather.json"),
+    loadOptionalJson("/data/d0/analysis.json"),
+    loadOptionalJson("/data/d0/task.json"),
+    loadOptionalJson("/data/d1/weather.json"),
+    loadOptionalJson("/data/d1/analysis.json"),
+    loadOptionalJson("/data/d1/task.json"),
+    loadOptionalJson("/data/d2/weather.json"),
+    loadOptionalJson("/data/d2/analysis.json"),
+    loadOptionalJson("/data/d2/task.json")
+  ]);
+
+  const forecastDateRaw =
+    analysis.forecast?.date ||
+    task.forecast_date ||
+    weather.forecast_date ||
+    weather.ehhv?.date ||
+    weather.forecast?.date;
+
+  const generatedRaw =
+    analysis.generated_at ||
+    task.generated_at ||
+    weather.generated_at_utc ||
+    weather.generated_at;
+
+  const forecastDateText = formatDateLong(forecastDateRaw);
+  const generatedText = formatDateTime(generatedRaw);
+  const ageText = forecastAgeText(generatedRaw);
+
+  document.getElementById("version").innerHTML = `
+    Weather ${weather.release_version || "-"}
+    - Analysis ${analysis.release_version || "-"}
+    - Briefing ${briefing.release_version || "-"}
+    - Task ${task.release_version || "-"}
+    <br>
+    Dataset: ${dayLabel(selectedDay)} (${selectedDay})
+  `;
+
+  document.getElementById("generated").innerHTML =
+    `Forecast gemaakt: ${generatedText}${ageText ? " - " + ageText : ""}`;
+
+  renderHero(weather, analysis, task, consensus, selectedDay, forecastDateText);
+
+  document.getElementById("daily-interpretation").innerHTML =
+    generateSynopsis(weather, analysis, task, consensus)
+      .map(line => `<p class="synopsis-line">${line}</p>`)
+      .join("");
+
+  renderOperationalSummary(analysis, task, consensus);
+  renderTimeline(task, analysis);
+  renderRouteAdvice(task);
+  renderOutlook([
+    {day:"d0", weather:d0Weather, analysis:d0Analysis, task:d0Task},
+    {day:"d1", weather:d1Weather, analysis:d1Analysis, task:d1Task},
+    {day:"d2", weather:d2Weather, analysis:d2Analysis, task:d2Task}
+  ]);
+  renderWindrose(task.sector_risks);
+  renderTechnicalPanels(weather, analysis, task, verification, consensus, uncertainty, briefing, supplementalSources);
+  renderPublicReliability(publicReliability, publicReliabilityExplanation);
+  renderConfidenceV2(confidenceV2);
+  renderForecastExplanation(forecastExplanation);
+  renderRealityLearning(meteoFlightOutcomeCoupling, weglideFlightAnalytics, publicReliability, confidenceV2, verification);
+  renderGoNoGoChecklist(weather, analysis, task, consensus);
+  if(localStorage.getItem(PRESENTATION_STORAGE_KEY) === "true"){
+    setPresentationMode(true, false);
+  }else{
+    updatePresentationToggle();
+  }
+  updateBriefingTimer();
+}
+
+init().catch(error => {
+  console.error(error);
+  document.getElementById("hero").innerHTML = `
+    <div class="hero bad">
+      <h2>Briefing kon niet worden geladen</h2>
+      <div class="hero-subtitle">Controleer of de JSON-bestanden onder /data beschikbaar zijn.</div>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>

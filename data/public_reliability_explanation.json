@@ -1,0 +1,35 @@
+{
+  "release_version": "7.6",
+  "generated_at_utc": "2026-07-12T12:08:52Z",
+  "public": true,
+  "source": {
+    "public_reliability_indicator": "site/data/public_reliability_indicator.json"
+  },
+  "status": {
+    "available": false,
+    "sample_size": "insufficient",
+    "label": "Nog onvoldoende data",
+    "score_pct": null,
+    "trend": "unknown"
+  },
+  "texts": {
+    "headline": "Historische betrouwbaarheid",
+    "short": "Nog onvoldoende historische verificatie beschikbaar.",
+    "explanation": "De betrouwbaarheid wordt pas getoond zodra er voldoende voorspellingen met werkelijke zweefvliegactiviteit zijn vergeleken.",
+    "caution": "De huidige briefing blijft gebaseerd op de actuele meteorologische analyse.",
+    "trend_text": "Trend nog onbekend.",
+    "lead_time_text": "Er is nog onvoldoende data om d0, d1 en d2 betrouwbaar te vergelijken."
+  },
+  "display": {
+    "show_on_public_app": true,
+    "style": "compact",
+    "severity": "neutral"
+  },
+  "safety": {
+    "no_internal_diagnostics_exposed": true,
+    "no_recommendations_exposed": true,
+    "does_not_change_forecast": true,
+    "no_guarantee_language": true
+  },
+  "notes": []
+}

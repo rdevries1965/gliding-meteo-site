@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoZC Meteo</title>
+
+<style>
+body{
+  margin:0;
+  background:#eef2f7;
+  font-family:Arial,sans-serif;
+  color:#1f2937;
+}
+
+.wrapper{
+  max-width:430px;
+  margin:60px auto;
+  background:white;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 4px 20px rgba(0,0,0,.10);
+}
+
+h1{
+  color:#0050a4;
+  margin-top:0;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  margin-top:16px;
+  border:0;
+  border-radius:10px;
+  background:#0050a4;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.card{
+  background:#f8fbff;
+  border:1px solid #dbe4f0;
+  border-radius:14px;
+  padding:20px;
+  margin-top:20px;
+}
+
+.small{
+  margin-top:20px;
+  color:#667085;
+  font-size:13px;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<h1>GoZC Meteo</h1>
+<p>Zweefvlieg Meteobriefing</p>
+
+<div class="card">
+  <h2>Briefing</h2>
+  <button onclick="openBriefing()">Open briefing</button>
+</div>
+
+<div class="small">
+Release 5.2A - access is controlled by the hosting layer.
+</div>
+
+</div>
+
+<script>
+function openBriefing(){
+  localStorage.setItem("gozc_role", "user");
+  localStorage.setItem("gozc_login_time", Date.now().toString());
+  window.location.href = "app.html?v=10.3";
+}
+
+</script>
+
+</body>
+</html>
