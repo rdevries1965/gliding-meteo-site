@@ -10,7 +10,7 @@
     "status": "CONDITIONAL GO",
     "status_definition": "Bruikbare overlanddag tot ongeveer 300 km.",
     "reference_aircraft": "18m / Discus 2c performanceklasse",
-    "task": "Out-and-return circa 252 km of driehoek circa 216 km.",
+    "task": "Out-and-return circa 171 km of driehoek circa 146 km.",
     "flight_window": [
       {
         "time": "10:00",
@@ -67,27 +67,27 @@
     "risk_panel": [
       {
         "label": "Cloudbase",
-        "value": 2062,
+        "value": 1250,
         "unit": " m",
-        "level": "goed"
+        "level": "redelijk"
       },
       {
         "label": "Thermiek",
-        "value": 3.0,
+        "value": 2.2,
         "unit": " m/s",
-        "level": "goed"
+        "level": "redelijk"
       },
       {
         "label": "Neerslag",
-        "value": 6,
+        "value": 45,
         "unit": "%",
-        "level": "laag"
+        "level": "matig"
       },
       {
         "label": "OD-risico",
-        "value": 10,
+        "value": 45,
         "unit": "%",
-        "level": "laag"
+        "level": "matig"
       },
       {
         "label": "Model agreement",
@@ -111,7 +111,7 @@
         "description": "NOAA GFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/gfs",
         "response_ms": null,
-        "fetched_at_utc": "2026-07-13T08:23:16+00:00",
+        "fetched_at_utc": "2026-07-14T21:14:46+00:00",
         "fallback_used": true,
         "fallback_to": "ECMWF",
         "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=120)"
@@ -123,8 +123,8 @@
         "health": "GOOD",
         "description": "ECMWF IFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/ecmwf",
-        "response_ms": 659,
-        "fetched_at_utc": "2026-07-13T08:23:17+00:00",
+        "response_ms": 618,
+        "fetched_at_utc": "2026-07-14T21:14:46+00:00",
         "fallback_used": false,
         "fallback_to": null,
         "error": null
@@ -133,12 +133,12 @@
     "deep_dive_cards": [
       {
         "label": "Trigger temp",
-        "value": 20.7,
+        "value": 23.9,
         "unit": "°C"
       },
       {
         "label": "Boundary layer",
-        "value": 2578,
+        "value": 1562,
         "unit": " m"
       },
       {
@@ -148,12 +148,12 @@
       },
       {
         "label": "Wolkenstraten",
-        "value": 50,
+        "value": 25,
         "unit": "%"
       },
       {
         "label": "OD-risico",
-        "value": 10,
+        "value": 45,
         "unit": "%"
       },
       {
@@ -174,5 +174,5 @@
       "betrouwbaarheid is relatief goed voor een convectieve briefing"
     ]
   },
-  "text": "## Samenvatting\nStatus: **CONDITIONAL GO**. Bruikbare overlanddag tot ongeveer 300 km.\n\nXC-score: **9.0/10**. Operationele score: **8.2/10**. Betrouwbaarheid: **89%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **3.0 m/s**. Cloudbase circa **2062 m AGL**.\n\n## Taakadvies\nBeste richting: **ZW**. Indicatie: out-and-return circa **252 km** of driehoek circa **216 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **Forecast source health: POOR**. Neerslagkans: **6%**. OD-risico: **10%**. Model agreement: **100% (hoog)**. Forecast health: **52% (POOR)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
+  "text": "## Samenvatting\nStatus: **CONDITIONAL GO**. Bruikbare overlanddag tot ongeveer 300 km.\n\nXC-score: **6.1/10**. Operationele score: **5.3/10**. Betrouwbaarheid: **89%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **2.2 m/s**. Cloudbase circa **1250 m AGL**.\n\n## Taakadvies\nBeste richting: **Z**. Indicatie: out-and-return circa **171 km** of driehoek circa **146 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **Forecast source health: POOR**. Neerslagkans: **45%**. OD-risico: **45%**. Model agreement: **100% (hoog)**. Forecast health: **52% (POOR)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
 }

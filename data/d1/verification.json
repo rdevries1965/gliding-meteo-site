@@ -1,12 +1,12 @@
 {
   "release_version": "4.1A",
-  "generated_at": "2026-07-13T08:24:21.706548Z",
-  "forecast_date": "2026-07-14",
+  "generated_at": "2026-07-14T21:15:53.222065Z",
+  "forecast_date": "2026-07-16",
   "reality_source": "manual",
   "forecast_summary": {
-    "cloudbase_m": 1550,
-    "thermal_ms": 2.5,
-    "wind_kmh": 17.1,
+    "cloudbase_m": 1662,
+    "thermal_ms": 2.2,
+    "wind_kmh": 12.3,
     "cu_expected": true,
     "od_expected": false,
     "xc_possible": true,
@@ -23,9 +23,9 @@
     "notes": "sterke cumulusdag"
   },
   "errors": {
-    "cloudbase_error_m": 100,
-    "thermal_error_ms": 0.6,
-    "wind_error_kmh": 4.9,
+    "cloudbase_error_m": 212,
+    "thermal_error_ms": 0.3,
+    "wind_error_kmh": 9.7,
     "distance_error_km": 300
   },
   "matches": {
@@ -34,18 +34,18 @@
     "xc_quality_match": true
   },
   "scores": {
-    "cloudbase_score": 100,
-    "thermal_score": 60,
-    "wind_score": 80,
+    "cloudbase_score": 60,
+    "thermal_score": 80,
+    "wind_score": 60,
     "distance_score": 20,
     "boolean_score": 100,
-    "overall_score": 71.0,
-    "quality": "GOOD"
+    "overall_score": 63.0,
+    "quality": "REASONABLE"
   },
   "calibration_hints": {
-    "thermal_bias": "forecast too optimistic",
+    "thermal_bias": "thermal forecast acceptable",
     "cloudbase_bias": "cloudbase forecast acceptable",
-    "wind_bias": "wind forecast acceptable"
+    "wind_bias": "forecast wind too weak"
   },
   "notes": [
     "4.1A verification is still heuristic.",
