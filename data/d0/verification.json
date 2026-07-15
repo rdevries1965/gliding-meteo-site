@@ -1,10 +1,10 @@
 {
   "release_version": "4.1A",
-  "generated_at": "2026-07-14T21:15:32.035771Z",
+  "generated_at": "2026-07-15T07:20:23.550794Z",
   "forecast_date": "2026-07-15",
   "reality_source": "manual",
   "forecast_summary": {
-    "cloudbase_m": 2050,
+    "cloudbase_m": 2075,
     "thermal_ms": 3.0,
     "wind_kmh": 18.4,
     "cu_expected": true,
@@ -23,7 +23,7 @@
     "notes": "sterke cumulusdag"
   },
   "errors": {
-    "cloudbase_error_m": 600,
+    "cloudbase_error_m": 625,
     "thermal_error_ms": 1.1,
     "wind_error_kmh": 3.6,
     "distance_error_km": 300

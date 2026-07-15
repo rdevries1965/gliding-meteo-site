@@ -1,22 +1,22 @@
 {
   "release_version": "4.6A",
-  "generated_at": "2026-07-14T21:16:13.685354Z",
+  "generated_at": "2026-07-15T07:21:04.994335Z",
   "forecast_date": "2026-07-17",
   "summary": {
     "forecast_stability": "LOW",
     "forecast_uncertainty": "LOW",
     "uncertainty_pct": 44,
-    "operational_volatility_pct": 52,
-    "operational_volatility": "HIGH",
-    "bust_risk_pct": 40,
-    "bust_risk": "MODERATE",
+    "operational_volatility_pct": 47,
+    "operational_volatility": "MODERATE",
+    "bust_risk_pct": 55,
+    "bust_risk": "HIGH",
     "upside_surprise_pct": 36,
     "upside_surprise": "MODERATE"
   },
   "xc_range_km": {
     "p20": 6,
     "p50": 10,
-    "p80": 14,
+    "p80": 12,
     "interpretation": "p20/p50/p80 represent low/median/high plausible XC distance range"
   },
   "confidence_cone": {
@@ -24,26 +24,26 @@
     "spread_km": 4,
     "low_case_km": 6,
     "median_case_km": 10,
-    "high_case_km": 14
+    "high_case_km": 12
   },
   "drivers": {
-    "overall_model_agreement_pct": 89,
-    "task_confidence_pct": 69,
+    "overall_model_agreement_pct": 92,
+    "task_confidence_pct": 70,
     "verification_score": 63.0,
     "distance_error_km": 300,
     "forecast_health": 52,
-    "precip_pct": 45,
+    "precip_pct": 53,
     "od_risk_pct": 45,
-    "wind_kmh": 20.1,
-    "cu_potential_pct": 60,
-    "street_probability_pct": 25,
+    "wind_kmh": 18.4,
+    "cu_potential_pct": 65,
+    "street_probability_pct": 65,
     "calibration_confidence_adjustment_pct": -10
   },
   "operational_guidance": {
     "if_conservative": "Plan alsof 6 km haalbaar is.",
     "if_realistic": "Plan rond 10 km.",
-    "if_aggressive": "Alleen uitbreiden richting 14 km als straatbeeld en basis bevestigd worden.",
-    "risk_note": "Bust-risk niet dominant, normale afkortopties blijven voldoende."
+    "if_aggressive": "Alleen uitbreiden richting 12 km als straatbeeld en basis bevestigd worden.",
+    "risk_note": "Hoge bust-risk: taak compact houden en duidelijke afkortopties plannen."
   },
   "notes": [
     "4.6A creates probabilistic forecast uncertainty.",

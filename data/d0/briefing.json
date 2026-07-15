@@ -10,7 +10,7 @@
     "status": "CONDITIONAL GO",
     "status_definition": "Bruikbare overlanddag tot ongeveer 300 km.",
     "reference_aircraft": "18m / Discus 2c performanceklasse",
-    "task": "Out-and-return circa 255 km of driehoek circa 218 km.",
+    "task": "Out-and-return circa 258 km of driehoek circa 221 km.",
     "flight_window": [
       {
         "time": "10:00",
@@ -65,7 +65,7 @@
     "risk_panel": [
       {
         "label": "Cloudbase",
-        "value": 2050,
+        "value": 2075,
         "unit": " m",
         "level": "goed"
       },
@@ -89,13 +89,13 @@
       },
       {
         "label": "Model agreement",
-        "value": 64,
+        "value": 75,
         "unit": "%",
-        "level": "redelijk"
+        "level": "hoog"
       },
       {
         "label": "Forecast health",
-        "value": 90,
+        "value": 100,
         "unit": "%",
         "level": "GOOD"
       }
@@ -108,8 +108,8 @@
         "health": "GOOD",
         "description": "NOAA GFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/gfs",
-        "response_ms": 671,
-        "fetched_at_utc": "2026-07-14T21:08:38+00:00",
+        "response_ms": 665,
+        "fetched_at_utc": "2026-07-15T07:13:31+00:00",
         "fallback_used": false,
         "fallback_to": null,
         "error": null
@@ -121,8 +121,8 @@
         "health": "GOOD",
         "description": "ECMWF IFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/ecmwf",
-        "response_ms": 652,
-        "fetched_at_utc": "2026-07-14T21:08:39+00:00",
+        "response_ms": 621,
+        "fetched_at_utc": "2026-07-15T07:13:32+00:00",
         "fallback_used": false,
         "fallback_to": null,
         "error": null
@@ -136,7 +136,7 @@
       },
       {
         "label": "Boundary layer",
-        "value": 2562,
+        "value": 2594,
         "unit": " m"
       },
       {
@@ -156,19 +156,19 @@
       },
       {
         "label": "Model agreement",
-        "value": 64,
+        "value": 75,
         "unit": "%"
       },
       {
         "label": "Forecast health",
-        "value": 90,
+        "value": 100,
         "unit": "%"
       }
     ],
     "confidence_explanation": [
-      "grote spreiding in wolkenbasis tussen modellen",
+      "modelovereenkomst is goed",
       "betrouwbaarheid is relatief goed voor een convectieve briefing"
     ]
   },
-  "text": "## Samenvatting\nStatus: **CONDITIONAL GO**. Bruikbare overlanddag tot ongeveer 300 km.\n\nXC-score: **9.1/10**. Operationele score: **9.1/10**. Betrouwbaarheid: **76%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **3.0 m/s**. Cloudbase circa **2050 m AGL**.\n\n## Taakadvies\nBeste richting: **ZW**. Indicatie: out-and-return circa **255 km** of driehoek circa **218 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **geen dominante waarschuwingen**. Neerslagkans: **0%**. OD-risico: **10%**. Model agreement: **64% (redelijk)**. Forecast health: **90% (GOOD)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
+  "text": "## Samenvatting\nStatus: **CONDITIONAL GO**. Bruikbare overlanddag tot ongeveer 300 km.\n\nXC-score: **9.2/10**. Operationele score: **9.2/10**. Betrouwbaarheid: **86%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **3.0 m/s**. Cloudbase circa **2075 m AGL**.\n\n## Taakadvies\nBeste richting: **ZW**. Indicatie: out-and-return circa **258 km** of driehoek circa **221 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **geen dominante waarschuwingen**. Neerslagkans: **0%**. OD-risico: **10%**. Model agreement: **75% (hoog)**. Forecast health: **100% (GOOD)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
 }
