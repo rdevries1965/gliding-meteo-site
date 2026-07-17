@@ -1,14 +1,14 @@
 {
   "release_version": "4.6A",
-  "generated_at": "2026-07-16T07:29:21.300473Z",
-  "forecast_date": "2026-07-17",
+  "generated_at": "2026-07-17T07:22:35.460623Z",
+  "forecast_date": "2026-07-18",
   "summary": {
     "forecast_stability": "LOW",
     "forecast_uncertainty": "LOW",
     "uncertainty_pct": 44,
-    "operational_volatility_pct": 54,
-    "operational_volatility": "HIGH",
-    "bust_risk_pct": 45,
+    "operational_volatility_pct": 44,
+    "operational_volatility": "MODERATE",
+    "bust_risk_pct": 40,
     "bust_risk": "MODERATE",
     "upside_surprise_pct": 26,
     "upside_surprise": "MODERATE"
@@ -16,7 +16,7 @@
   "xc_range_km": {
     "p20": 6,
     "p50": 10,
-    "p80": 14,
+    "p80": 12,
     "interpretation": "p20/p50/p80 represent low/median/high plausible XC distance range"
   },
   "confidence_cone": {
@@ -24,25 +24,25 @@
     "spread_km": 4,
     "low_case_km": 6,
     "median_case_km": 10,
-    "high_case_km": 14
+    "high_case_km": 12
   },
   "drivers": {
-    "overall_model_agreement_pct": 92,
-    "task_confidence_pct": 70,
-    "verification_score": 68.0,
+    "overall_model_agreement_pct": 89,
+    "task_confidence_pct": 69,
+    "verification_score": 61.0,
     "distance_error_km": 300,
     "forecast_health": 52,
-    "precip_pct": 69,
-    "od_risk_pct": 45,
-    "wind_kmh": 18.5,
-    "cu_potential_pct": 55,
-    "street_probability_pct": 65,
+    "precip_pct": 6,
+    "od_risk_pct": 40,
+    "wind_kmh": 16.0,
+    "cu_potential_pct": 30,
+    "street_probability_pct": 50,
     "calibration_confidence_adjustment_pct": -10
   },
   "operational_guidance": {
     "if_conservative": "Plan alsof 6 km haalbaar is.",
     "if_realistic": "Plan rond 10 km.",
-    "if_aggressive": "Alleen uitbreiden richting 14 km als straatbeeld en basis bevestigd worden.",
+    "if_aggressive": "Alleen uitbreiden richting 12 km als straatbeeld en basis bevestigd worden.",
     "risk_note": "Bust-risk niet dominant, normale afkortopties blijven voldoende."
   },
   "notes": [

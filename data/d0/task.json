@@ -1,9 +1,9 @@
 {
   "release_version": "4.5B",
-  "generated_at": "2026-07-16T07:28:59.762257Z",
-  "forecast_date": "2026-07-16",
+  "generated_at": "2026-07-17T07:22:14.133263Z",
+  "forecast_date": "2026-07-17",
   "status": "LOCAL ONLY",
-  "analysis_status": "CONDITIONAL GO",
+  "analysis_status": "MARGINAL",
   "task_quality": "POOR",
   "pilot_profile": {
     "pilot": "Ronald",
@@ -20,15 +20,15 @@
     "triangle_km": 8
   },
   "best_sector": {
-    "direction": "ZW",
-    "degrees": 211,
-    "confidence": 60,
+    "direction": "ZO",
+    "degrees": 157,
+    "confidence": 33,
     "reason": "beste sector volgens profiel en risico"
   },
   "alternative_sector": {
-    "direction": "W",
-    "degrees": 256,
-    "confidence": 55
+    "direction": "Z",
+    "degrees": 202,
+    "confidence": 28
   },
   "timing": {
     "launch_window": "11:30-13:00 LT",
@@ -44,7 +44,7 @@
       "level": "MODERATE",
       "reason": "pilootprofiel prefereert vroeg"
     },
-    "shutdown_reason": "normale thermiekafbouw",
+    "shutdown_reason": "neerslag beperkt late dag",
     "od_timing": {
       "expected_after": "laat in de middag",
       "urgency": "MODERATE",
@@ -96,25 +96,25 @@
   "xc_intelligence": {
     "blue_gap_risk": {
       "risk": "LOW",
-      "score": 0,
+      "score": 10,
       "reason": "geen dominant blue-gap signaal"
     },
-    "usable_corridor_km": 6,
-    "street_probability_pct": 50,
-    "cu_potential_pct": 40,
+    "usable_corridor_km": 3,
+    "street_probability_pct": 65,
+    "cu_potential_pct": 65,
     "consensus_uncertainty": "LOW",
     "overall_model_agreement_pct": 89
   },
   "sector_risks": [
     {
-      "sector": "ZW",
-      "degrees": 211,
+      "sector": "ZO",
+      "degrees": 157,
       "label": "beste sector",
-      "risk": "MODERATE",
-      "risk_score": 37,
-      "confidence": 60,
-      "distance_km": 137,
-      "recommended": true,
+      "risk": "HIGH",
+      "risk_score": 69,
+      "confidence": 33,
+      "distance_km": 10,
+      "recommended": false,
       "street_alignment": {
         "label": "GOOD",
         "score": 90,
@@ -122,37 +122,18 @@
       },
       "sea_breeze_risk": {
         "risk": "LOW",
-        "score": 12
-      }
-    },
-    {
-      "sector": "W",
-      "degrees": 256,
-      "label": "alternatief rechts",
-      "risk": "MODERATE",
-      "risk_score": 45,
-      "confidence": 55,
-      "distance_km": 130,
-      "recommended": true,
-      "street_alignment": {
-        "label": "FAIR",
-        "score": 65,
-        "difference_deg": 45
-      },
-      "sea_breeze_risk": {
-        "risk": "LOW",
-        "score": 12
+        "score": 24
       }
     },
     {
       "sector": "Z",
-      "degrees": 166,
-      "label": "alternatief links",
-      "risk": "MODERATE",
-      "risk_score": 45,
-      "confidence": 55,
-      "distance_km": 130,
-      "recommended": true,
+      "degrees": 202,
+      "label": "alternatief rechts",
+      "risk": "HIGH",
+      "risk_score": 77,
+      "confidence": 28,
+      "distance_km": 10,
+      "recommended": false,
       "street_alignment": {
         "label": "FAIR",
         "score": 65,
@@ -160,17 +141,36 @@
       },
       "sea_breeze_risk": {
         "risk": "LOW",
-        "score": 12
+        "score": 24
       }
     },
     {
-      "sector": "NW",
-      "degrees": 301,
+      "sector": "O",
+      "degrees": 112,
+      "label": "alternatief links",
+      "risk": "HIGH",
+      "risk_score": 77,
+      "confidence": 28,
+      "distance_km": 10,
+      "recommended": false,
+      "street_alignment": {
+        "label": "FAIR",
+        "score": 65,
+        "difference_deg": 45
+      },
+      "sea_breeze_risk": {
+        "risk": "LOW",
+        "score": 24
+      }
+    },
+    {
+      "sector": "ZW",
+      "degrees": 247,
       "label": "crosswind reserve",
       "risk": "HIGH",
-      "risk_score": 69,
-      "confidence": 37,
-      "distance_km": 91,
+      "risk_score": 94,
+      "confidence": 15,
+      "distance_km": 10,
       "recommended": false,
       "street_alignment": {
         "label": "POOR",
@@ -178,15 +178,15 @@
         "difference_deg": 90
       },
       "sea_breeze_risk": {
-        "risk": "MODERATE",
-        "score": 53
+        "risk": "LOW",
+        "score": 24
       }
     }
   ],
   "applied_calibration": {
-    "raw_confidence_pct": 75,
+    "raw_confidence_pct": 45,
     "confidence_adjustment_pct": -10,
-    "adjusted_confidence_pct": 62,
+    "adjusted_confidence_pct": 47,
     "cloudbase_bias": "TOO_PESSIMISTIC",
     "thermal_bias": "TOO_PESSIMISTIC",
     "wind_bias": "TOO_PESSIMISTIC"
@@ -220,7 +220,7 @@
     "dominant_model": "ICON",
     "outlier_model": "GFS"
   },
-  "operational_conclusion": "Ronald: beste sector ZW (211°). Probabilistische taakrange: 6–14 km (mediaan 10 km). Taakkwaliteit POOR. Bust risk: MODERATE. Upside: MODERATE.",
+  "operational_conclusion": "Ronald: beste sector ZO (157°). Probabilistische taakrange: 6–14 km (mediaan 10 km). Taakkwaliteit POOR. Bust risk: MODERATE. Upside: MODERATE.",
   "notes": [
     "4.5A integreert consensus uncertainty in tasking.",
     "Pilot profile beïnvloedt taakafstand en risico.",
