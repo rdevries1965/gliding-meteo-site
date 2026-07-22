@@ -1,7 +1,7 @@
 {
   "release_version": "4.6A",
-  "generated_at": "2026-07-21T07:39:28.277793Z",
-  "forecast_date": "2026-07-23",
+  "generated_at": "2026-07-22T07:40:59.611760Z",
+  "forecast_date": "2026-07-24",
   "summary": {
     "forecast_stability": "LOW",
     "forecast_uncertainty": "LOW",
@@ -16,7 +16,7 @@
   "xc_range_km": {
     "p20": 6,
     "p50": 10,
-    "p80": 12,
+    "p80": 13,
     "interpretation": "p20/p50/p80 represent low/median/high plausible XC distance range"
   },
   "confidence_cone": {
@@ -24,25 +24,25 @@
     "spread_km": 5,
     "low_case_km": 6,
     "median_case_km": 10,
-    "high_case_km": 12
+    "high_case_km": 13
   },
   "drivers": {
     "overall_model_agreement_pct": 92,
     "task_confidence_pct": 70,
-    "verification_score": 44.0,
+    "verification_score": 43.0,
     "distance_error_km": 300,
     "forecast_health": 52,
-    "precip_pct": 4,
+    "precip_pct": 6,
     "od_risk_pct": 40,
-    "wind_kmh": 14.8,
+    "wind_kmh": 5.4,
     "cu_potential_pct": 40,
-    "street_probability_pct": 50,
+    "street_probability_pct": 30,
     "calibration_confidence_adjustment_pct": -10
   },
   "operational_guidance": {
     "if_conservative": "Plan alsof 6 km haalbaar is.",
     "if_realistic": "Plan rond 10 km.",
-    "if_aggressive": "Alleen uitbreiden richting 12 km als straatbeeld en basis bevestigd worden.",
+    "if_aggressive": "Alleen uitbreiden richting 13 km als straatbeeld en basis bevestigd worden.",
     "risk_note": "Bust-risk niet dominant, normale afkortopties blijven voldoende."
   },
   "notes": [
