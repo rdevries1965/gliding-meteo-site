@@ -7,10 +7,10 @@
     "fallback_used": true
   },
   "operational": {
-    "status": "NO GO",
-    "status_definition": "Geen realistische overlanddag.",
+    "status": "MARGINAL",
+    "status_definition": "Voornamelijk lokaal of beperkt overland.",
     "reference_aircraft": "18m / Discus 2c performanceklasse",
-    "task": "Out-and-return circa 109 km of driehoek circa 94 km.",
+    "task": "Out-and-return circa 162 km of driehoek circa 139 km.",
     "flight_window": [
       {
         "time": "10:00",
@@ -19,33 +19,33 @@
       },
       {
         "time": "11:00",
-        "quality": "poor",
-        "label": "beperkt"
+        "quality": "usable",
+        "label": "lokaal"
       },
       {
         "time": "12:00",
-        "quality": "poor",
-        "label": "beperkt"
+        "quality": "usable",
+        "label": "lokaal"
       },
       {
         "time": "13:00",
-        "quality": "poor",
-        "label": "beperkt"
+        "quality": "usable",
+        "label": "lokaal"
       },
       {
         "time": "14:00",
-        "quality": "poor",
-        "label": "beperkt"
+        "quality": "usable",
+        "label": "lokaal"
       },
       {
         "time": "15:00",
-        "quality": "poor",
-        "label": "beperkt"
+        "quality": "usable",
+        "label": "lokaal"
       },
       {
         "time": "16:00",
-        "quality": "poor",
-        "label": "beperkt"
+        "quality": "usable",
+        "label": "lokaal"
       },
       {
         "time": "17:00",
@@ -62,39 +62,37 @@
     "thermal_usable_from": "12:00 LT",
     "thermal_end": "16:30-17:30 LT",
     "warnings": [
-      "Hoge neerslagkans",
       "Beperkte wolkenbasis",
-      "Matige thermiek",
-      "Verhoogd overdevelopment-risico"
+      "Matige thermiek"
     ],
     "risk_panel": [
       {
         "label": "Cloudbase",
-        "value": 975,
+        "value": 1162,
         "unit": " m",
-        "level": "laag"
+        "level": "redelijk"
       },
       {
         "label": "Thermiek",
-        "value": 0.8,
+        "value": 1.0,
         "unit": " m/s",
         "level": "zwak"
       },
       {
         "label": "Neerslag",
-        "value": 67,
+        "value": 2,
         "unit": "%",
-        "level": "hoog"
+        "level": "laag"
       },
       {
         "label": "OD-risico",
-        "value": 75,
+        "value": 40,
         "unit": "%",
-        "level": "hoog"
+        "level": "matig"
       },
       {
         "label": "Model agreement",
-        "value": 62,
+        "value": 60,
         "unit": "%",
         "level": "redelijk"
       },
@@ -113,8 +111,8 @@
         "health": "GOOD",
         "description": "NOAA GFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/gfs",
-        "response_ms": 674,
-        "fetched_at_utc": "2026-07-22T07:33:23+00:00",
+        "response_ms": 503,
+        "fetched_at_utc": "2026-07-23T07:32:07+00:00",
         "fallback_used": false,
         "fallback_to": null,
         "error": null
@@ -126,8 +124,8 @@
         "health": "GOOD",
         "description": "ECMWF IFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/ecmwf",
-        "response_ms": 644,
-        "fetched_at_utc": "2026-07-22T07:33:24+00:00",
+        "response_ms": 397,
+        "fetched_at_utc": "2026-07-23T07:32:07+00:00",
         "fallback_used": false,
         "fallback_to": null,
         "error": null
@@ -136,12 +134,12 @@
     "deep_dive_cards": [
       {
         "label": "Trigger temp",
-        "value": 21.5,
+        "value": 20.5,
         "unit": "°C"
       },
       {
         "label": "Boundary layer",
-        "value": 878,
+        "value": 1046,
         "unit": " m"
       },
       {
@@ -151,17 +149,17 @@
       },
       {
         "label": "Wolkenstraten",
-        "value": 25,
+        "value": 50,
         "unit": "%"
       },
       {
         "label": "OD-risico",
-        "value": 75,
+        "value": 40,
         "unit": "%"
       },
       {
         "label": "Model agreement",
-        "value": 62,
+        "value": 60,
         "unit": "%"
       },
       {
@@ -171,8 +169,9 @@
       }
     ],
     "confidence_explanation": [
-      "hoge neerslagkans maakt timing en bruikbaarheid onzeker"
+      "grote spreiding in wolkenbasis tussen modellen",
+      "hoge bewolking beperkt instraling en thermiekbetrouwbaarheid"
     ]
   },
-  "text": "## Samenvatting\nStatus: **NO GO**. Geen realistische overlanddag.\n\nXC-score: **3.9/10**. Operationele score: **1/10**. Betrouwbaarheid: **72%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **0.8 m/s**. Cloudbase circa **975 m AGL**.\n\n## Taakadvies\nBeste richting: **ZO**. Indicatie: out-and-return circa **109 km** of driehoek circa **94 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **Hoge neerslagkans, Beperkte wolkenbasis, Matige thermiek, Verhoogd overdevelopment-risico**. Neerslagkans: **67%**. OD-risico: **75%**. Model agreement: **62% (redelijk)**. Forecast health: **90% (GOOD)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
+  "text": "## Samenvatting\nStatus: **MARGINAL**. Voornamelijk lokaal of beperkt overland.\n\nXC-score: **5.8/10**. Operationele score: **4.7/10**. Betrouwbaarheid: **60%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **1.0 m/s**. Cloudbase circa **1162 m AGL**.\n\n## Taakadvies\nBeste richting: **ZO**. Indicatie: out-and-return circa **162 km** of driehoek circa **139 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **Beperkte wolkenbasis, Matige thermiek**. Neerslagkans: **2%**. OD-risico: **40%**. Model agreement: **60% (redelijk)**. Forecast health: **90% (GOOD)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
 }
