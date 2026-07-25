@@ -7,10 +7,10 @@
     "fallback_used": true
   },
   "operational": {
-    "status": "CONDITIONAL GO",
-    "status_definition": "Bruikbare overlanddag tot ongeveer 300 km.",
+    "status": "NO GO",
+    "status_definition": "Geen realistische overlanddag.",
     "reference_aircraft": "18m / Discus 2c performanceklasse",
-    "task": "Out-and-return circa 190 km of driehoek circa 163 km.",
+    "task": "Out-and-return circa 106 km of driehoek circa 91 km.",
     "flight_window": [
       {
         "time": "10:00",
@@ -24,28 +24,28 @@
       },
       {
         "time": "12:00",
-        "quality": "usable",
-        "label": "bruikbaar"
+        "quality": "poor",
+        "label": "beperkt"
       },
       {
         "time": "13:00",
-        "quality": "usable",
-        "label": "bruikbaar"
+        "quality": "poor",
+        "label": "beperkt"
       },
       {
         "time": "14:00",
-        "quality": "usable",
-        "label": "bruikbaar"
+        "quality": "poor",
+        "label": "beperkt"
       },
       {
         "time": "15:00",
-        "quality": "usable",
-        "label": "bruikbaar"
+        "quality": "poor",
+        "label": "beperkt"
       },
       {
         "time": "16:00",
-        "quality": "usable",
-        "label": "bruikbaar"
+        "quality": "poor",
+        "label": "beperkt"
       },
       {
         "time": "17:00",
@@ -62,32 +62,35 @@
     "thermal_usable_from": "12:00 LT",
     "thermal_end": "16:30-17:30 LT",
     "warnings": [
+      "Hoge neerslagkans",
+      "Beperkte wolkenbasis",
+      "Matige thermiek",
       "Forecast source health: POOR"
     ],
     "risk_panel": [
       {
         "label": "Cloudbase",
-        "value": 1412,
+        "value": 912,
         "unit": " m",
-        "level": "redelijk"
+        "level": "laag"
       },
       {
         "label": "Thermiek",
-        "value": 2.4,
+        "value": 0.8,
         "unit": " m/s",
-        "level": "goed"
+        "level": "zwak"
       },
       {
         "label": "Neerslag",
-        "value": 31,
+        "value": 84,
         "unit": "%",
-        "level": "matig"
+        "level": "hoog"
       },
       {
         "label": "OD-risico",
-        "value": 25,
+        "value": 45,
         "unit": "%",
-        "level": "laag"
+        "level": "matig"
       },
       {
         "label": "Model agreement",
@@ -111,7 +114,7 @@
         "description": "NOAA GFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/gfs",
         "response_ms": null,
-        "fetched_at_utc": "2026-07-24T07:32:56+00:00",
+        "fetched_at_utc": "2026-07-25T07:16:56+00:00",
         "fallback_used": true,
         "fallback_to": "ECMWF",
         "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=120)"
@@ -123,8 +126,8 @@
         "health": "GOOD",
         "description": "ECMWF IFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/ecmwf",
-        "response_ms": 604,
-        "fetched_at_utc": "2026-07-24T07:32:56+00:00",
+        "response_ms": 440,
+        "fetched_at_utc": "2026-07-25T07:16:56+00:00",
         "fallback_used": false,
         "fallback_to": null,
         "error": null
@@ -133,27 +136,27 @@
     "deep_dive_cards": [
       {
         "label": "Trigger temp",
-        "value": 23.1,
+        "value": 24.5,
         "unit": "°C"
       },
       {
         "label": "Boundary layer",
-        "value": 1765,
+        "value": 1003,
         "unit": " m"
       },
       {
         "label": "Cu-potentie",
-        "value": 60,
+        "value": 30,
         "unit": "%"
       },
       {
         "label": "Wolkenstraten",
-        "value": 50,
+        "value": 25,
         "unit": "%"
       },
       {
         "label": "OD-risico",
-        "value": 25,
+        "value": 45,
         "unit": "%"
       },
       {
@@ -168,11 +171,11 @@
       }
     ],
     "confidence_explanation": [
+      "hoge neerslagkans maakt timing en bruikbaarheid onzeker",
       "forecast source health is POOR (52%)",
       "1 bron(nen) gebruiken fallback",
-      "modelovereenkomst is goed",
-      "betrouwbaarheid is relatief goed voor een convectieve briefing"
+      "modelovereenkomst is goed"
     ]
   },
-  "text": "## Samenvatting\nStatus: **CONDITIONAL GO**. Bruikbare overlanddag tot ongeveer 300 km.\n\nXC-score: **6.8/10**. Operationele score: **6.0/10**. Betrouwbaarheid: **89%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **2.4 m/s**. Cloudbase circa **1412 m AGL**.\n\n## Taakadvies\nBeste richting: **NO**. Indicatie: out-and-return circa **190 km** of driehoek circa **163 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **Forecast source health: POOR**. Neerslagkans: **31%**. OD-risico: **25%**. Model agreement: **100% (hoog)**. Forecast health: **52% (POOR)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
+  "text": "## Samenvatting\nStatus: **NO GO**. Geen realistische overlanddag.\n\nXC-score: **3.8/10**. Operationele score: **1/10**. Betrouwbaarheid: **66%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **0.8 m/s**. Cloudbase circa **912 m AGL**.\n\n## Taakadvies\nBeste richting: **ONO**. Indicatie: out-and-return circa **106 km** of driehoek circa **91 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **Hoge neerslagkans, Beperkte wolkenbasis, Matige thermiek, Forecast source health: POOR**. Neerslagkans: **84%**. OD-risico: **45%**. Model agreement: **100% (hoog)**. Forecast health: **52% (POOR)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
 }
