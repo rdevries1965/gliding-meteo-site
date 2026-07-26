@@ -10,7 +10,7 @@
     "status": "NO GO",
     "status_definition": "Geen realistische overlanddag.",
     "reference_aircraft": "18m / Discus 2c performanceklasse",
-    "task": "Out-and-return circa 106 km of driehoek circa 91 km.",
+    "task": "Out-and-return circa 148 km of driehoek circa 127 km.",
     "flight_window": [
       {
         "time": "10:00",
@@ -64,25 +64,24 @@
     "warnings": [
       "Hoge neerslagkans",
       "Beperkte wolkenbasis",
-      "Matige thermiek",
       "Forecast source health: POOR"
     ],
     "risk_panel": [
       {
         "label": "Cloudbase",
-        "value": 912,
+        "value": 937,
         "unit": " m",
         "level": "laag"
       },
       {
         "label": "Thermiek",
-        "value": 0.8,
+        "value": 1.5,
         "unit": " m/s",
-        "level": "zwak"
+        "level": "redelijk"
       },
       {
         "label": "Neerslag",
-        "value": 84,
+        "value": 86,
         "unit": "%",
         "level": "hoog"
       },
@@ -114,7 +113,7 @@
         "description": "NOAA GFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/gfs",
         "response_ms": null,
-        "fetched_at_utc": "2026-07-25T07:16:56+00:00",
+        "fetched_at_utc": "2026-07-26T07:37:05+00:00",
         "fallback_used": true,
         "fallback_to": "ECMWF",
         "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=120)"
@@ -126,8 +125,8 @@
         "health": "GOOD",
         "description": "ECMWF IFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/ecmwf",
-        "response_ms": 440,
-        "fetched_at_utc": "2026-07-25T07:16:56+00:00",
+        "response_ms": 632,
+        "fetched_at_utc": "2026-07-26T07:37:06+00:00",
         "fallback_used": false,
         "fallback_to": null,
         "error": null
@@ -136,22 +135,22 @@
     "deep_dive_cards": [
       {
         "label": "Trigger temp",
-        "value": 24.5,
+        "value": 23.0,
         "unit": "°C"
       },
       {
         "label": "Boundary layer",
-        "value": 1003,
+        "value": 1031,
         "unit": " m"
       },
       {
         "label": "Cu-potentie",
-        "value": 30,
+        "value": 55,
         "unit": "%"
       },
       {
         "label": "Wolkenstraten",
-        "value": 25,
+        "value": 65,
         "unit": "%"
       },
       {
@@ -177,5 +176,5 @@
       "modelovereenkomst is goed"
     ]
   },
-  "text": "## Samenvatting\nStatus: **NO GO**. Geen realistische overlanddag.\n\nXC-score: **3.8/10**. Operationele score: **1/10**. Betrouwbaarheid: **66%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **0.8 m/s**. Cloudbase circa **912 m AGL**.\n\n## Taakadvies\nBeste richting: **ONO**. Indicatie: out-and-return circa **106 km** of driehoek circa **91 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **Hoge neerslagkans, Beperkte wolkenbasis, Matige thermiek, Forecast source health: POOR**. Neerslagkans: **84%**. OD-risico: **45%**. Model agreement: **100% (hoog)**. Forecast health: **52% (POOR)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
+  "text": "## Samenvatting\nStatus: **NO GO**. Geen realistische overlanddag.\n\nXC-score: **5.3/10**. Operationele score: **2.4/10**. Betrouwbaarheid: **71%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **1.5 m/s**. Cloudbase circa **937 m AGL**.\n\n## Taakadvies\nBeste richting: **OZO**. Indicatie: out-and-return circa **148 km** of driehoek circa **127 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **Hoge neerslagkans, Beperkte wolkenbasis, Forecast source health: POOR**. Neerslagkans: **86%**. OD-risico: **45%**. Model agreement: **100% (hoog)**. Forecast health: **52% (POOR)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
 }
