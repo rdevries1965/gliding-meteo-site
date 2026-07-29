@@ -1,16 +1,16 @@
 {
   "release_version": "4.6A",
-  "generated_at": "2026-07-28T07:43:50.312222Z",
-  "forecast_date": "2026-07-29",
+  "generated_at": "2026-07-29T07:48:59.314799Z",
+  "forecast_date": "2026-07-30",
   "summary": {
     "forecast_stability": "LOW",
     "forecast_uncertainty": "LOW",
-    "uncertainty_pct": 38,
-    "operational_volatility_pct": 38,
+    "uncertainty_pct": 44,
+    "operational_volatility_pct": 44,
     "operational_volatility": "MODERATE",
-    "bust_risk_pct": 30,
+    "bust_risk_pct": 40,
     "bust_risk": "MODERATE",
-    "upside_surprise_pct": 46,
+    "upside_surprise_pct": 26,
     "upside_surprise": "MODERATE"
   },
   "xc_range_km": {
@@ -29,15 +29,15 @@
   "drivers": {
     "overall_model_agreement_pct": 92,
     "task_confidence_pct": 70,
-    "verification_score": 73.0,
+    "verification_score": 35.0,
     "distance_error_km": 300,
     "forecast_health": 52,
-    "precip_pct": 2,
+    "precip_pct": 14,
     "od_risk_pct": 10,
-    "wind_kmh": 9.9,
+    "wind_kmh": 12.4,
     "cu_potential_pct": 60,
-    "street_probability_pct": 30,
-    "calibration_confidence_adjustment_pct": -10
+    "street_probability_pct": 50,
+    "calibration_confidence_adjustment_pct": -7
   },
   "operational_guidance": {
     "if_conservative": "Plan alsof 6 km haalbaar is.",

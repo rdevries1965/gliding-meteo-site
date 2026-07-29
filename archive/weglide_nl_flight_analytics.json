@@ -1,6 +1,6 @@
 {
   "release_version": "10.1D",
-  "generated_at_utc": "2026-07-28T07:44:12Z",
+  "generated_at_utc": "2026-07-29T07:49:21Z",
   "source": {
     "input_dir": "site/archive/weglide_nl_flights",
     "index": "site/archive/weglide_nl_flights/index.json",
@@ -34,7 +34,7 @@
       "mean_total_distance_km": 0.0,
       "mean_max_distance_km": 0.0,
       "best_day": {
-        "date": "2026-07-27",
+        "date": "2026-07-28",
         "flight_count": 0,
         "total_distance_km": 0.0,
         "average_distance_km": 0.0,
@@ -258,13 +258,13 @@
   },
   "by_weekday": {
     "monday": {
-      "days": 3,
+      "days": 2,
       "flights": 11,
-      "average_flights_per_day": 3.7,
+      "average_flights_per_day": 5.5,
       "max_distance_km": 620.5
     },
     "tuesday": {
-      "days": 2,
+      "days": 3,
       "flights": 0,
       "average_flights_per_day": 0.0,
       "max_distance_km": 0.0
@@ -339,7 +339,7 @@
         "outcome_category": "strong_xc_day"
       },
       {
-        "date": "2026-07-27",
+        "date": "2026-07-28",
         "flight_count": 0,
         "total_distance_km": 0.0,
         "average_distance_km": 0.0,
@@ -431,7 +431,7 @@
         "outcome_category": "local_day"
       },
       {
-        "date": "2026-07-27",
+        "date": "2026-07-28",
         "flight_count": 0,
         "total_distance_km": 0.0,
         "average_distance_km": 0.0,
@@ -523,7 +523,7 @@
         "outcome_category": "local_day"
       },
       {
-        "date": "2026-07-27",
+        "date": "2026-07-28",
         "flight_count": 0,
         "total_distance_km": 0.0,
         "average_distance_km": 0.0,
@@ -615,7 +615,7 @@
         "outcome_category": "local_day"
       },
       {
-        "date": "2026-07-27",
+        "date": "2026-07-28",
         "flight_count": 0,
         "total_distance_km": 0.0,
         "average_distance_km": 0.0,
@@ -707,7 +707,7 @@
         "outcome_category": "strong_xc_day"
       },
       {
-        "date": "2026-07-27",
+        "date": "2026-07-28",
         "flight_count": 0,
         "total_distance_km": 0.0,
         "average_distance_km": 0.0,
@@ -1066,7 +1066,7 @@
   ],
   "recent_days": [
     {
-      "date": "2026-07-27",
+      "date": "2026-07-28",
       "flight_count": 0,
       "airfields_count": 0,
       "total_distance_km": 0.0,
@@ -1277,13 +1277,13 @@
       "strong_xc_days": 0
     },
     "last_30_days": {
-      "days": 15,
-      "flights": 26,
-      "total_distance_km": 17630.1,
-      "average_flights_per_day": 1.7,
-      "average_distance_per_flight_km": 678.1,
+      "days": 14,
+      "flights": 15,
+      "total_distance_km": 11989.1,
+      "average_flights_per_day": 1.1,
+      "average_distance_per_flight_km": 799.3,
       "max_distance_km": 1010.6,
-      "strong_xc_days": 3
+      "strong_xc_days": 2
     },
     "last_90_days": {
       "days": 20,
@@ -1299,7 +1299,7 @@
     "days_missing_daily_file": [],
     "days_with_warnings": [
       {
-        "date": "2026-07-27",
+        "date": "2026-07-28",
         "warnings": [
           "No usable NL takeoff flights could be normalized from the API response."
         ]
