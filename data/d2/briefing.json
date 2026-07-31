@@ -3,14 +3,14 @@
   "generation": {
     "ai_ok": false,
     "ai_attempts": 3,
-    "ai_error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "ai_error": "Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
     "fallback_used": true
   },
   "operational": {
     "status": "CONDITIONAL GO",
     "status_definition": "Bruikbare overlanddag tot ongeveer 300 km.",
     "reference_aircraft": "18m / Discus 2c performanceklasse",
-    "task": "Out-and-return circa 227 km of driehoek circa 194 km.",
+    "task": "Out-and-return circa 232 km of driehoek circa 199 km.",
     "flight_window": [
       {
         "time": "10:00",
@@ -67,19 +67,19 @@
     "risk_panel": [
       {
         "label": "Cloudbase",
-        "value": 1662,
+        "value": 1863,
         "unit": " m",
         "level": "goed"
       },
       {
         "label": "Thermiek",
-        "value": 2.2,
+        "value": 2.4,
         "unit": " m/s",
-        "level": "redelijk"
+        "level": "goed"
       },
       {
         "label": "Neerslag",
-        "value": 20,
+        "value": 0,
         "unit": "%",
         "level": "laag"
       },
@@ -111,7 +111,7 @@
         "description": "NOAA GFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/gfs",
         "response_ms": null,
-        "fetched_at_utc": "2026-07-30T07:39:29+00:00",
+        "fetched_at_utc": "2026-07-31T07:55:46+00:00",
         "fallback_used": true,
         "fallback_to": "ECMWF",
         "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=120)"
@@ -123,8 +123,8 @@
         "health": "GOOD",
         "description": "ECMWF IFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/ecmwf",
-        "response_ms": 511,
-        "fetched_at_utc": "2026-07-30T07:39:29+00:00",
+        "response_ms": 626,
+        "fetched_at_utc": "2026-07-31T07:55:47+00:00",
         "fallback_used": false,
         "fallback_to": null,
         "error": null
@@ -133,12 +133,12 @@
     "deep_dive_cards": [
       {
         "label": "Trigger temp",
-        "value": 20.0,
+        "value": 20.3,
         "unit": "°C"
       },
       {
         "label": "Boundary layer",
-        "value": 1828,
+        "value": 2049,
         "unit": " m"
       },
       {
@@ -148,7 +148,7 @@
       },
       {
         "label": "Wolkenstraten",
-        "value": 70,
+        "value": 50,
         "unit": "%"
       },
       {
@@ -174,5 +174,5 @@
       "betrouwbaarheid is relatief goed voor een convectieve briefing"
     ]
   },
-  "text": "## Samenvatting\nStatus: **CONDITIONAL GO**. Bruikbare overlanddag tot ongeveer 300 km.\n\nXC-score: **8.1/10**. Operationele score: **7.3/10**. Betrouwbaarheid: **89%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **2.2 m/s**. Cloudbase circa **1662 m AGL**.\n\n## Taakadvies\nBeste richting: **ZZO**. Indicatie: out-and-return circa **227 km** of driehoek circa **194 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **Forecast source health: POOR**. Neerslagkans: **20%**. OD-risico: **10%**. Model agreement: **100% (hoog)**. Forecast health: **52% (POOR)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
+  "text": "## Samenvatting\nStatus: **CONDITIONAL GO**. Bruikbare overlanddag tot ongeveer 300 km.\n\nXC-score: **8.3/10**. Operationele score: **7.5/10**. Betrouwbaarheid: **89%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **2.4 m/s**. Cloudbase circa **1863 m AGL**.\n\n## Taakadvies\nBeste richting: **ZW**. Indicatie: out-and-return circa **232 km** of driehoek circa **199 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **Forecast source health: POOR**. Neerslagkans: **0%**. OD-risico: **10%**. Model agreement: **100% (hoog)**. Forecast health: **52% (POOR)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
 }
