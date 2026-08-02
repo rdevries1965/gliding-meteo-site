@@ -1,6 +1,6 @@
 {
   "release_version": "10.1D",
-  "generated_at_utc": "2026-08-01T07:33:53Z",
+  "generated_at_utc": "2026-08-02T07:38:15Z",
   "source": {
     "input_dir": "site/archive/weglide_nl_flights",
     "index": "site/archive/weglide_nl_flights/index.json",
@@ -8,33 +8,33 @@
   },
   "sample": {
     "days_total": 20,
-    "days_with_flights": 4,
-    "flights_total": 36,
-    "airfields_total": 6,
+    "days_with_flights": 5,
+    "flights_total": 38,
+    "airfields_total": 7,
     "sample_size_warning": true
   },
   "overall": {
-    "average_flights_per_day": 1.8,
-    "average_flights_per_flying_day": 9.0,
-    "total_distance_km": 17717.5,
-    "average_total_distance_per_day_km": 885.9,
-    "average_distance_per_flight_km": 492.2,
+    "average_flights_per_day": 1.9,
+    "average_flights_per_flying_day": 7.6,
+    "total_distance_km": 19269.6,
+    "average_total_distance_per_day_km": 963.5,
+    "average_distance_per_flight_km": 507.1,
     "max_distance_km": 1010.6,
-    "total_duration_hours": 205.9,
-    "average_duration_minutes": 343.2,
-    "average_speed_kmh": 87.5,
-    "max_speed_kmh": 102.4
+    "total_duration_hours": 221.5,
+    "average_duration_minutes": 349.7,
+    "average_speed_kmh": 88.3,
+    "max_speed_kmh": 112.5
   },
   "outcome_categories": {
     "no_activity": {
-      "days": 16,
-      "percentage_of_days": 80.0,
+      "days": 15,
+      "percentage_of_days": 75.0,
       "total_flights": 0,
       "mean_flights_per_day": 0.0,
       "mean_total_distance_km": 0.0,
       "mean_max_distance_km": 0.0,
       "best_day": {
-        "date": "2026-07-31",
+        "date": "2026-07-12",
         "flight_count": 0,
         "total_distance_km": 0.0,
         "average_distance_km": 0.0,
@@ -79,12 +79,12 @@
       "best_day": null
     },
     "strong_xc_day": {
-      "days": 3,
-      "percentage_of_days": 15.0,
-      "total_flights": 26,
-      "mean_flights_per_day": 8.7,
-      "mean_total_distance_km": 5876.7,
-      "mean_max_distance_km": 842.3,
+      "days": 4,
+      "percentage_of_days": 20.0,
+      "total_flights": 28,
+      "mean_flights_per_day": 7.0,
+      "mean_total_distance_km": 4795.6,
+      "mean_max_distance_km": 835.8,
       "best_day": {
         "date": "2026-07-03",
         "flight_count": 6,
@@ -100,13 +100,13 @@
     {
       "airfield": "Terlet",
       "airfield_id": "EHTL",
-      "days_seen": 3,
-      "flight_count": 16,
-      "total_distance_km": 11531.3,
-      "average_distance_km": 720.7,
+      "days_seen": 4,
+      "flight_count": 17,
+      "total_distance_km": 12347.5,
+      "average_distance_km": 726.3,
       "max_distance_km": 1010.6,
-      "average_flights_per_day_seen": 5.3,
-      "share_of_total_flights_pct": 44.4,
+      "average_flights_per_day_seen": 4.2,
+      "share_of_total_flights_pct": 44.7,
       "best_day": {
         "date": "2026-07-03",
         "flight_count": 4,
@@ -122,7 +122,7 @@
       "average_distance_km": 8.7,
       "max_distance_km": 9.8,
       "average_flights_per_day_seen": 10.0,
-      "share_of_total_flights_pct": 27.8,
+      "share_of_total_flights_pct": 26.3,
       "best_day": {
         "date": "2026-06-27",
         "flight_count": 10,
@@ -138,7 +138,7 @@
       "average_distance_km": 575.8,
       "max_distance_km": 654.4,
       "average_flights_per_day_seen": 3.0,
-      "share_of_total_flights_pct": 16.7,
+      "share_of_total_flights_pct": 15.8,
       "best_day": {
         "date": "2026-07-01",
         "flight_count": 3,
@@ -154,11 +154,27 @@
       "average_distance_km": 903.5,
       "max_distance_km": 1004.4,
       "average_flights_per_day_seen": 2.0,
-      "share_of_total_flights_pct": 5.6,
+      "share_of_total_flights_pct": 5.3,
       "best_day": {
         "date": "2026-07-03",
         "flight_count": 2,
         "max_distance_km": 1004.4
+      }
+    },
+    {
+      "airfield": "Gilze-Rijen",
+      "airfield_id": "EHGR",
+      "days_seen": 1,
+      "flight_count": 1,
+      "total_distance_km": 735.9,
+      "average_distance_km": 735.9,
+      "max_distance_km": 735.9,
+      "average_flights_per_day_seen": 1.0,
+      "share_of_total_flights_pct": 2.6,
+      "best_day": {
+        "date": "2026-08-01",
+        "flight_count": 1,
+        "max_distance_km": 735.9
       }
     },
     {
@@ -170,7 +186,7 @@
       "average_distance_km": 485.4,
       "max_distance_km": 485.4,
       "average_flights_per_day_seen": 1.0,
-      "share_of_total_flights_pct": 2.8,
+      "share_of_total_flights_pct": 2.6,
       "best_day": {
         "date": "2026-06-29",
         "flight_count": 1,
@@ -186,7 +202,7 @@
       "average_distance_km": 351.7,
       "max_distance_km": 351.7,
       "average_flights_per_day_seen": 1.0,
-      "share_of_total_flights_pct": 2.8,
+      "share_of_total_flights_pct": 2.6,
       "best_day": {
         "date": "2026-06-29",
         "flight_count": 1,
@@ -195,8 +211,17 @@
     }
   ],
   "by_month": {
+    "2026-08": {
+      "days": 1,
+      "flights": 2,
+      "total_distance_km": 1552.1,
+      "average_flights_per_day": 2.0,
+      "average_distance_per_flight_km": 776.0,
+      "max_distance_km": 816.2,
+      "strong_xc_days": 1
+    },
     "2026-07": {
-      "days": 13,
+      "days": 12,
       "flights": 15,
       "total_distance_km": 11989.1,
       "average_flights_per_day": 1.2,
@@ -227,12 +252,12 @@
     },
     "summer": {
       "days": 20,
-      "flights": 36,
-      "total_distance_km": 17717.5,
-      "average_flights_per_day": 1.8,
-      "average_distance_per_flight_km": 492.2,
+      "flights": 38,
+      "total_distance_km": 19269.6,
+      "average_flights_per_day": 1.9,
+      "average_distance_per_flight_km": 507.1,
       "max_distance_km": 1010.6,
-      "strong_xc_days": 3,
+      "strong_xc_days": 4,
       "dominant_outcome_category": "no_activity"
     },
     "autumn": {
@@ -282,16 +307,16 @@
       "max_distance_km": 0.0
     },
     "friday": {
-      "days": 4,
+      "days": 3,
       "flights": 6,
-      "average_flights_per_day": 1.5,
+      "average_flights_per_day": 2.0,
       "max_distance_km": 1010.6
     },
     "saturday": {
-      "days": 3,
-      "flights": 10,
-      "average_flights_per_day": 3.3,
-      "max_distance_km": 9.8
+      "days": 4,
+      "flights": 12,
+      "average_flights_per_day": 3.0,
+      "max_distance_km": 816.2
     },
     "sunday": {
       "days": 3,
@@ -339,13 +364,13 @@
         "outcome_category": "strong_xc_day"
       },
       {
-        "date": "2026-07-31",
-        "flight_count": 0,
-        "total_distance_km": 0.0,
-        "average_distance_km": 0.0,
-        "max_distance_km": 0.0,
-        "average_speed_kmh": 0.0,
-        "outcome_category": "no_activity"
+        "date": "2026-08-01",
+        "flight_count": 2,
+        "total_distance_km": 1552.1,
+        "average_distance_km": 776.0,
+        "max_distance_km": 816.2,
+        "average_speed_kmh": 103.0,
+        "outcome_category": "strong_xc_day"
       },
       {
         "date": "2026-07-12",
@@ -422,6 +447,15 @@
         "outcome_category": "strong_xc_day"
       },
       {
+        "date": "2026-08-01",
+        "flight_count": 2,
+        "total_distance_km": 1552.1,
+        "average_distance_km": 776.0,
+        "max_distance_km": 816.2,
+        "average_speed_kmh": 103.0,
+        "outcome_category": "strong_xc_day"
+      },
+      {
         "date": "2026-06-27",
         "flight_count": 10,
         "total_distance_km": 87.4,
@@ -429,15 +463,6 @@
         "max_distance_km": 9.8,
         "average_speed_kmh": 85.5,
         "outcome_category": "local_day"
-      },
-      {
-        "date": "2026-07-31",
-        "flight_count": 0,
-        "total_distance_km": 0.0,
-        "average_distance_km": 0.0,
-        "max_distance_km": 0.0,
-        "average_speed_kmh": 0.0,
-        "outcome_category": "no_activity"
       },
       {
         "date": "2026-07-12",
@@ -505,6 +530,15 @@
         "outcome_category": "strong_xc_day"
       },
       {
+        "date": "2026-08-01",
+        "flight_count": 2,
+        "total_distance_km": 1552.1,
+        "average_distance_km": 776.0,
+        "max_distance_km": 816.2,
+        "average_speed_kmh": 103.0,
+        "outcome_category": "strong_xc_day"
+      },
+      {
         "date": "2026-06-29",
         "flight_count": 11,
         "total_distance_km": 5641.0,
@@ -521,15 +555,6 @@
         "max_distance_km": 9.8,
         "average_speed_kmh": 85.5,
         "outcome_category": "local_day"
-      },
-      {
-        "date": "2026-07-31",
-        "flight_count": 0,
-        "total_distance_km": 0.0,
-        "average_distance_km": 0.0,
-        "max_distance_km": 0.0,
-        "average_speed_kmh": 0.0,
-        "outcome_category": "no_activity"
       },
       {
         "date": "2026-07-12",
@@ -588,6 +613,15 @@
         "outcome_category": "strong_xc_day"
       },
       {
+        "date": "2026-08-01",
+        "flight_count": 2,
+        "total_distance_km": 1552.1,
+        "average_distance_km": 776.0,
+        "max_distance_km": 816.2,
+        "average_speed_kmh": 103.0,
+        "outcome_category": "strong_xc_day"
+      },
+      {
         "date": "2026-07-01",
         "flight_count": 9,
         "total_distance_km": 6329.2,
@@ -613,15 +647,6 @@
         "max_distance_km": 9.8,
         "average_speed_kmh": 85.5,
         "outcome_category": "local_day"
-      },
-      {
-        "date": "2026-07-31",
-        "flight_count": 0,
-        "total_distance_km": 0.0,
-        "average_distance_km": 0.0,
-        "max_distance_km": 0.0,
-        "average_speed_kmh": 0.0,
-        "outcome_category": "no_activity"
       },
       {
         "date": "2026-07-12",
@@ -671,6 +696,15 @@
     ],
     "by_average_speed": [
       {
+        "date": "2026-08-01",
+        "flight_count": 2,
+        "total_distance_km": 1552.1,
+        "average_distance_km": 776.0,
+        "max_distance_km": 816.2,
+        "average_speed_kmh": 103.0,
+        "outcome_category": "strong_xc_day"
+      },
+      {
         "date": "2026-07-03",
         "flight_count": 6,
         "total_distance_km": 5659.9,
@@ -705,15 +739,6 @@
         "max_distance_km": 895.7,
         "average_speed_kmh": 84.6,
         "outcome_category": "strong_xc_day"
-      },
-      {
-        "date": "2026-07-31",
-        "flight_count": 0,
-        "total_distance_km": 0.0,
-        "average_distance_km": 0.0,
-        "max_distance_km": 0.0,
-        "average_speed_kmh": 0.0,
-        "outcome_category": "no_activity"
       },
       {
         "date": "2026-07-12",
@@ -848,6 +873,18 @@
       "weglide_url": ""
     },
     {
+      "date": "2026-08-01",
+      "flight_id": "1184077",
+      "takeoff_airfield": "Terlet",
+      "takeoff_airfield_id": "EHTL",
+      "glider_type": "EB 29R",
+      "registration": "",
+      "distance_km": 816.2,
+      "duration_minutes": 449.8,
+      "average_speed_kmh": 112.5,
+      "weglide_url": ""
+    },
+    {
       "date": "2026-07-01",
       "flight_id": "1138413",
       "takeoff_airfield": "Terlet",
@@ -869,6 +906,18 @@
       "distance_km": 802.5,
       "duration_minutes": 554.2,
       "average_speed_kmh": 88.3,
+      "weglide_url": ""
+    },
+    {
+      "date": "2026-08-01",
+      "flight_id": "1183947",
+      "takeoff_airfield": "Gilze-Rijen",
+      "takeoff_airfield_id": "EHGR",
+      "glider_type": "LS 4 neo",
+      "registration": "",
+      "distance_km": 735.9,
+      "duration_minutes": 485.9,
+      "average_speed_kmh": 93.5,
       "weglide_url": ""
     },
     {
@@ -1038,42 +1087,18 @@
       "duration_minutes": 364.5,
       "average_speed_kmh": 88.2,
       "weglide_url": ""
-    },
-    {
-      "date": "2026-06-29",
-      "flight_id": "1136443",
-      "takeoff_airfield": "Terlet",
-      "takeoff_airfield_id": "EHTL",
-      "glider_type": "EB 29DR",
-      "registration": "",
-      "distance_km": 448.9,
-      "duration_minutes": 316.1,
-      "average_speed_kmh": 88.1,
-      "weglide_url": ""
-    },
-    {
-      "date": "2026-06-29",
-      "flight_id": "1136695",
-      "takeoff_airfield": "Terlet",
-      "takeoff_airfield_id": "EHTL",
-      "glider_type": "ASH 31 Mi 21m",
-      "registration": "",
-      "distance_km": 354.9,
-      "duration_minutes": 223.8,
-      "average_speed_kmh": 96.9,
-      "weglide_url": ""
     }
   ],
   "recent_days": [
     {
-      "date": "2026-07-31",
-      "flight_count": 0,
-      "airfields_count": 0,
-      "total_distance_km": 0.0,
-      "max_distance_km": 0.0,
-      "average_speed_kmh": 0.0,
-      "outcome_category": "no_activity",
-      "warnings_count": 1
+      "date": "2026-08-01",
+      "flight_count": 2,
+      "airfields_count": 2,
+      "total_distance_km": 1552.1,
+      "max_distance_km": 816.2,
+      "average_speed_kmh": 103.0,
+      "outcome_category": "strong_xc_day",
+      "warnings_count": 0
     },
     {
       "date": "2026-07-12",
@@ -1269,41 +1294,35 @@
   "trends": {
     "last_7_days": {
       "days": 1,
-      "flights": 0,
-      "total_distance_km": 0.0,
-      "average_flights_per_day": 0.0,
-      "average_distance_per_flight_km": 0,
-      "max_distance_km": 0.0,
-      "strong_xc_days": 0
+      "flights": 2,
+      "total_distance_km": 1552.1,
+      "average_flights_per_day": 2.0,
+      "average_distance_per_flight_km": 776.0,
+      "max_distance_km": 816.2,
+      "strong_xc_days": 1
     },
     "last_30_days": {
-      "days": 11,
-      "flights": 6,
-      "total_distance_km": 5659.9,
-      "average_flights_per_day": 0.5,
-      "average_distance_per_flight_km": 943.3,
-      "max_distance_km": 1010.6,
+      "days": 10,
+      "flights": 2,
+      "total_distance_km": 1552.1,
+      "average_flights_per_day": 0.2,
+      "average_distance_per_flight_km": 776.0,
+      "max_distance_km": 816.2,
       "strong_xc_days": 1
     },
     "last_90_days": {
       "days": 20,
-      "flights": 36,
-      "total_distance_km": 17717.5,
-      "average_flights_per_day": 1.8,
-      "average_distance_per_flight_km": 492.2,
+      "flights": 38,
+      "total_distance_km": 19269.6,
+      "average_flights_per_day": 1.9,
+      "average_distance_per_flight_km": 507.1,
       "max_distance_km": 1010.6,
-      "strong_xc_days": 3
+      "strong_xc_days": 4
     }
   },
   "data_quality": {
     "days_missing_daily_file": [],
     "days_with_warnings": [
-      {
-        "date": "2026-07-31",
-        "warnings": [
-          "No usable NL takeoff flights could be normalized from the API response."
-        ]
-      },
       {
         "date": "2026-07-12",
         "warnings": [
@@ -1395,7 +1414,7 @@
         ]
       }
     ],
-    "days_with_zero_flights": 16,
+    "days_with_zero_flights": 15,
     "flights_missing_distance": 0,
     "flights_missing_duration": 0,
     "flights_missing_airfield": 0
