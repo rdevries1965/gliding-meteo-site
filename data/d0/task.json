@@ -1,7 +1,7 @@
 {
   "release_version": "4.5B",
-  "generated_at": "2026-08-02T07:37:31.080178Z",
-  "forecast_date": "2026-08-02",
+  "generated_at": "2026-08-03T08:34:51.308918Z",
+  "forecast_date": "2026-08-03",
   "status": "LOCAL ONLY",
   "analysis_status": "CONDITIONAL GO",
   "task_quality": "POOR",
@@ -17,18 +17,18 @@
     "conservative_km": 6,
     "realistic_km": 10,
     "aggressive_km": 14,
-    "triangle_km": 9
+    "triangle_km": 8
   },
   "best_sector": {
     "direction": "ZW",
-    "degrees": 233,
-    "confidence": 73,
+    "degrees": 224,
+    "confidence": 50,
     "reason": "beste sector volgens profiel en risico"
   },
   "alternative_sector": {
-    "direction": "Z",
-    "degrees": 188,
-    "confidence": 68
+    "direction": "W",
+    "degrees": 269,
+    "confidence": 45
   },
   "timing": {
     "launch_window": "11:30-13:00 LT",
@@ -96,10 +96,10 @@
   "xc_intelligence": {
     "blue_gap_risk": {
       "risk": "LOW",
-      "score": 0,
+      "score": 10,
       "reason": "geen dominant blue-gap signaal"
     },
-    "usable_corridor_km": 7,
+    "usable_corridor_km": 5,
     "street_probability_pct": 90,
     "cu_potential_pct": 85,
     "consensus_uncertainty": "LOW",
@@ -107,13 +107,13 @@
   },
   "sector_risks": [
     {
-      "sector": "ZW",
-      "degrees": 233,
+      "sector": "W",
+      "degrees": 269,
       "label": "beste sector",
-      "risk": "LOW",
-      "risk_score": 7,
-      "confidence": 73,
-      "distance_km": 300,
+      "risk": "MODERATE",
+      "risk_score": 40,
+      "confidence": 45,
+      "distance_km": 268,
       "recommended": true,
       "street_alignment": {
         "label": "GOOD",
@@ -121,19 +121,19 @@
         "difference_deg": 0
       },
       "sea_breeze_risk": {
-        "risk": "LOW",
-        "score": 24
+        "risk": "HIGH",
+        "score": 65
       }
     },
     {
-      "sector": "W",
-      "degrees": 278,
+      "sector": "NW",
+      "degrees": 314,
       "label": "alternatief rechts",
-      "risk": "LOW",
-      "risk_score": 23,
-      "confidence": 58,
-      "distance_km": 289,
-      "recommended": true,
+      "risk": "MODERATE",
+      "risk_score": 48,
+      "confidence": 40,
+      "distance_km": 229,
+      "recommended": false,
       "street_alignment": {
         "label": "FAIR",
         "score": 65,
@@ -145,13 +145,13 @@
       }
     },
     {
-      "sector": "Z",
-      "degrees": 188,
+      "sector": "ZW",
+      "degrees": 224,
       "label": "alternatief links",
-      "risk": "LOW",
-      "risk_score": 15,
-      "confidence": 68,
-      "distance_km": 300,
+      "risk": "MODERATE",
+      "risk_score": 41,
+      "confidence": 50,
+      "distance_km": 283,
       "recommended": true,
       "street_alignment": {
         "label": "FAIR",
@@ -164,14 +164,14 @@
       }
     },
     {
-      "sector": "NW",
-      "degrees": 323,
+      "sector": "N",
+      "degrees": 359,
       "label": "crosswind reserve",
-      "risk": "MODERATE",
-      "risk_score": 40,
-      "confidence": 45,
-      "distance_km": 211,
-      "recommended": true,
+      "risk": "HIGH",
+      "risk_score": 65,
+      "confidence": 27,
+      "distance_km": 167,
+      "recommended": false,
       "street_alignment": {
         "label": "POOR",
         "score": 15,
@@ -184,9 +184,9 @@
     }
   ],
   "applied_calibration": {
-    "raw_confidence_pct": 87,
+    "raw_confidence_pct": 65,
     "confidence_adjustment_pct": -10,
-    "adjusted_confidence_pct": 68,
+    "adjusted_confidence_pct": 57,
     "cloudbase_bias": "TOO_PESSIMISTIC",
     "thermal_bias": "TOO_PESSIMISTIC",
     "wind_bias": "TOO_PESSIMISTIC"
@@ -220,7 +220,7 @@
     "dominant_model": "ICON",
     "outlier_model": "GFS"
   },
-  "operational_conclusion": "Ronald: beste sector ZW (233°). Probabilistische taakrange: 6–14 km (mediaan 10 km). Taakkwaliteit POOR. Bust risk: MODERATE. Upside: MODERATE.",
+  "operational_conclusion": "Ronald: beste sector ZW (224°). Probabilistische taakrange: 6–14 km (mediaan 10 km). Taakkwaliteit POOR. Bust risk: MODERATE. Upside: MODERATE.",
   "notes": [
     "4.5A integreert consensus uncertainty in tasking.",
     "Pilot profile beïnvloedt taakafstand en risico.",

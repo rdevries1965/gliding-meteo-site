@@ -1,22 +1,22 @@
 {
   "release_version": "4.6A",
-  "generated_at": "2026-08-02T07:38:13.701462Z",
-  "forecast_date": "2026-08-04",
+  "generated_at": "2026-08-03T08:35:33.941950Z",
+  "forecast_date": "2026-08-05",
   "summary": {
     "forecast_stability": "LOW",
     "forecast_uncertainty": "LOW",
-    "uncertainty_pct": 44,
-    "operational_volatility_pct": 62,
-    "operational_volatility": "HIGH",
+    "uncertainty_pct": 38,
+    "operational_volatility_pct": 33,
+    "operational_volatility": "MODERATE",
     "bust_risk_pct": 40,
     "bust_risk": "MODERATE",
-    "upside_surprise_pct": 46,
+    "upside_surprise_pct": 48,
     "upside_surprise": "MODERATE"
   },
   "xc_range_km": {
     "p20": 6,
     "p50": 10,
-    "p80": 14,
+    "p80": 12,
     "interpretation": "p20/p50/p80 represent low/median/high plausible XC distance range"
   },
   "confidence_cone": {
@@ -24,25 +24,25 @@
     "spread_km": 4,
     "low_case_km": 6,
     "median_case_km": 10,
-    "high_case_km": 14
+    "high_case_km": 12
   },
   "drivers": {
-    "overall_model_agreement_pct": 92,
-    "task_confidence_pct": 70,
-    "verification_score": 46.0,
+    "overall_model_agreement_pct": 89,
+    "task_confidence_pct": 69,
+    "verification_score": 58.0,
     "distance_error_km": 300,
     "forecast_health": 52,
-    "precip_pct": 49,
-    "od_risk_pct": 60,
-    "wind_kmh": 15.6,
-    "cu_potential_pct": 60,
-    "street_probability_pct": 25,
+    "precip_pct": 33,
+    "od_risk_pct": 10,
+    "wind_kmh": 24.3,
+    "cu_potential_pct": 85,
+    "street_probability_pct": 90,
     "calibration_confidence_adjustment_pct": -7
   },
   "operational_guidance": {
     "if_conservative": "Plan alsof 6 km haalbaar is.",
     "if_realistic": "Plan rond 10 km.",
-    "if_aggressive": "Alleen uitbreiden richting 14 km als straatbeeld en basis bevestigd worden.",
+    "if_aggressive": "Alleen uitbreiden richting 12 km als straatbeeld en basis bevestigd worden.",
     "risk_note": "Bust-risk niet dominant, normale afkortopties blijven voldoende."
   },
   "notes": [

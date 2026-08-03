@@ -1,38 +1,38 @@
 {
   "release_version": "4.6A",
-  "generated_at": "2026-08-02T07:37:31.130842Z",
-  "forecast_date": "2026-08-02",
+  "generated_at": "2026-08-03T08:34:51.354190Z",
+  "forecast_date": "2026-08-03",
   "summary": {
-    "forecast_stability": "LOW",
-    "forecast_uncertainty": "MODERATE",
-    "uncertainty_pct": 41,
-    "operational_volatility_pct": 36,
-    "operational_volatility": "MODERATE",
-    "bust_risk_pct": 30,
+    "forecast_stability": "VERY LOW",
+    "forecast_uncertainty": "HIGH",
+    "uncertainty_pct": 60,
+    "operational_volatility_pct": 55,
+    "operational_volatility": "HIGH",
+    "bust_risk_pct": 45,
     "bust_risk": "MODERATE",
-    "upside_surprise_pct": 58,
+    "upside_surprise_pct": 52,
     "upside_surprise": "HIGH"
   },
   "xc_range_km": {
-    "p20": 6,
+    "p20": 5,
     "p50": 10,
-    "p80": 14,
+    "p80": 15,
     "interpretation": "p20/p50/p80 represent low/median/high plausible XC distance range"
   },
   "confidence_cone": {
     "base_realistic_km": 10,
-    "spread_km": 4,
-    "low_case_km": 6,
+    "spread_km": 6,
+    "low_case_km": 5,
     "median_case_km": 10,
-    "high_case_km": 14
+    "high_case_km": 15
   },
   "drivers": {
-    "overall_model_agreement_pct": 80,
-    "task_confidence_pct": 82,
+    "overall_model_agreement_pct": 68,
+    "task_confidence_pct": 69,
     "verification_score": 71.0,
     "distance_error_km": 300,
-    "forecast_health": 100,
-    "precip_pct": 0,
+    "forecast_health": 75,
+    "precip_pct": 4,
     "od_risk_pct": 10,
     "wind_kmh": 17.1,
     "cu_potential_pct": 85,
@@ -40,9 +40,9 @@
     "calibration_confidence_adjustment_pct": -10
   },
   "operational_guidance": {
-    "if_conservative": "Plan alsof 6 km haalbaar is.",
+    "if_conservative": "Plan alsof 5 km haalbaar is.",
     "if_realistic": "Plan rond 10 km.",
-    "if_aggressive": "Alleen uitbreiden richting 14 km als straatbeeld en basis bevestigd worden.",
+    "if_aggressive": "Alleen uitbreiden richting 15 km als straatbeeld en basis bevestigd worden.",
     "risk_note": "Bust-risk niet dominant, normale afkortopties blijven voldoende."
   },
   "notes": [

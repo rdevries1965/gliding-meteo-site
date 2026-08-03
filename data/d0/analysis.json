@@ -2,17 +2,17 @@
   "schema_version": "5.0F",
   "release_version": "5.0F",
   "forecast": {
-    "date": "2026-08-02",
+    "date": "2026-08-03",
     "location": "Hilversum / EHHV",
-    "generated_at": "2026-08-02T07:30:40",
-    "generated_at_utc": "2026-08-02T07:30:40+00:00",
+    "generated_at": "2026-08-03T08:28:00",
+    "generated_at_utc": "2026-08-03T08:28:00+00:00",
     "primary_model": "ECMWF"
   },
   "sources": {
     "primary_model": "ECMWF",
     "forecast_health": {
-      "score": 100,
-      "label": "GOOD",
+      "score": 75,
+      "label": "DEGRADED",
       "available_sources": 2,
       "failed_sources": 0,
       "fallback_sources": 0,
@@ -43,8 +43,8 @@
         "health": "GOOD",
         "description": "NOAA GFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/gfs",
-        "response_ms": 614,
-        "fetched_at_utc": "2026-08-02T07:30:37+00:00",
+        "response_ms": 755,
+        "fetched_at_utc": "2026-08-03T08:27:57+00:00",
         "fallback_used": false,
         "fallback_to": null,
         "error": null
@@ -56,8 +56,8 @@
         "health": "GOOD",
         "description": "ECMWF IFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/ecmwf",
-        "response_ms": 649,
-        "fetched_at_utc": "2026-08-02T07:30:38+00:00",
+        "response_ms": 748,
+        "fetched_at_utc": "2026-08-03T08:27:58+00:00",
         "fallback_used": false,
         "fallback_to": null,
         "error": null
@@ -74,117 +74,117 @@
     }
   },
   "surface": {
-    "max_temp_c": 26.3,
-    "dewpoint_avg_c": 9.9,
+    "max_temp_c": 31.5,
+    "dewpoint_avg_c": 14.6,
     "wind_speed_max_kmh": 17.1,
-    "wind_direction_deg": 53,
-    "wind_direction_text": "NO",
-    "precip_chance_pct": 0,
+    "wind_direction_deg": 89,
+    "wind_direction_text": "O",
+    "precip_chance_pct": 4,
     "precip_mm": 0.0
   },
   "wind_profile": {
-    "max_kmh": 16.5,
-    "avg_kmh": 9.6,
-    "dominant_direction_deg": 63,
-    "dominant_direction_text": "ONO",
+    "max_kmh": 12.2,
+    "avg_kmh": 9.7,
+    "dominant_direction_deg": 150,
+    "dominant_direction_text": "ZZO",
     "crosswind_risk": "LOW",
     "streeting_support": "MODERATE",
     "hourly": [
       {
-        "time": "2026-08-02T08:00",
+        "time": "2026-08-03T08:00",
+        "wind_kmh": 9.9,
+        "direction_deg": 80,
+        "direction_text": "O",
+        "task_direction_deg": 260,
+        "task_direction_text": "W"
+      },
+      {
+        "time": "2026-08-03T09:00",
+        "wind_kmh": 9.7,
+        "direction_deg": 92,
+        "direction_text": "O",
+        "task_direction_deg": 272,
+        "task_direction_text": "W"
+      },
+      {
+        "time": "2026-08-03T10:00",
+        "wind_kmh": 10.5,
+        "direction_deg": 106,
+        "direction_text": "OZO",
+        "task_direction_deg": 286,
+        "task_direction_text": "WNW"
+      },
+      {
+        "time": "2026-08-03T11:00",
+        "wind_kmh": 11.4,
+        "direction_deg": 118,
+        "direction_text": "OZO",
+        "task_direction_deg": 298,
+        "task_direction_text": "WNW"
+      },
+      {
+        "time": "2026-08-03T12:00",
+        "wind_kmh": 12.1,
+        "direction_deg": 127,
+        "direction_text": "ZO",
+        "task_direction_deg": 307,
+        "task_direction_text": "NW"
+      },
+      {
+        "time": "2026-08-03T13:00",
+        "wind_kmh": 12.2,
+        "direction_deg": 133,
+        "direction_text": "ZO",
+        "task_direction_deg": 313,
+        "task_direction_text": "NW"
+      },
+      {
+        "time": "2026-08-03T14:00",
+        "wind_kmh": 11.8,
+        "direction_deg": 140,
+        "direction_text": "ZO",
+        "task_direction_deg": 320,
+        "task_direction_text": "NW"
+      },
+      {
+        "time": "2026-08-03T15:00",
+        "wind_kmh": 10.0,
+        "direction_deg": 154,
+        "direction_text": "ZZO",
+        "task_direction_deg": 334,
+        "task_direction_text": "NNW"
+      },
+      {
+        "time": "2026-08-03T16:00",
+        "wind_kmh": 7.9,
+        "direction_deg": 177,
+        "direction_text": "Z",
+        "task_direction_deg": 357,
+        "task_direction_text": "N"
+      },
+      {
+        "time": "2026-08-03T17:00",
+        "wind_kmh": 7.4,
+        "direction_deg": 203,
+        "direction_text": "ZZW",
+        "task_direction_deg": 23,
+        "task_direction_text": "NNO"
+      },
+      {
+        "time": "2026-08-03T18:00",
         "wind_kmh": 6.9,
-        "direction_deg": 96,
-        "direction_text": "O",
-        "task_direction_deg": 276,
-        "task_direction_text": "W"
+        "direction_deg": 223,
+        "direction_text": "ZW",
+        "task_direction_deg": 43,
+        "task_direction_text": "NO"
       },
       {
-        "time": "2026-08-02T09:00",
-        "wind_kmh": 6.8,
-        "direction_deg": 90,
-        "direction_text": "O",
-        "task_direction_deg": 270,
-        "task_direction_text": "W"
-      },
-      {
-        "time": "2026-08-02T10:00",
-        "wind_kmh": 6.9,
-        "direction_deg": 81,
-        "direction_text": "O",
-        "task_direction_deg": 261,
-        "task_direction_text": "W"
-      },
-      {
-        "time": "2026-08-02T11:00",
-        "wind_kmh": 7.1,
-        "direction_deg": 75,
-        "direction_text": "ONO",
-        "task_direction_deg": 255,
-        "task_direction_text": "WZW"
-      },
-      {
-        "time": "2026-08-02T12:00",
-        "wind_kmh": 7.1,
-        "direction_deg": 75,
-        "direction_text": "ONO",
-        "task_direction_deg": 255,
-        "task_direction_text": "WZW"
-      },
-      {
-        "time": "2026-08-02T13:00",
-        "wind_kmh": 7.1,
-        "direction_deg": 75,
-        "direction_text": "ONO",
-        "task_direction_deg": 255,
-        "task_direction_text": "WZW"
-      },
-      {
-        "time": "2026-08-02T14:00",
-        "wind_kmh": 7.6,
-        "direction_deg": 71,
-        "direction_text": "ONO",
-        "task_direction_deg": 251,
-        "task_direction_text": "WZW"
-      },
-      {
-        "time": "2026-08-02T15:00",
-        "wind_kmh": 8.9,
-        "direction_deg": 58,
-        "direction_text": "ONO",
-        "task_direction_deg": 238,
-        "task_direction_text": "WZW"
-      },
-      {
-        "time": "2026-08-02T16:00",
-        "wind_kmh": 11.5,
-        "direction_deg": 46,
-        "direction_text": "NO",
-        "task_direction_deg": 226,
-        "task_direction_text": "ZW"
-      },
-      {
-        "time": "2026-08-02T17:00",
-        "wind_kmh": 13.6,
-        "direction_deg": 37,
-        "direction_text": "NO",
-        "task_direction_deg": 217,
-        "task_direction_text": "ZW"
-      },
-      {
-        "time": "2026-08-02T18:00",
-        "wind_kmh": 15.1,
-        "direction_deg": 28,
-        "direction_text": "NNO",
-        "task_direction_deg": 208,
-        "task_direction_text": "ZZW"
-      },
-      {
-        "time": "2026-08-02T19:00",
-        "wind_kmh": 16.5,
-        "direction_deg": 20,
-        "direction_text": "NNO",
-        "task_direction_deg": 200,
-        "task_direction_text": "ZZW"
+        "time": "2026-08-03T19:00",
+        "wind_kmh": 6.0,
+        "direction_deg": 245,
+        "direction_text": "WZW",
+        "task_direction_deg": 65,
+        "task_direction_text": "ONO"
       }
     ]
   },
@@ -193,166 +193,166 @@
     "usable_from": "12:00 LT",
     "end": "16:30-17:30 LT",
     "avg_ms": 2.6,
-    "trigger_temp_c": 19.5,
-    "boundary_layer_height_m": 2255
+    "trigger_temp_c": 24.2,
+    "boundary_layer_height_m": 2323
   },
   "thermal_profile": {
     "usable_from": "08:00",
-    "best_window": "09:00-19:00",
+    "best_window": "08:00-19:00",
     "end": "19:00",
-    "max_ms": 3.0,
+    "max_ms": 2.5,
     "risk": "LOW",
     "hourly": [
       {
-        "time": "2026-08-02T08:00",
-        "thermal_ms": 1.2,
-        "cloud_cover_pct": 61,
-        "wind_kmh": 6.9
+        "time": "2026-08-03T08:00",
+        "thermal_ms": 1.5,
+        "cloud_cover_pct": 59,
+        "wind_kmh": 9.9
       },
       {
-        "time": "2026-08-02T09:00",
-        "thermal_ms": 1.4,
-        "cloud_cover_pct": 47,
-        "wind_kmh": 6.8
+        "time": "2026-08-03T09:00",
+        "thermal_ms": 1.6,
+        "cloud_cover_pct": 44,
+        "wind_kmh": 9.7
       },
       {
-        "time": "2026-08-02T10:00",
+        "time": "2026-08-03T10:00",
         "thermal_ms": 1.8,
-        "cloud_cover_pct": 33,
+        "cloud_cover_pct": 27,
+        "wind_kmh": 10.5
+      },
+      {
+        "time": "2026-08-03T11:00",
+        "thermal_ms": 2.4,
+        "cloud_cover_pct": 18,
+        "wind_kmh": 11.4
+      },
+      {
+        "time": "2026-08-03T12:00",
+        "thermal_ms": 2.5,
+        "cloud_cover_pct": 24,
+        "wind_kmh": 12.1
+      },
+      {
+        "time": "2026-08-03T13:00",
+        "thermal_ms": 2.2,
+        "cloud_cover_pct": 38,
+        "wind_kmh": 12.2
+      },
+      {
+        "time": "2026-08-03T14:00",
+        "thermal_ms": 2.3,
+        "cloud_cover_pct": 48,
+        "wind_kmh": 11.8
+      },
+      {
+        "time": "2026-08-03T15:00",
+        "thermal_ms": 2.4,
+        "cloud_cover_pct": 47,
+        "wind_kmh": 10.0
+      },
+      {
+        "time": "2026-08-03T16:00",
+        "thermal_ms": 2.5,
+        "cloud_cover_pct": 42,
+        "wind_kmh": 7.9
+      },
+      {
+        "time": "2026-08-03T17:00",
+        "thermal_ms": 2.5,
+        "cloud_cover_pct": 43,
+        "wind_kmh": 7.4
+      },
+      {
+        "time": "2026-08-03T18:00",
+        "thermal_ms": 2.4,
+        "cloud_cover_pct": 57,
         "wind_kmh": 6.9
       },
       {
-        "time": "2026-08-02T11:00",
-        "thermal_ms": 2.2,
-        "cloud_cover_pct": 25,
-        "wind_kmh": 7.1
-      },
-      {
-        "time": "2026-08-02T12:00",
-        "thermal_ms": 2.5,
-        "cloud_cover_pct": 28,
-        "wind_kmh": 7.1
-      },
-      {
-        "time": "2026-08-02T13:00",
-        "thermal_ms": 2.6,
-        "cloud_cover_pct": 36,
-        "wind_kmh": 7.1
-      },
-      {
-        "time": "2026-08-02T14:00",
-        "thermal_ms": 2.7,
-        "cloud_cover_pct": 40,
-        "wind_kmh": 7.6
-      },
-      {
-        "time": "2026-08-02T15:00",
-        "thermal_ms": 2.7,
-        "cloud_cover_pct": 36,
-        "wind_kmh": 8.9
-      },
-      {
-        "time": "2026-08-02T16:00",
-        "thermal_ms": 2.7,
-        "cloud_cover_pct": 27,
-        "wind_kmh": 11.5
-      },
-      {
-        "time": "2026-08-02T17:00",
-        "thermal_ms": 3.0,
-        "cloud_cover_pct": 20,
-        "wind_kmh": 13.6
-      },
-      {
-        "time": "2026-08-02T18:00",
-        "thermal_ms": 2.8,
-        "cloud_cover_pct": 13,
-        "wind_kmh": 15.1
-      },
-      {
-        "time": "2026-08-02T19:00",
-        "thermal_ms": 2.6,
-        "cloud_cover_pct": 6,
-        "wind_kmh": 16.5
+        "time": "2026-08-03T19:00",
+        "thermal_ms": 1.5,
+        "cloud_cover_pct": 77,
+        "wind_kmh": 6.0
       }
     ]
   },
   "clouds": {
-    "base_agl_m": 2050,
-    "coverage_pct": 31,
+    "base_agl_m": 2112,
+    "coverage_pct": 44,
     "streets_probability_pct": 90,
     "od_risk_pct": 10,
     "cu_potential_pct": 85
   },
   "cloudbase_profile": {
-    "max_m": 2200,
-    "usable_from": "10:00",
+    "max_m": 2013,
+    "usable_from": "08:00",
     "best_window": "10:00-19:00",
-    "uncertainty_m": 237,
-    "risk": "NORMAL",
+    "uncertainty_m": 850,
+    "risk": "HIGH",
     "hourly": [
       {
-        "time": "2026-08-02T08:00",
-        "base_agl_m": 612
+        "time": "2026-08-03T08:00",
+        "base_agl_m": 938
       },
       {
-        "time": "2026-08-02T09:00",
-        "base_agl_m": 862
+        "time": "2026-08-03T09:00",
+        "base_agl_m": 1037
       },
       {
-        "time": "2026-08-02T10:00",
-        "base_agl_m": 1287
+        "time": "2026-08-03T10:00",
+        "base_agl_m": 1262
       },
       {
-        "time": "2026-08-02T11:00",
-        "base_agl_m": 1712
+        "time": "2026-08-03T11:00",
+        "base_agl_m": 1438
       },
       {
-        "time": "2026-08-02T12:00",
-        "base_agl_m": 1950
+        "time": "2026-08-03T12:00",
+        "base_agl_m": 1575
       },
       {
-        "time": "2026-08-02T13:00",
-        "base_agl_m": 2075
+        "time": "2026-08-03T13:00",
+        "base_agl_m": 1675
       },
       {
-        "time": "2026-08-02T14:00",
-        "base_agl_m": 2137
+        "time": "2026-08-03T14:00",
+        "base_agl_m": 1788
       },
       {
-        "time": "2026-08-02T15:00",
-        "base_agl_m": 2188
+        "time": "2026-08-03T15:00",
+        "base_agl_m": 1887
       },
       {
-        "time": "2026-08-02T16:00",
-        "base_agl_m": 2200
+        "time": "2026-08-03T16:00",
+        "base_agl_m": 2000
       },
       {
-        "time": "2026-08-02T17:00",
-        "base_agl_m": 2075
+        "time": "2026-08-03T17:00",
+        "base_agl_m": 2013
       },
       {
-        "time": "2026-08-02T18:00",
-        "base_agl_m": 1875
+        "time": "2026-08-03T18:00",
+        "base_agl_m": 1900
       },
       {
-        "time": "2026-08-02T19:00",
-        "base_agl_m": 1625
+        "time": "2026-08-03T19:00",
+        "base_agl_m": 1700
       }
     ],
     "model_cloudbases": [
       {
         "model": "GFS",
-        "cloudbase_m": 2287
+        "cloudbase_m": 2962
       },
       {
         "model": "ECMWF",
-        "cloudbase_m": 2050
+        "cloudbase_m": 2112
       }
     ]
   },
   "xc_potential_profile": {
-    "category": "STRONG XC",
+    "category": "GOOD XC",
     "score": 9.5,
     "realistic_km": 266,
     "conservative_km": 160,
@@ -361,12 +361,12 @@
   },
   "xc": {
     "score": 9.5,
-    "operational_score": 9.5,
-    "confidence_pct": 87,
+    "operational_score": 9.2,
+    "confidence_pct": 65,
     "status": "CONDITIONAL GO",
     "status_definition": "Bruikbare overlanddag tot ongeveer 300 km.",
-    "best_direction": "ZW",
-    "best_direction_degrees": 233,
+    "best_direction": "W",
+    "best_direction_degrees": 269,
     "task_advice": {
       "reference_aircraft": "18m / Discus 2c performanceklasse",
       "out_and_return_km": 266,
@@ -395,12 +395,12 @@
       },
       {
         "direction": "Z",
-        "score": 10,
+        "score": 9.3,
         "advice": "voorkeur"
       },
       {
         "direction": "ZW",
-        "score": 10,
+        "score": 9.3,
         "advice": "voorkeur"
       },
       {
@@ -442,13 +442,13 @@
       {
         "direction": "Z",
         "degrees": 180,
-        "score": 10,
+        "score": 9.3,
         "advice": "voorkeur"
       },
       {
         "direction": "ZW",
         "degrees": 225,
-        "score": 10,
+        "score": 9.3,
         "advice": "voorkeur"
       },
       {
@@ -469,25 +469,25 @@
     "model_consensus": {
       "models": [
         {
-          "date": "2026-08-02",
-          "cloudbase_agl_m": 2287,
-          "thermal_ms": 2.8,
-          "wind_kmh": 19.7,
+          "date": "2026-08-03",
+          "cloudbase_agl_m": 2962,
+          "thermal_ms": 3.4,
+          "wind_kmh": 19.5,
           "wind_direction_text": "ONO",
-          "precip_chance_pct": 0,
-          "xc_score": 9.0,
+          "precip_chance_pct": 23,
+          "xc_score": 8.6,
           "model": "GFS",
           "source": "NOAA GFS via Open-Meteo",
           "status": "OK",
           "health": "GOOD"
         },
         {
-          "date": "2026-08-02",
-          "cloudbase_agl_m": 2050,
+          "date": "2026-08-03",
+          "cloudbase_agl_m": 2112,
           "thermal_ms": 2.6,
           "wind_kmh": 17.1,
-          "wind_direction_text": "NO",
-          "precip_chance_pct": 0,
+          "wind_direction_text": "O",
+          "precip_chance_pct": 4,
           "xc_score": 9.5,
           "model": "ECMWF",
           "source": "ECMWF IFS via Open-Meteo",
@@ -497,32 +497,32 @@
       ],
       "summary": {
         "cloudbase": {
-          "spread": 237,
-          "agreement": "redelijk"
+          "spread": 850,
+          "agreement": "laag"
         },
         "thermal": {
-          "spread": 0.2,
-          "agreement": "hoog"
+          "spread": 0.8,
+          "agreement": "laag"
         },
         "wind": {
-          "spread": 2.6,
+          "spread": 2.4,
           "agreement": "hoog"
         },
         "precip": {
-          "spread": 0,
-          "agreement": "hoog"
+          "spread": 19,
+          "agreement": "redelijk"
         },
         "xc_score": {
-          "spread": 0.5,
-          "agreement": "hoog"
+          "spread": 0.9,
+          "agreement": "redelijk"
         }
       },
-      "agreement_score": 78,
-      "agreement_label": "hoog"
+      "agreement_score": 33,
+      "agreement_label": "laag"
     },
     "forecast_health": {
-      "score": 100,
-      "label": "GOOD",
+      "score": 75,
+      "label": "DEGRADED",
       "available_sources": 2,
       "failed_sources": 0,
       "fallback_sources": 0,
@@ -531,28 +531,30 @@
     },
     "confidence_breakdown": {
       "positives": [
-        "goede overeenkomst tussen modellen",
-        "forecast health is goed",
         "thermiekverwachting is stabiel"
       ],
-      "negatives": []
+      "negatives": [
+        "grote verschillen tussen modellen",
+        "grote onzekerheid in wolkenbasis"
+      ]
     },
     "confidence_explanation": [
-      "modelovereenkomst is goed",
-      "betrouwbaarheid is relatief goed voor een convectieve briefing"
+      "grote spreiding in wolkenbasis tussen modellen",
+      "grote spreiding in thermieksterkte tussen modellen",
+      "forecast source health is DEGRADED (75%)"
     ],
     "note": "3.7D.2 koppelt source diagnostics aan confidence en operational scoring."
   },
   "deep_dive": {
-    "trigger_temp_c": 19.5,
-    "boundary_layer_height_m": 2255,
+    "trigger_temp_c": 24.2,
+    "boundary_layer_height_m": 2323,
     "cu_potential_pct": 85,
     "streets_probability_pct": 90,
     "od_risk_pct": 10,
-    "model_agreement_score": 78,
-    "model_agreement_label": "hoog",
-    "forecast_health_score": 100,
-    "forecast_health_label": "GOOD",
+    "model_agreement_score": 33,
+    "model_agreement_label": "laag",
+    "forecast_health_score": 75,
+    "forecast_health_label": "DEGRADED",
     "comments": [
       "Trigger temperature is benaderd op basis van dauwpunt en gewenste convectieve basis.",
       "Boundary layer hoogte is voorlopig afgeleid uit cloudbase en bewolkingsgraad.",
@@ -561,17 +563,17 @@
     ]
   },
   "legacy": {
-    "cloudbase_agl": 2050,
+    "cloudbase_agl": 2112,
     "thermal_strength": 2.6,
     "xc_score": 9.5,
-    "confidence": 87,
-    "wind_direction_text": "NO",
-    "best_task_direction": "ZW",
-    "best_task_direction_degrees": 233
+    "confidence": 65,
+    "wind_direction_text": "O",
+    "best_task_direction": "W",
+    "best_task_direction_degrees": 269
   },
   "model_notes": [
     "Echte modelbronnen via Open-Meteo GFS/ECMWF/KNMI waar beschikbaar.",
     "KNMI Open Data API bereikbaar.",
-    "Forecast health: GOOD (100%)."
+    "Forecast health: DEGRADED (75%)."
   ]
 }
