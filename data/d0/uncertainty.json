@@ -1,48 +1,48 @@
 {
   "release_version": "4.6A",
-  "generated_at": "2026-08-03T08:34:51.354190Z",
-  "forecast_date": "2026-08-03",
+  "generated_at": "2026-08-04T07:44:50.564422Z",
+  "forecast_date": "2026-08-04",
   "summary": {
-    "forecast_stability": "VERY LOW",
-    "forecast_uncertainty": "HIGH",
-    "uncertainty_pct": 60,
-    "operational_volatility_pct": 55,
+    "forecast_stability": "LOW",
+    "forecast_uncertainty": "MODERATE",
+    "uncertainty_pct": 41,
+    "operational_volatility_pct": 61,
     "operational_volatility": "HIGH",
     "bust_risk_pct": 45,
     "bust_risk": "MODERATE",
-    "upside_surprise_pct": 52,
-    "upside_surprise": "HIGH"
+    "upside_surprise_pct": 40,
+    "upside_surprise": "MODERATE"
   },
   "xc_range_km": {
-    "p20": 5,
+    "p20": 6,
     "p50": 10,
-    "p80": 15,
+    "p80": 14,
     "interpretation": "p20/p50/p80 represent low/median/high plausible XC distance range"
   },
   "confidence_cone": {
     "base_realistic_km": 10,
-    "spread_km": 6,
-    "low_case_km": 5,
+    "spread_km": 4,
+    "low_case_km": 6,
     "median_case_km": 10,
-    "high_case_km": 15
+    "high_case_km": 14
   },
   "drivers": {
-    "overall_model_agreement_pct": 68,
-    "task_confidence_pct": 69,
+    "overall_model_agreement_pct": 72,
+    "task_confidence_pct": 71,
     "verification_score": 71.0,
     "distance_error_km": 300,
     "forecast_health": 75,
-    "precip_pct": 4,
-    "od_risk_pct": 10,
-    "wind_kmh": 17.1,
-    "cu_potential_pct": 85,
-    "street_probability_pct": 90,
+    "precip_pct": 78,
+    "od_risk_pct": 60,
+    "wind_kmh": 13.4,
+    "cu_potential_pct": 65,
+    "street_probability_pct": 65,
     "calibration_confidence_adjustment_pct": -10
   },
   "operational_guidance": {
-    "if_conservative": "Plan alsof 5 km haalbaar is.",
+    "if_conservative": "Plan alsof 6 km haalbaar is.",
     "if_realistic": "Plan rond 10 km.",
-    "if_aggressive": "Alleen uitbreiden richting 15 km als straatbeeld en basis bevestigd worden.",
+    "if_aggressive": "Alleen uitbreiden richting 14 km als straatbeeld en basis bevestigd worden.",
     "risk_note": "Bust-risk niet dominant, normale afkortopties blijven voldoende."
   },
   "notes": [
