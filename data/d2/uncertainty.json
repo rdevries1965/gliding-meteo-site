@@ -1,22 +1,22 @@
 {
   "release_version": "4.6A",
-  "generated_at": "2026-08-04T07:45:32.154105Z",
-  "forecast_date": "2026-08-06",
+  "generated_at": "2026-08-05T07:46:36.996766Z",
+  "forecast_date": "2026-08-07",
   "summary": {
     "forecast_stability": "MODERATE",
     "forecast_uncertainty": "LOW",
     "uncertainty_pct": 32,
-    "operational_volatility_pct": 32,
+    "operational_volatility_pct": 27,
     "operational_volatility": "MODERATE",
     "bust_risk_pct": 30,
     "bust_risk": "MODERATE",
-    "upside_surprise_pct": 36,
+    "upside_surprise_pct": 48,
     "upside_surprise": "MODERATE"
   },
   "xc_range_km": {
     "p20": 6,
     "p50": 10,
-    "p80": 12,
+    "p80": 14,
     "interpretation": "p20/p50/p80 represent low/median/high plausible XC distance range"
   },
   "confidence_cone": {
@@ -24,25 +24,25 @@
     "spread_km": 3,
     "low_case_km": 6,
     "median_case_km": 10,
-    "high_case_km": 12
+    "high_case_km": 14
   },
   "drivers": {
-    "overall_model_agreement_pct": 89,
-    "task_confidence_pct": 69,
-    "verification_score": 79.0,
+    "overall_model_agreement_pct": 92,
+    "task_confidence_pct": 70,
+    "verification_score": 74.0,
     "distance_error_km": 300,
     "forecast_health": 52,
-    "precip_pct": 12,
+    "precip_pct": 16,
     "od_risk_pct": 10,
-    "wind_kmh": 20.6,
-    "cu_potential_pct": 60,
-    "street_probability_pct": 50,
+    "wind_kmh": 11.2,
+    "cu_potential_pct": 85,
+    "street_probability_pct": 70,
     "calibration_confidence_adjustment_pct": -7
   },
   "operational_guidance": {
     "if_conservative": "Plan alsof 6 km haalbaar is.",
     "if_realistic": "Plan rond 10 km.",
-    "if_aggressive": "Alleen uitbreiden richting 12 km als straatbeeld en basis bevestigd worden.",
+    "if_aggressive": "Alleen uitbreiden richting 14 km als straatbeeld en basis bevestigd worden.",
     "risk_note": "Bust-risk niet dominant, normale afkortopties blijven voldoende."
   },
   "notes": [
