@@ -1,12 +1,12 @@
 {
   "release_version": "4.6A",
-  "generated_at": "2026-08-05T07:46:16.087695Z",
-  "forecast_date": "2026-08-06",
+  "generated_at": "2026-08-06T07:44:29.749734Z",
+  "forecast_date": "2026-08-07",
   "summary": {
-    "forecast_stability": "LOW",
+    "forecast_stability": "MODERATE",
     "forecast_uncertainty": "LOW",
-    "uncertainty_pct": 38,
-    "operational_volatility_pct": 33,
+    "uncertainty_pct": 32,
+    "operational_volatility_pct": 27,
     "operational_volatility": "MODERATE",
     "bust_risk_pct": 30,
     "bust_risk": "MODERATE",
@@ -21,23 +21,23 @@
   },
   "confidence_cone": {
     "base_realistic_km": 10,
-    "spread_km": 4,
+    "spread_km": 3,
     "low_case_km": 6,
     "median_case_km": 10,
     "high_case_km": 14
   },
   "drivers": {
-    "overall_model_agreement_pct": 89,
-    "task_confidence_pct": 69,
-    "verification_score": 79.0,
+    "overall_model_agreement_pct": 92,
+    "task_confidence_pct": 70,
+    "verification_score": 74.0,
     "distance_error_km": 300,
     "forecast_health": 52,
-    "precip_pct": 2,
+    "precip_pct": 6,
     "od_risk_pct": 10,
-    "wind_kmh": 20.6,
+    "wind_kmh": 9.1,
     "cu_potential_pct": 85,
-    "street_probability_pct": 90,
-    "calibration_confidence_adjustment_pct": -10
+    "street_probability_pct": 70,
+    "calibration_confidence_adjustment_pct": -7
   },
   "operational_guidance": {
     "if_conservative": "Plan alsof 6 km haalbaar is.",
