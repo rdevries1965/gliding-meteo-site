@@ -1,9 +1,9 @@
 {
   "release_version": "11.0B",
-  "generated_at_utc": "2026-08-07T06:14:05Z",
+  "generated_at_utc": "2026-08-08T05:47:19Z",
   "mode": "shadow",
-  "base_date": "2026-08-07",
-  "forecast_date": "2026-08-08",
+  "base_date": "2026-08-08",
+  "forecast_date": "2026-08-09",
   "forecast_offset": 1,
   "forecast_date_source": "current_utc_date",
   "summary": {
@@ -48,19 +48,19 @@
         "wind",
         "inversion"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 868,
+      "response_ms": 1267,
       "status_code": 200,
       "content_type": "image/png",
-      "content_length": 468572,
+      "content_length": 374581,
       "error": null,
       "asset": {
         "content_type": "image/png",
-        "content_length": 468572
+        "content_length": 374581
       }
     },
     {
@@ -80,19 +80,19 @@
         "wind",
         "inversion"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 784,
+      "response_ms": 1090,
       "status_code": 200,
       "content_type": "image/png",
-      "content_length": 502754,
+      "content_length": 370509,
       "error": null,
       "asset": {
         "content_type": "image/png",
-        "content_length": 502754
+        "content_length": 370509
       }
     },
     {
@@ -112,19 +112,19 @@
         "wind",
         "inversion"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 819,
+      "response_ms": 1108,
       "status_code": 200,
       "content_type": "image/png",
-      "content_length": 509027,
+      "content_length": 376599,
       "error": null,
       "asset": {
         "content_type": "image/png",
-        "content_length": 509027
+        "content_length": 376599
       }
     },
     {
@@ -144,19 +144,19 @@
         "wind",
         "inversion"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 684,
+      "response_ms": 1102,
       "status_code": 200,
       "content_type": "image/png",
-      "content_length": 438571,
+      "content_length": 367634,
       "error": null,
       "asset": {
         "content_type": "image/png",
-        "content_length": 438571
+        "content_length": 367634
       }
     },
     {
@@ -176,19 +176,19 @@
         "wind",
         "inversion"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 777,
+      "response_ms": 1110,
       "status_code": 200,
       "content_type": "image/png",
-      "content_length": 469219,
+      "content_length": 383287,
       "error": null,
       "asset": {
         "content_type": "image/png",
-        "content_length": 469219
+        "content_length": 383287
       }
     },
     {
@@ -208,19 +208,19 @@
         "wind",
         "inversion"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 694,
+      "response_ms": 1063,
       "status_code": 200,
       "content_type": "image/png",
-      "content_length": 385572,
+      "content_length": 390063,
       "error": null,
       "asset": {
         "content_type": "image/png",
-        "content_length": 385572
+        "content_length": 390063
       }
     },
     {
@@ -240,19 +240,19 @@
         "wind",
         "inversion"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 732,
+      "response_ms": 1127,
       "status_code": 200,
       "content_type": "image/png",
-      "content_length": 395036,
+      "content_length": 389658,
       "error": null,
       "asset": {
         "content_type": "image/png",
-        "content_length": 395036
+        "content_length": 389658
       }
     },
     {
@@ -272,19 +272,19 @@
         "wind",
         "inversion"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 730,
+      "response_ms": 1077,
       "status_code": 200,
       "content_type": "image/png",
-      "content_length": 388654,
+      "content_length": 384239,
       "error": null,
       "asset": {
         "content_type": "image/png",
-        "content_length": 388654
+        "content_length": 384239
       }
     },
     {
@@ -304,19 +304,19 @@
         "wind",
         "inversion"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 730,
+      "response_ms": 1090,
       "status_code": 200,
       "content_type": "image/png",
-      "content_length": 393079,
+      "content_length": 387799,
       "error": null,
       "asset": {
         "content_type": "image/png",
-        "content_length": 393079
+        "content_length": 387799
       }
     },
     {
@@ -336,19 +336,19 @@
         "wind",
         "inversion"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 739,
+      "response_ms": 1106,
       "status_code": 200,
       "content_type": "image/png",
-      "content_length": 378286,
+      "content_length": 381905,
       "error": null,
       "asset": {
         "content_type": "image/png",
-        "content_length": 378286
+        "content_length": 381905
       }
     },
     {
@@ -368,19 +368,19 @@
         "wind",
         "weather"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 563,
+      "response_ms": 994,
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
-      "content_length": 15961,
+      "content_length": 15674,
       "error": null,
       "text": {
-        "length": 2755,
-        "excerpt": "KNMI - Weerbulletin kleine luchtvaart Naar de hoofd content Je gebruikt een verouderde browser. Voor een betere gebruikerservaring kun je jouw browser upgraden. English Home Nederland nu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Klimaat Producten & diensten Kennis & uitleg Research Over het KNMI Over het KNMI Bestuur Kerntaken Internationaal Werken bij Nieuws Agenda Pers Contact Zoek binnen de site binnen de hele site binnen het kennis- & datacentrum Trefwoord Zoek Menu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Sluiten Home Nederland nu Luchtvaart Weerbulletin kleine luchtvaart Weerbulletin kleine luchtvaart Luchtvaartmeteorologische informatie voor operationeel gebruik en vluchtvoorbereiding is beschikbaar op www.luchtvaartmeteo.nl. ZCZC FBNL50 EHDB 070448 WEERBULLETIN VOOR DE LUCHTVAART - . GELDIG 070600/071200 UTC . SITUATIE: AAN DE NOORDFLANK VAN EEN HOGEDRUKGEBIED BOVEN FRANKRIJK STAAT EEN ZWAKKE WESTELIJKE STROMING. EEN NW-ZO GEORIENTEERDE OCCLUSIE BEVINDT ZICH VAN NOORD-HOLLAND TOT DE ACHTERHOEK. DEZE BEWEEGT LANGZAAM OOSTWAARTS EN BEVINDT ZICH AAN HET EINDE VAN DE PERIODE VAN FRIESLAND NAAR OVERIJSSEL. DE ATMOSFEER WORDT IN DE EERSTE HELFT VAN DE PERIODE ONSTABIEL VAN OPBOUW TOT 7000 VT, LOKAAL TOT ROND FL100. . SIGNIFICANT WEER: NABIJ EN NOORD VAN DE OCCLUSIE EEN ENKELE LICHTE TOT MATIGE REGENBUI. . WIND: LANDINWAARTS ZUIDWESTELIJK, AAN DE KUST EN RONDOM HET IJSSELMEER NOORDWESTELIJK, 2-6 KN, AAN DE KUST 7-12 KN. . BEWOLKING: NABIJ EN NOORD VAN DE OCCLUSIE SCT/BKN SC 2500 VT, TOPPEN TOT 7000 VT. LOKAAL OOK BKN SC 6000-7000 VT, TOPPEN 8000 VT. IN DE EERSTE HELFT VAN DE PERIODE OOK VORMING VAN FEW/SCT CU 2500 VT, TOPPEN 7000 VT. BIJ EEN BUI FEW TCU 2500 VT, TOPPEN ROND FL100. . ZICHT: MEER DAN 10 KM. IN NEERSLAG MOGELIJK 5-8 KM, KANS OP 3-5 KM. . NULGRADEN NIVEAU: BOVEN FL100. . HOOGTEWINDEN EN TEMPERATUREN: 06 UTC: 12 UTC: 0500VT 300/05-10 +15 300/05-10 +19 1500VT 300/05-10 +13 270/05-10 +16 3000VT 310/05-10 +09 270/05-10 +11 FL 050 310/10-15 +05 270/05-10 +06 FL 100 260/10-15 +01 270/10-15 +03 . THERMIEK: ZWAK, VANAF 08 UTC MATIG. NABIJ EN NOORD VAN DE OCCLUSIE VERSTOORD DOOR BUIEN EN VERZWAKT DOOR BEWOLKING. . MAX. TEMPERATUUR: VAN 21 GRADEN CELSIUS IN HET NOORDELIJK KUSTGEBIED TOT 26 GRADEN CELSIUS IN HET ZUIDEN. . VOORUITZICHTEN VOOR DE PERIODE VAN 071200/071800: DE OCCLUSIE BEWEEGT VERDER OOSTWAARTS EN VERLAAT AAN HET EINDE VAN DE PERIODE DE OOSTGRENS. . DAGLICHTPERIODE: 03.56 TOT 19.34 UTC.= NNNN 07/08/2026 07.30 uur LT Pagina delen Meer informatie Luchtvaartmeteorologische informatie Vliegveldverwachtingen (TAF) Vliegveldwaarnemingen (AUTO) METAR Website Luchtvaartmeteo Volg ons op social media Copyright Privacy Cookies Toegankelijkheid",
+        "length": 2470,
+        "excerpt": "KNMI - Weerbulletin kleine luchtvaart Naar de hoofd content Je gebruikt een verouderde browser. Voor een betere gebruikerservaring kun je jouw browser upgraden. English Home Nederland nu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Klimaat Producten & diensten Kennis & uitleg Research Over het KNMI Over het KNMI Bestuur Kerntaken Internationaal Werken bij Nieuws Agenda Pers Contact Zoek binnen de site binnen de hele site binnen het kennis- & datacentrum Trefwoord Zoek Menu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Sluiten Home Nederland nu Luchtvaart Weerbulletin kleine luchtvaart Weerbulletin kleine luchtvaart Luchtvaartmeteorologische informatie voor operationeel gebruik en vluchtvoorbereiding is beschikbaar op www.luchtvaartmeteo.nl. ZCZC FBNL50 EHDB 080505 WEERBULLETIN VOOR DE LUCHTVAART - . GELDIG 080600/081200 UTC . SITUATIE: TEN WESTEN VAN EEN HOGEDRUKGEBIED BOVEN DUITSLAND VOERT EEN ZUIDOOSTELIJKE STROMING VRIJ DROGE LUCHT AAN. DE ATMOSFEER WORDT IN DE EERSTE HELFT VAN DE PERIODE ONSTABIEL VAN OPBOUW TOT CA. 3000-4000 VT, IN DE TWEEDE HELFT VAN DE PERIODE TOT 5000-6000 VT. . SIGNIFICANT WEER: GEEN. . WIND: VARIABEL 1-3 KN. IN DE EERSTE HELFT VAN DE PERIODE LANDINWAARTS ENKELE KN TOENEMEND, LANGS DE KUST EN BOVEN HET IJSSELMEER 3-6 KN, IN HET WADDENGEBIED ENKELE KN MEER. IN DE EERSTE HELFT VAN DE PERIODE IN DE NOORDELIJKE HELFT GELEIDELIJK ZUID, IN DE ZUIDELIJKE HELFT GELEIDELIJK OOST. IN DE TWEEDE HELFT VAN DE PERIODE LANGS DE WESTKUST WIND VAN ZEE. . BEWOLKING: IN DE TWEEDE HELFT VAN DE PERIODE VORMING VAN FEW CU 4000-5000 VT, TOPPEN 5000-6000 VT. . ZICHT: MEER DAN 10 KM. . NULGRADEN NIVEAU: BOVEN FL100. . HOOGTEWINDEN EN TEMPERATUREN: 06 UTC: 12 UTC: 0500VT 160/10 +16 VRB/05 +20 1500VT 170/05 +14 100/05 +18 3000VT VRB/05 +11 110/05 +13 FL 050 VRB/05 +08 VRB/05 +08 FL 100 270/10 +04 240/10 +05 . . THERMIEK: VANAF 07 UTC ZWAK, SPOEDIG MATIG. AAN HET EINDE VAN DE PERIODE LOKAAL VRIJ KRACHTIG. MEEST DROOG. . MAX. TEMPERATUUR: VAN 22 GRADEN CELSIUS IN HET WADDENGEBIED TOT 28 GRADEN IN HET ZUIDOOSTEN. . VOORUITZICHTEN VOOR DE PERIODE VAN 081200/081800: GEEN SIGNIFICANTE VERANDERINGEN. . DAGLICHTPERIODE: 03.58 TOT 19.33 UTC.= NNNN 08/08/2026 07.30 uur LT Pagina delen Meer informatie Luchtvaartmeteorologische informatie Vliegveldverwachtingen (TAF) Vliegveldwaarnemingen (AUTO) METAR Website Luchtvaartmeteo Volg ons op social media Copyright Privacy Cookies Toegankelijkheid",
         "truncated": false
       }
     },
@@ -401,19 +401,19 @@
         "precipitation",
         "temperature"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 36,
+      "response_ms": 1164,
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
-      "content_length": 77887,
+      "content_length": 79613,
       "error": null,
       "text": {
-        "length": 4972,
-        "excerpt": "KNMI - Weer - Verwachtingen Naar de hoofd content Je gebruikt een verouderde browser. Voor een betere gebruikerservaring kun je jouw browser upgraden. English Home Nederland nu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Klimaat Producten & diensten Kennis & uitleg Research Over het KNMI Over het KNMI Bestuur Kerntaken Internationaal Werken bij Nieuws Agenda Pers Contact Zoek binnen de site binnen de hele site binnen het kennis- & datacentrum Trefwoord Zoek Menu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Sluiten Home Nederland nu Weer Verwachtingen Verwachtingen Bekijk waarschuwingen Bekijk waarnemingen Vrijdag overdag Nacht vrijdag - zaterdag Zaterdag overdag Vandaag & morgen In het noorden plaatselijk buien, zaterdag zonnig en droog Waarschuwingen Er zijn geen waarschuwingen. Vanochtend is er in het midden en noorden veel bewolking en trekken er enkele regenbuien over. In het zuiden is het droog met zonnige perioden. Er is weinig wind. Vanmiddag komt er in het noorden en oosten nog steeds wat bewolking voor. Verder breekt geleidelijk steeds vaker de zon door. Op een enkele bui in het noorden na blijft het droog. De maximumtemperatuur loopt uiteen van 21°C op de Wadden tot plaatselijk 26°C in het zuiden. Eerst is er weinig wind. In de loop van de middag wordt de wind in de kustgebieden matig uit richtingen tussen west en noord. Vanavond is er weinig bewolking en is het droog. De wind is zwak tot matig uit uiteenlopende richtingen. Komende nacht is het droog. Vooral in het noorden is er kans op plaatselijk mist, die aan het einde van de nacht snel oplost. De minimumtemperaturen lopen uiteen van plaatselijk 5°C in het noorden en oosten tot 14°C aan zee. Er staat weinig wind, alleen aan de zuidwestkust staat een matige wind uit het zuidoosten. Morgenochtend is het zonnig en droog. Er staat weinig wind, alleen aan zee en op het IJsselmeer staat een matig wind uit zuidoost. Morgenmiddag is het zonnig en droog. De maximumtemperatuur ligt tussen 24°C op de Wadden en plaatselijk 29°C in het zuidoosten. Er staat weinig wind. Mogelijk dat later in de middag een matige wind vanaf zee of het IJsselmeer opsteekt. Morgenavond is het zonnig en droog. Er staat weinig wind, alleen aan zee en op het IJsselmeer staat een matige wind uit het oosten. (Bron: KNMI) 07/08/2026 07.21 uur LT Vooruitzichten Veel zon, droog en warm met landinwaarts tropische temperaturen. Op maandag en dinsdag doet de temperatuur tijdelijk een stapje terug maar blijft het waarschijnlijk wel zomers. Vanaf donderdag wordt het mogelijk zeer warm, met in het zuidoosten temperaturen van 35°C of meer. 07/08/2026 05.15 uur LT × KNMI-app Wilt u de weersverwachting voor uw eigen plaats? Download vrijdag 7 augustus Max. 23° Min. 14° Neerslag 0/1 mm Neerslagkans 20% Windkracht NW 3 Zonneschijn 50% Zonkracht 6 zaterdag 8 augustus Max. 23/26° Min. 13° Neerslag 0 mm Neerslagkans 10% Windkracht N 2 Zonneschijn 80% Zonkracht 6 zondag 9 augustus Max. 28/32° Min. 14° Neerslag 0 mm Neerslagkans 20% Windkracht ZW 3 Zonneschijn 70% Zonkracht 6 maandag 10 augustus Max. 24/27° Min. 17° Neerslag 0/1 mm Neerslagkans 30% Windkracht W 3 Zonneschijn 50% Zonkracht 6 dinsdag 11 augustus Max. 25/28° Min. 14° Neerslag 0 mm Neerslagkans 20% Windkracht O 2 Zonneschijn 50% Zonkracht 6 woensdag 12 augustus Max. 28/32° Min. 15° Neerslag 0 mm Neerslagkans 10% Windkracht O 2 Zonneschijn 60% Zonkracht 6 donderdag 13 augustus Max. 31/35° Min. 16/21° Neerslag 0 mm Neerslagkans 10% Windkracht ZO 2 Zonneschijn 70% Zonkracht 6 Meer informatie Mogelijk hitte vrijdag 7 augustus Max. 23° Min. 14° Neerslag 0/1 mm Neerslagkans 20% Windkracht NW 3 Zonneschijn 50% Zonkracht 6 zaterdag 8 augustus Max. 23/26° Min. 13° Neerslag 0 mm Neerslagkans 10% Windkracht N 2 Zonneschijn 80% Zonkracht 6 zondag 9 augustus Max. 28/32° Min. 14° Neerslag 0 mm Neerslagkans 20% Windkracht ZW 3 Zonneschijn 70% Zonkracht 6 maandag 10 augustus Max. 24/27° Min. 17° Neerslag 0/1 mm Neerslagkans",
+        "length": 4464,
+        "excerpt": "KNMI - Weer - Verwachtingen Naar de hoofd content Je gebruikt een verouderde browser. Voor een betere gebruikerservaring kun je jouw browser upgraden. English Home Nederland nu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Klimaat Producten & diensten Kennis & uitleg Research Over het KNMI Over het KNMI Bestuur Kerntaken Internationaal Werken bij Nieuws Agenda Pers Contact Zoek binnen de site binnen de hele site binnen het kennis- & datacentrum Trefwoord Zoek Menu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Sluiten Home Nederland nu Weer Verwachtingen Verwachtingen Bekijk waarschuwingen Bekijk waarnemingen Zaterdag overdag Nacht zaterdag - zondag Zondag overdag Vandaag & morgen Droog, warm en zonnig weekend Waarschuwingen Er zijn geen waarschuwingen. Vanochtend is het zonnig en droog. Er staat weinig wind. Vanmiddag is het zonnig en droog. De maximumtemperatuur loopt uiteen van 22°C op de Wadden tot 28°C in het zuidoosten. Er staat weinig wind, aan de kust steekt een matige wind vanaf zee op. Vanavond is het vrij helder en droog. Er staat weinig wind, alleen aan zee en op het IJsselmeer staat een matige wind uit het noordoosten. Komende nacht blijft het droog. De minimumtemperatuur ligt rond 12°C. Er is weinig wind. Morgenochtend is het zonnig en droog. Er is weinig wind. Morgenmiddag is er vrij veel zon met vooral in het zuidoosten ook wat bewolking. Het blijft droog. De maximumtemperatuur ligt rond 30°C, in het noorden en op de stranden wordt het iets minder warm. De wind waait uit het zuidwesten en is zwak tot matig. Morgenavond zijn er flinke opklaringen en blijft het droog. De wind is zwak tot matig en komt uit het zuidwesten. (Bron: KNMI) 08/08/2026 07.06 uur LT Vooruitzichten Veel zon, droog en warm, met landinwaarts tropische temperaturen. Op maandag en dinsdag doet de temperatuur tijdelijk een stapje terug, maar blijft het waarschijnlijk wel zomers. Vanaf donderdag wordt het mogelijk zeer warm, met in het zuidoosten temperaturen van 35 °C of hoger. 08/08/2026 02.21 uur LT × KNMI-app Wilt u de weersverwachting voor uw eigen plaats? Download zaterdag 8 augustus Max. 23/26° Min. 13° Neerslag 0 mm Neerslagkans 10% Windkracht N 2 Zonneschijn 80% Zonkracht 5 zondag 9 augustus Max. 28/32° Min. 14° Neerslag 0 mm Neerslagkans 10% Windkracht ZW 3 Zonneschijn 70% Zonkracht 5 maandag 10 augustus Max. 24/27° Min. 17° Neerslag 0/1 mm Neerslagkans 20% Windkracht W 3 Zonneschijn 60% Zonkracht 6 dinsdag 11 augustus Max. 25/28° Min. 14° Neerslag 0 mm Neerslagkans 10% Windkracht O 2 Zonneschijn 60% Zonkracht 6 woensdag 12 augustus Max. 28/32° Min. 15° Neerslag 0 mm Neerslagkans 10% Windkracht O 2 Zonneschijn 80% Zonkracht 5 donderdag 13 augustus Max. 31/35° Min. 16/21° Neerslag 0 mm Neerslagkans 10% Windkracht ZO 2 Zonneschijn 80% Zonkracht 6 Meer informatie Mogelijk hitte vrijdag 14 augustus Max. 32° Min. 19° Neerslag 0 mm Neerslagkans 10% Windkracht Z 2 Zonneschijn 70% Zonkracht 6 Meer informatie Mogelijk hitte zaterdag 8 augustus Max. 23/26° Min. 13° Neerslag 0 mm Neerslagkans 10% Windkracht N 2 Zonneschijn 80% Zonkracht 5 zondag 9 augustus Max. 28/32° Min. 14° Neerslag 0 mm Neerslagkans 10% Windkracht ZW 3 Zonneschijn 70% Zonkracht 5 maandag 10 augustus Max. 24/27° Min. 17° Neerslag 0/1 mm Neerslagkans 20% Windkracht W 3 Zonneschijn 60% Zonkracht 6 dinsdag 11 augustus Max. 25/28° Min. 14° Neerslag 0 mm Neerslagkans 10% Windkracht O 2 Zonneschijn 60% Zonkracht 6 woensdag 12 augustus Max. 28/32° Min. 15° Neerslag 0 mm Neerslagkans 10% Windkracht O 2 Zonneschijn 80% Zonkracht 5 donderdag 13 augustus Max. 31/35° Min. 16/21° Neerslag 0 mm Neerslagkans 10% Windkracht ZO 2 Zonneschijn 80% Zonkracht 6 Mogelijk hitte vrijdag 14 augustus Max. 32° Min. 19° Neerslag 0 mm Neerslagkans 10% Windkracht Z 2 Zonneschijn 70% Zonkracht 6 Mogelijk hitte Vooruitzichten lange termijn zaterdag 15 augustus tot en met zaterdag 22 augustus Aanvankelijk perioden met zon en droog weer. Vanaf zondag neemt de kans",
         "truncated": true
       }
     },
@@ -434,19 +434,19 @@
         "cloud",
         "wind"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 344,
+      "response_ms": 31,
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
-      "content_length": 18027,
+      "content_length": 17781,
       "error": null,
       "text": {
-        "length": 4551,
-        "excerpt": "KNMI - Vliegveldwaarnemingen Nederland - (AUTO) METAR Naar de hoofd content Je gebruikt een verouderde browser. Voor een betere gebruikerservaring kun je jouw browser upgraden. English Home Nederland nu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Klimaat Producten & diensten Kennis & uitleg Research Over het KNMI Over het KNMI Bestuur Kerntaken Internationaal Werken bij Nieuws Agenda Pers Contact Zoek binnen de site binnen de hele site binnen het kennis- & datacentrum Trefwoord Zoek Menu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Sluiten Home Nederland nu Luchtvaart Vliegveldwaarnemingen Neder... Vliegveldwaarnemingen Nederland - (AUTO) METAR Luchtvaartmeteorologische informatie voor operationeel gebruik en vluchtvoorbereiding is beschikbaar op www.luchtvaartmeteo.nl. ZCZC SA070525 EHFS VLISSINGEN AWS NLD 8 m. METAR EHFS 070525Z AUTO 16003KT 110V200 9999 NSC 18/13 Q1024= ZCZC SA070555 EHKD DE KOOY/DE KOOY NLD 1 m. METAR EHKD 070555Z AUTO 17005KT 150V210 9999 -RA SCT019 SCT022 BKN027 15/14 Q1023 BLU TEMPO 3500 SHRA FEW016= ZCZC SA070555 EHFD F3-FB-1 NLD 50 m. METAR EHFD 070555Z AUTO 28013KT 9999 NSC 16/09 Q1022 W///H18= ZCZC SA070555 EHAM AMSTERDAM/SCHIPHOL NLD -3 m. METAR EHAM 070555Z 19004KT 9999 -RA FEW025 16/14 Q1023 NOSIG= ZCZC SA070555 EHVL VLIELAND NLD 10 m. METAR EHVL 070555Z AUTO 36008KT 9999 FEW019 SCT028 BKN048 16/13 Q1023 REDZ BLU= ZCZC SA070555 EHJR K13-A NLD 37 m. METAR EHJR 070555Z AUTO 27005KT //// // ///////// 16/13 Q1022 RE// W19/H15= ZCZC SA070555 EHLE LELYSTAD/LELYSTAD NLD -3 m. METAR EHLE 070555Z AUTO 18005KT 9999 FEW047 16/13 Q1023 TEMPO -SHRA FEW025TCU= ZCZC SA070555 EHLW LEEUWARDEN/LEEUWARDEN NLD 1 m. METAR EHLW 070555Z AUTO VRB02KT 9999 BKN031 BKN039 BKN045 16/12 Q1023 BLU NOSIG= ZCZC SA070555 EHDL ARNHEM/DEELEN NLD 48 m. METAR EHDL 070555Z AUTO VRB01KT 9999 BKN023 OVC061 14/11 Q1024 WHT= ZCZC SA070555 EHGG GRONINGEN/EELDE NLD 5 m. METAR EHGG 070555Z AUTO 26004KT 230V290 9999 NSC 15/12 Q1023 NOSIG= ZCZC SA070555 EHSC LICHTEILAND GOEREE NLD 22 m. METAR EHSC 070555Z AUTO 26004KT 230V290 9999 ///////// 18/12 Q1024 W21/H8= ZCZC SA070555 EHSA EURO PLATFORM NLD 19 m. METAR EHSA 070555Z AUTO 25004KT 210V270 9999 ///////// 18/12 Q1024 W21/H10= ZCZC SA070555 EHWO WOENSDRECHT/WOENSDRECHT NLD 19 m. METAR EHWO 070555Z AUTO 00000KT 9999 NCD 13/10 Q1024 BLU= ZCZC SA070555 EHRD ROTTERDAM/THE HAGUE AIRPORT NLD -5 m. METAR EHRD 070555Z AUTO 20002KT 9999 NSC 17/14 Q1024 NOSIG= ZCZC SA070555 EHGR GILZE-RIJEN/GILZE-RIJEN NLD 14 m. METAR EHGR 070555Z AUTO VRB01KT 9999 BKN066 12/10 Q1024 BLU= ZCZC SA070555 EHEH EINDHOVEN/EINDHOVEN NLD 22 m. METAR EHEH 070555Z AUTO 21001KT 9999 NCD 13/09 Q1024 BLU NOSIG RMK TREND REMOTE BY EHWX= ZCZC SA070555 EHVK VOLKEL/VOLKEL NLD 21 m. METAR EHVK 070555Z AUTO 18001KT 9999 NCD 14/10 Q1024 BLU= ZCZC SA070555 EHBK MAASTRICHT/MAASTRICHT-AACHEN NLD 114 m. METAR EHBK 070555Z AUTO 21004KT 9999 NCD 13/09 Q1024 NOSIG= ZCZC SA070555 EHKV K14-FA-1C NLD 41 m. METAR EHKV 070555Z AUTO 34004KT 290V010 9999 FEW038 16/12 Q1023 W///H13= ZCZC SA070555 EHMG L9-FF-1 NLD 44 m. METAR EHMG 070555Z AUTO 31008KT 270V330 9999 FEW025 SCT034 17/10 Q1024 W///H15= ZCZC SA070555 EHMA AWG-1 NLD 40 m. METAR EHMA 070555Z AUTO 31014KT 9999 SCT023 BKN029 BKN035 16/11 Q1023 W///H11= ZCZC SA070555 EHDV D15-FA-1 NLD 42 m. METAR EHDV 070555Z AUTO 27010KT 9999 FEW018/// 16/11 Q1022= ZCZC SA070555 EHAK A12-CPP NLD 48 m. METAR EHAK 070555Z AUTO 25012KT 9999 NSC 15/10 Q1021 W///H16= ZCZC SA070555 EHJA J6-A NLD 45 m. METAR EHJA 070555Z AUTO 25009KT 9999 FEW018/// 16/12 Q1023 RERA W///H16= ZCZC SA070555 EHPG P11-B NLD 41 m. METAR EHPG 070555Z AUTO 26005KT 210V320 9999 FEW021 18/13 Q1024= ZCZC SA070555 EHHW BUITENGAATS/BG-OHVS2 42 m. METAR EHHW 070555Z AUTO 32010KT 9999 NSC 16/08 Q1021= ZCZC SA070555 EHSG BSA NLD 43 m. METAR EHSG 070555Z AUTO VRB02KT //// // NSC 18/11 Q1024 RE// W21/H7= ZCZC SA070555 EHQS HOLLANDSE KUST ZUID ALPHA NLD 44 m. METAR EHQS 070555Z AUTO 29010KT //// // NSC 1",
+        "length": 4306,
+        "excerpt": "KNMI - Vliegveldwaarnemingen Nederland - (AUTO) METAR Naar de hoofd content Je gebruikt een verouderde browser. Voor een betere gebruikerservaring kun je jouw browser upgraden. English Home Nederland nu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Klimaat Producten & diensten Kennis & uitleg Research Over het KNMI Over het KNMI Bestuur Kerntaken Internationaal Werken bij Nieuws Agenda Pers Contact Zoek binnen de site binnen de hele site binnen het kennis- & datacentrum Trefwoord Zoek Menu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Sluiten Home Nederland nu Luchtvaart Vliegveldwaarnemingen Neder... Vliegveldwaarnemingen Nederland - (AUTO) METAR Luchtvaartmeteorologische informatie voor operationeel gebruik en vluchtvoorbereiding is beschikbaar op www.luchtvaartmeteo.nl. ZCZC SA080455 EHFS VLISSINGEN AWS NLD 8 m. METAR EHFS 080455Z AUTO 13010KT 9000 NCD 18/12 Q1022= ZCZC SA080525 EHKD DE KOOY/DE KOOY NLD 1 m. METAR EHKD 080525Z AUTO 18003KT 9999 NCD 13/10 Q1022 BLU NOSIG= ZCZC SA080525 EHFD F3-FB-1 NLD 50 m. METAR EHFD 080525Z AUTO 22017KT 9999 NSC 18/12 Q1021 W///H10= ZCZC SA080525 EHAM AMSTERDAM/SCHIPHOL NLD -3 m. METAR EHAM 080525Z 10002KT CAVOK 13/11 Q1023 NOSIG= ZCZC SA080525 EHVL VLIELAND NLD 10 m. METAR EHVL 080525Z AUTO 20006KT 9999 NCD 11/10 Q1022 BLU= ZCZC SA080525 EHJR K13-A NLD 37 m. METAR EHJR 080525Z AUTO 17013KT //// // ///////// 18/13 Q1021 RE// W19/H7= ZCZC SA080525 EHLE LELYSTAD/LELYSTAD NLD -3 m. METAR EHLE 080525Z AUTO 11001KT 9999 NCD 11/11 Q1023 NOSIG= ZCZC SA080525 EHLW LEEUWARDEN/LEEUWARDEN NLD 1 m. METAR EHLW 080525Z AUTO 16002KT 9999 NCD 12/11 Q1023 BLU= ZCZC SA080525 EHDL ARNHEM/DEELEN NLD 48 m. METAR EHDL 080525Z AUTO 11002KT 9999 NCD 10/08 Q1023 BLU= ZCZC SA080525 EHGG GRONINGEN/EELDE NLD 5 m. METAR EHGG 080525Z AUTO 20001KT 9999 NCD 10/10 Q1023 NOSIG= ZCZC SA080525 EHSC LICHTEILAND GOEREE NLD 22 m. METAR EHSC 080525Z AUTO 17008KT 9999 ///////// 19/14 Q1022 W21/H6= ZCZC SA080525 EHSA EURO PLATFORM NLD 19 m. METAR EHSA 080525Z AUTO 15014KT 9999 ///////// 20/12 Q1022 W21/H7= ZCZC SA080525 EHWO WOENSDRECHT/WOENSDRECHT NLD 19 m. METAR EHWO 080525Z AUTO 05003KT 9999 NCD 11/08 Q1022 BLU= ZCZC SA080525 EHRD ROTTERDAM/THE HAGUE AIRPORT NLD -5 m. METAR EHRD 080525Z AUTO 05003KT 9999 NCD 13/11 Q1022 NOSIG= ZCZC SA080525 EHGR GILZE-RIJEN/GILZE-RIJEN NLD 14 m. METAR EHGR 080525Z AUTO VRB01KT 9999 NCD 11/09 Q1023 BLU= ZCZC SA080525 EHEH EINDHOVEN/EINDHOVEN NLD 22 m. METAR EHEH 080525Z AUTO VRB02KT 9999 NCD 10/09 Q1022 BLU NOSIG RMK TREND REMOTE BY EHWX= ZCZC SA080525 EHVK VOLKEL/VOLKEL NLD 21 m. METAR EHVK 080525Z AUTO 04002KT 9999 NCD 11/10 Q1022 BLU= ZCZC SA080525 EHBK MAASTRICHT/MAASTRICHT-AACHEN NLD 114 m. METAR EHBK 080525Z AUTO 11004KT 9999 NCD 15/10 Q1022 NOSIG= ZCZC SA080525 EHKV K14-FA-1C NLD 41 m. METAR EHKV 080525Z AUTO 19010KT 9999 NSC 19/13 Q1022 W///H6= ZCZC SA080525 EHMG L9-FF-1 NLD 44 m. METAR EHMG 080525Z AUTO 20007KT 9999 NCD 18/11 Q1023 W///H7= ZCZC SA080525 EHMA AWG-1 NLD 40 m. METAR EHMA 080525Z AUTO VRB07KT 9999 NCD 16/13 Q1023 W///H6= ZCZC SA080525 EHDV D15-FA-1 NLD 42 m. METAR EHDV 080525Z AUTO 20011KT 9999 NSC 18/15 Q1021= ZCZC SA080525 EHAK A12-CPP NLD 48 m. METAR EHAK 080525Z AUTO 22017KT 190V250 9999 NSC 17/15 Q1020 W///H10= ZCZC SA080525 EHJA J6-A NLD 45 m. METAR EHJA 080525Z AUTO 20011KT 9999 NCD 18/14 Q1021 RERA W///H7= ZCZC SA080525 EHPG P11-B NLD 41 m. METAR EHPG 080525Z AUTO 15010KT 100V170 9999 NCD 19/13 Q1022= ZCZC SA080525 EHHW BUITENGAATS/BG-OHVS2 42 m. METAR EHHW 080525Z AUTO 22005KT 190V270 9999 FEW022/// 17/12 Q1021= ZCZC SA080525 EHSG BSA NLD 43 m. METAR EHSG 080525Z AUTO VRB08KT //// // NSC 19/12 Q1022 RE// W21/H6= ZCZC SA080525 EHQS HOLLANDSE KUST ZUID ALPHA NLD 44 m. METAR EHQS 080525Z AUTO 15007KT 120V180 //// // NCD 18/13 Q1022 RE// W21/H6= ZCZC SA080525 EHQW HOLLANDSE KUST WEST ALPHA NLD 41 m. METAR EHQW 080525Z AUTO 15007KT //// // NCD 19/11 Q1022 RE// W20/H8= ZCZC SA080525 EHQN HOLLANDSE KUST NOORD NLD 40 m. META",
         "truncated": true
       }
     },
@@ -466,20 +466,20 @@
         "uncertainty",
         "precipitation"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 343,
+      "response_ms": 391,
       "status_code": 200,
       "content_type": "text/html; charset=utf-8",
-      "content_length": 17406,
+      "content_length": 17318,
       "error": null,
       "text": {
-        "length": 4040,
-        "excerpt": "KNMI - Guidance modelbeoordeling Naar de hoofd content Je gebruikt een verouderde browser. Voor een betere gebruikerservaring kun je jouw browser upgraden. English Home Nederland nu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Klimaat Producten & diensten Kennis & uitleg Research Over het KNMI Over het KNMI Bestuur Kerntaken Internationaal Werken bij Nieuws Agenda Pers Contact Zoek binnen de site binnen de hele site binnen het kennis- & datacentrum Trefwoord Zoek Menu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Sluiten Home Nederland nu Weer Guidance modelbeoordeling Guidance modelbeoordeling Modellen algemeen tot +48 uur, geldig tot zaterdag 08 augustus 2026 24.00 locale tijd Guidance modelbeoordeling voor Nederland, de Nederlandse kustwateren en de Noordzee, gebaseerd op de HARMONIE run van 00 UTC en de overige genoemde modellen en gidsen met bijbehorende runtijd. Modelbeoordeling door meteoroloog Synoptische situatie: Een hogedrukgebied ten westen van Het Kanaal heeft een N-Z georienteerde uitloper boven de Noordzee en de Noorse Zee. Een tweede rug bevindt zich W-O georiënteerd boven het zuiden van het land. Ten noorden van deze zwakke rug staat een west tot noordwestelijke stroming van polaire lucht. Een zwakke occlusie ligt O-W georiënteerd boven het noorden. Boven Engeland buigt deze occlusie ten westen van de eerstgenoemde rug af naar het noorden. De occlusie nabij de Wadden trekt zuidoostwaarts maar komt niet zuidelijker dan het midden van het land. De eerstgenoemde rug passeert in de ochtend oostwaarts de FIR. Het tweede deel van de occlusie volgt ongeveer 2 à 3 uur na passage van de rugas (in de middag) en is vooral actief boven de zee. In de avond vormt zich een apart centrum van hogedruk boven ons land. Op zaterdag ligt het hoog ten oosten van ons land. Aan de grond is de stroming eerst oostelijk, later zuidelijk. In de bovenlucht is de stroming eerst nog westelijk, maar zaterdagmiddag passeert er een flauwe hoogterug van zuidwest naar noordoost en wordt de bovenstroming zuidwestelijk. Vanaf dat moment wordt er steeds warmere en vochtigere lucht aangevoerd. Modelbeoordeling: De convectie bij de occlusie is iets sterker en dieper ontwikkeld. Door het warmere zeewater kunnen de toppen toch wel rond of iets boven FL100 komen, iets wat je op basis van de progtemps niet meteen zou verwachten. Overigens zien we de buien ook vandaag overdag nog aanhouden boven en stroomafwaarts van het IJsselmeer, hetgeen te maken heeft met de hoge watertemperaturen daar. Daarnaast zien we actueel ook meer bewolking dan in beide modellen en dus lijkt zeker de ochtend toch met vrij veel bewolking te gaan verlopen. In de middag en avond klaart het van het westen uit op en wordt het overal droog. In de nacht naar zaterdag berekend EC in het noorden mist of mistbanken, Harmonie houdt het meer bij grondmist, de waarheid zal in het midden liggen. Aandachtspunten Temperatuur: Vanochtend vroeg in het zuiden plaatselijk 7°C. Vanmiddag Tx van 21°C in het Waddengebied tot plaatselijk 26°C in het zuiden. In de nacht naar zaterdag Tn in het noorden lokaal 5-6°C. Zaterdag Tx uiteenlopend van 23°C op de Wadden tot plaatselijk 29°C in het zuidoosten. Zondag Tx tussen 24°C op de Wadden tot 31°C in het zuiden en oosten. Wind: Vanmiddag en zaterdagmiddag mogelijk een zwakke zeewind. Bewolking: Ondiepe en overwegend cumuliforme bewolking, met bij de occlusies wat meer Sc, Ac en enkele ingebedde TCu's. Neerslag: Bij de occlusie(s) een combinatie van stratiforme en convectieve neerslag. Zicht: Vanochtend vroeg plaatselijk mogelijk wat grondmist. In buien uiteraard kortdurende teruglopende zichten. In de nacht naar zaterdag vooral in het noorden kans op mistbanken. Paraaf meteoroloog: wijs Uitgifte: 07/08/2026 05.40 uur LT. Pagina delen Meer informatie Guidance meerdaagse Verwachtingen in meer detail Ensembleverwachting ijsdikte en watertemperatuur Weer-en klimaatpluim en Expertpluim Volg ons op social media Co",
-        "truncated": true
+        "length": 3968,
+        "excerpt": "KNMI - Guidance modelbeoordeling Naar de hoofd content Je gebruikt een verouderde browser. Voor een betere gebruikerservaring kun je jouw browser upgraden. English Home Nederland nu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Klimaat Producten & diensten Kennis & uitleg Research Over het KNMI Over het KNMI Bestuur Kerntaken Internationaal Werken bij Nieuws Agenda Pers Contact Zoek binnen de site binnen de hele site binnen het kennis- & datacentrum Trefwoord Zoek Menu Weer Seismologie Maritiem Luchtvaart Klimatologie Caribisch Nederland Sluiten Home Nederland nu Weer Guidance modelbeoordeling Guidance modelbeoordeling Modellen algemeen tot +48 uur, geldig tot zondag 09 augustus 2026 24.00 locale tijd Guidance modelbeoordeling voor Nederland, de Nederlandse kustwateren en de Noordzee, gebaseerd op de HARMONIE run van 00 UTC en de overige genoemde modellen en gidsen met bijbehorende runtijd. Modelbeoordeling door meteoroloog Synoptische situatie: Een hogedrukgebied met het centrum boven het westen van Duitsland trekt oostwaarts en komt in de nacht naar maandag boven Oost-Europa te liggen. Aanvankelijk is er weinig stroming, maar in de loop van zaterdag en zondag voert een zuidelijke stroming zachtere lucht aan. Een lagedrukgebied ten zuiden van IJsland trekt oostwaarts en trekt in de nacht naar maandag richting de Noorse Zee. Het bijbehorende (golvende) koufront trekt dan ook zuidoostwaarts en komt boven het noorden van ons aandachtsgebied te liggen. Voor het koufront uit bevindt zich ook een zwakke occlusie. Door het naderen van een nieuw hogedrukgebied, dat maandag boven de Britse Eilanden komt te liggen, neemt de activiteit van beide fronten af. Modelbeoordeling: Komende nacht zal door de heldere omstandigheden ten opzichte van Ha43 en met name EC iets meer ontkoppeling optreden, waardoor de minima lager uit kunnen vallen. Door de sterkere ontkoppeling kan er wat grondmist voorkomen en in het noordoosten een mistbank. Het signaal van EC met mist en lage zichten lijkt te overdreven. Verder valt op dat er zondagmiddag in het zuidoosten in Ha43 meer bewolking voorkomt dan in EC. Ha43 is veel vochtiger dan EC en laat vanaf 9000 vt een licht onstabiel patroon zien. Dit zou kunnen leiden tot neerslag in het zuidoosten, die door de droge laag onderin grotendeels zal verdampen. We houden dus rekening met wat lichte regen in het zuidoosten. Verder bij het front de gebruikelijke verschillen, waarbij Ha43 ook wat lagere bewolking laat zien dan EC. Aandachtspunten Temperatuur: De komende dagen wordt het steeds iets warmer. Beide modellen geven een aardig beeld van het temperatuurverloop. Waarschijnlijk zullen voornamelijk tijdens heldere nachten wat lagere minima worden behaald door een sterkere ontkoppeling dan in Ha43 en met name EC. Mocht er zondag in het zuidoosten wat meer bewolking zijn, dan kunnen daar de maxima iets lager uitvallen. Wind: In de middag en aan het begin van de avond aan de kust een aanlandige windrichting. Bewolking: Vandaag wat convectieve bewolking. Zondag kan er in het zuidoosten wat meer AC voorkomen, conform Ha43, met wat middelbare onstabiliteit vanaf hoogte. Een enkele CB met een basis rond 9000 vt is mogelijk met toppen tot FL200, mogelijk doorschietend richting FL300. Bij het front wat Sc-bewolking, die soms wat lager zit. Neerslag: Zondagochtend mogelijk in het zuidoosten wat lichte regen, conform Ha43. Verder is de neerslag bij het front voornamelijk stratiform, maar in de onderste niveaus zit er toch een licht onstabiel signaal tot maximaal FL100 (mogelijk wat inzaaiing). Zicht: Vannacht op meerdere plaatsen grondmist, met in het noordoosten een enkele mistbank. Paraaf meteoroloog: Gorp Uitgifte: 08/08/2026 05.32 uur LT. Pagina delen Meer informatie Guidance meerdaagse Verwachtingen in meer detail Ensembleverwachting ijsdikte en watertemperatuur Weer-en klimaatpluim en Expertpluim Volg ons op social media Copyright Privacy Cookies Toegankelijkheid",
+        "truncated": false
       }
     },
     {
@@ -498,12 +498,12 @@
         "pressure_systems",
         "flow_trend"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 432,
+      "response_ms": 238,
       "status_code": 200,
       "content_type": "text/html",
       "content_length": 12344,
@@ -530,19 +530,19 @@
         "pressure_systems",
         "flow_trend"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 561,
+      "response_ms": 72,
       "status_code": 200,
       "content_type": "image/gif",
-      "content_length": 73833,
+      "content_length": 72507,
       "error": null,
       "asset": {
         "content_type": "image/gif",
-        "content_length": 73833
+        "content_length": 72507
       }
     },
     {
@@ -561,19 +561,19 @@
         "pressure_systems",
         "flow_trend"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 451,
+      "response_ms": 83,
       "status_code": 200,
       "content_type": "image/gif",
-      "content_length": 61849,
+      "content_length": 62100,
       "error": null,
       "asset": {
         "content_type": "image/gif",
-        "content_length": 61849
+        "content_length": 62100
       }
     },
     {
@@ -592,19 +592,19 @@
         "pressure_systems",
         "flow_trend"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 364,
+      "response_ms": 60,
       "status_code": 200,
       "content_type": "image/gif",
-      "content_length": 64594,
+      "content_length": 62106,
       "error": null,
       "asset": {
         "content_type": "image/gif",
-        "content_length": 64594
+        "content_length": 62106
       }
     },
     {
@@ -623,19 +623,19 @@
         "pressure_systems",
         "flow_trend"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 379,
+      "response_ms": 102,
       "status_code": 200,
       "content_type": "image/gif",
-      "content_length": 63866,
+      "content_length": 62749,
       "error": null,
       "asset": {
         "content_type": "image/gif",
-        "content_length": 63866
+        "content_length": 62749
       }
     },
     {
@@ -654,19 +654,19 @@
         "pressure_systems",
         "flow_trend"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 349,
+      "response_ms": 38,
       "status_code": 200,
       "content_type": "image/gif",
-      "content_length": 63707,
+      "content_length": 63410,
       "error": null,
       "asset": {
         "content_type": "image/gif",
-        "content_length": 63707
+        "content_length": 63410
       }
     },
     {
@@ -685,19 +685,19 @@
         "pressure_systems",
         "flow_trend"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 391,
+      "response_ms": 41,
       "status_code": 200,
       "content_type": "image/gif",
-      "content_length": 64253,
+      "content_length": 61575,
       "error": null,
       "asset": {
         "content_type": "image/gif",
-        "content_length": 64253
+        "content_length": 61575
       }
     },
     {
@@ -716,19 +716,19 @@
         "pressure_systems",
         "flow_trend"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 379,
+      "response_ms": 34,
       "status_code": 200,
       "content_type": "image/gif",
-      "content_length": 65027,
+      "content_length": 61924,
       "error": null,
       "asset": {
         "content_type": "image/gif",
-        "content_length": 65027
+        "content_length": 61924
       }
     },
     {
@@ -747,19 +747,19 @@
         "pressure_systems",
         "flow_trend"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 320,
+      "response_ms": 75,
       "status_code": 200,
       "content_type": "image/gif",
-      "content_length": 65397,
+      "content_length": 64199,
       "error": null,
       "asset": {
         "content_type": "image/gif",
-        "content_length": 65397
+        "content_length": 64199
       }
     },
     {
@@ -778,19 +778,19 @@
         "pressure_systems",
         "flow_trend"
       ],
-      "fetched_at_utc": "2026-08-07T06:14:05Z",
+      "fetched_at_utc": "2026-08-08T05:47:19Z",
       "affects_operational_forecast": false,
       "available": true,
       "status": "OK",
       "health": "GOOD",
-      "response_ms": 378,
+      "response_ms": 35,
       "status_code": 200,
       "content_type": "image/gif",
-      "content_length": 63711,
+      "content_length": 63293,
       "error": null,
       "asset": {
         "content_type": "image/gif",
-        "content_length": 63711
+        "content_length": 63293
       }
     }
   ],
