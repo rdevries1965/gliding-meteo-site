@@ -1,7 +1,7 @@
 {
   "release_version": "4.5B",
-  "generated_at": "2026-08-08T05:47:57.441940Z",
-  "forecast_date": "2026-08-08",
+  "generated_at": "2026-08-09T05:52:28.978541Z",
+  "forecast_date": "2026-08-09",
   "status": "LOCAL ONLY",
   "analysis_status": "CONDITIONAL GO",
   "task_quality": "POOR",
@@ -20,15 +20,15 @@
     "triangle_km": 8
   },
   "best_sector": {
-    "direction": "W",
-    "degrees": 253,
-    "confidence": 54,
+    "direction": "O",
+    "degrees": 73,
+    "confidence": 63,
     "reason": "beste sector volgens profiel en risico"
   },
   "alternative_sector": {
-    "direction": "ZW",
-    "degrees": 208,
-    "confidence": 49
+    "direction": "ZO",
+    "degrees": 118,
+    "confidence": 58
   },
   "timing": {
     "launch_window": "11:30-13:00 LT",
@@ -99,21 +99,21 @@
       "score": 10,
       "reason": "geen dominant blue-gap signaal"
     },
-    "usable_corridor_km": 5,
-    "street_probability_pct": 70,
-    "cu_potential_pct": 85,
+    "usable_corridor_km": 6,
+    "street_probability_pct": 50,
+    "cu_potential_pct": 60,
     "consensus_uncertainty": "LOW",
     "overall_model_agreement_pct": 89
   },
   "sector_risks": [
     {
-      "sector": "W",
-      "degrees": 253,
+      "sector": "O",
+      "degrees": 73,
       "label": "beste sector",
-      "risk": "MODERATE",
-      "risk_score": 32,
-      "confidence": 54,
-      "distance_km": 295,
+      "risk": "LOW",
+      "risk_score": 24,
+      "confidence": 63,
+      "distance_km": 298,
       "recommended": true,
       "street_alignment": {
         "label": "GOOD",
@@ -126,32 +126,13 @@
       }
     },
     {
-      "sector": "NW",
-      "degrees": 298,
+      "sector": "ZO",
+      "degrees": 118,
       "label": "alternatief rechts",
       "risk": "MODERATE",
-      "risk_score": 47,
-      "confidence": 39,
-      "distance_km": 227,
-      "recommended": false,
-      "street_alignment": {
-        "label": "FAIR",
-        "score": 65,
-        "difference_deg": 45
-      },
-      "sea_breeze_risk": {
-        "risk": "HIGH",
-        "score": 65
-      }
-    },
-    {
-      "sector": "ZW",
-      "degrees": 208,
-      "label": "alternatief links",
-      "risk": "MODERATE",
-      "risk_score": 40,
-      "confidence": 49,
-      "distance_km": 280,
+      "risk_score": 32,
+      "confidence": 58,
+      "distance_km": 283,
       "recommended": true,
       "street_alignment": {
         "label": "FAIR",
@@ -164,29 +145,48 @@
       }
     },
     {
-      "sector": "N",
-      "degrees": 343,
+      "sector": "NO",
+      "degrees": 28,
+      "label": "alternatief links",
+      "risk": "MODERATE",
+      "risk_score": 39,
+      "confidence": 48,
+      "distance_km": 229,
+      "recommended": true,
+      "street_alignment": {
+        "label": "FAIR",
+        "score": 65,
+        "difference_deg": 45
+      },
+      "sea_breeze_risk": {
+        "risk": "HIGH",
+        "score": 65
+      }
+    },
+    {
+      "sector": "Z",
+      "degrees": 163,
       "label": "crosswind reserve",
-      "risk": "HIGH",
-      "risk_score": 64,
-      "confidence": 26,
-      "distance_km": 165,
-      "recommended": false,
+      "risk": "MODERATE",
+      "risk_score": 49,
+      "confidence": 45,
+      "distance_km": 220,
+      "recommended": true,
       "street_alignment": {
         "label": "POOR",
         "score": 15,
         "difference_deg": 90
       },
       "sea_breeze_risk": {
-        "risk": "HIGH",
-        "score": 65
+        "risk": "LOW",
+        "score": 24
       }
     }
   ],
   "applied_calibration": {
-    "raw_confidence_pct": 62,
+    "raw_confidence_pct": 66,
     "confidence_adjustment_pct": -10,
-    "adjusted_confidence_pct": 56,
+    "adjusted_confidence_pct": 58,
     "cloudbase_bias": "TOO_PESSIMISTIC",
     "thermal_bias": "TOO_PESSIMISTIC",
     "wind_bias": "TOO_PESSIMISTIC"
@@ -220,7 +220,7 @@
     "dominant_model": "ICON",
     "outlier_model": "GFS"
   },
-  "operational_conclusion": "Ronald: beste sector W (253°). Probabilistische taakrange: 6–14 km (mediaan 10 km). Taakkwaliteit POOR. Bust risk: MODERATE. Upside: MODERATE.",
+  "operational_conclusion": "Ronald: beste sector O (73°). Probabilistische taakrange: 6–14 km (mediaan 10 km). Taakkwaliteit POOR. Bust risk: MODERATE. Upside: MODERATE.",
   "notes": [
     "4.5A integreert consensus uncertainty in tasking.",
     "Pilot profile beïnvloedt taakafstand en risico.",
