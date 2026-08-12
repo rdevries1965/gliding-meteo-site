@@ -10,7 +10,7 @@
     "status": "CONDITIONAL GO",
     "status_definition": "Bruikbare overlanddag tot ongeveer 300 km.",
     "reference_aircraft": "18m / Discus 2c performanceklasse",
-    "task": "Out-and-return circa 274 km of driehoek circa 235 km.",
+    "task": "Out-and-return circa 258 km of driehoek circa 221 km.",
     "flight_window": [
       {
         "time": "10:00",
@@ -67,13 +67,13 @@
     "risk_panel": [
       {
         "label": "Cloudbase",
-        "value": 2300,
+        "value": 2962,
         "unit": " m",
         "level": "goed"
       },
       {
         "label": "Thermiek",
-        "value": 2.8,
+        "value": 3.8,
         "unit": " m/s",
         "level": "goed"
       },
@@ -111,7 +111,7 @@
         "description": "NOAA GFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/gfs",
         "response_ms": null,
-        "fetched_at_utc": "2026-08-11T05:55:56+00:00",
+        "fetched_at_utc": "2026-08-12T06:15:44+00:00",
         "fallback_used": true,
         "fallback_to": "ECMWF",
         "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=120)"
@@ -123,8 +123,8 @@
         "health": "GOOD",
         "description": "ECMWF IFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/ecmwf",
-        "response_ms": 615,
-        "fetched_at_utc": "2026-08-11T05:55:56+00:00",
+        "response_ms": 377,
+        "fetched_at_utc": "2026-08-12T06:15:45+00:00",
         "fallback_used": false,
         "fallback_to": null,
         "error": null
@@ -133,22 +133,22 @@
     "deep_dive_cards": [
       {
         "label": "Trigger temp",
-        "value": 18.4,
+        "value": 17.6,
         "unit": "°C"
       },
       {
         "label": "Boundary layer",
-        "value": 2530,
+        "value": 3702,
         "unit": " m"
       },
       {
         "label": "Cu-potentie",
-        "value": 85,
+        "value": 60,
         "unit": "%"
       },
       {
         "label": "Wolkenstraten",
-        "value": 90,
+        "value": 30,
         "unit": "%"
       },
       {
@@ -174,5 +174,5 @@
       "betrouwbaarheid is relatief goed voor een convectieve briefing"
     ]
   },
-  "text": "## Samenvatting\nStatus: **CONDITIONAL GO**. Bruikbare overlanddag tot ongeveer 300 km.\n\nXC-score: **9.8/10**. Operationele score: **9.0/10**. Betrouwbaarheid: **79%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **2.8 m/s**. Cloudbase circa **2300 m AGL**.\n\n## Taakadvies\nBeste richting: **W**. Indicatie: out-and-return circa **274 km** of driehoek circa **235 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **Forecast source health: POOR**. Neerslagkans: **0%**. OD-risico: **10%**. Model agreement: **100% (hoog)**. Forecast health: **52% (POOR)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
+  "text": "## Samenvatting\nStatus: **CONDITIONAL GO**. Bruikbare overlanddag tot ongeveer 300 km.\n\nXC-score: **9.2/10**. Operationele score: **8.4/10**. Betrouwbaarheid: **79%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **3.8 m/s**. Cloudbase circa **2962 m AGL**.\n\n## Taakadvies\nBeste richting: **WNW**. Indicatie: out-and-return circa **258 km** of driehoek circa **221 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **Forecast source health: POOR**. Neerslagkans: **0%**. OD-risico: **10%**. Model agreement: **100% (hoog)**. Forecast health: **52% (POOR)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
 }
