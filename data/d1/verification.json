@@ -1,12 +1,12 @@
 {
   "release_version": "4.1A",
-  "generated_at": "2026-08-12T06:19:51.772506Z",
-  "forecast_date": "2026-08-13",
+  "generated_at": "2026-08-13T06:22:29.381451Z",
+  "forecast_date": "2026-08-14",
   "reality_source": "manual",
   "forecast_summary": {
-    "cloudbase_m": 2962,
-    "thermal_ms": 3.8,
-    "wind_kmh": 10.7,
+    "cloudbase_m": 2850,
+    "thermal_ms": 3.7,
+    "wind_kmh": 8.8,
     "cu_expected": true,
     "od_expected": false,
     "xc_possible": true,
@@ -23,9 +23,9 @@
     "notes": "sterke cumulusdag"
   },
   "errors": {
-    "cloudbase_error_m": 1512,
-    "thermal_error_ms": 1.9,
-    "wind_error_kmh": 11.3,
+    "cloudbase_error_m": 1400,
+    "thermal_error_ms": 1.8,
+    "wind_error_kmh": 13.2,
     "distance_error_km": 300
   },
   "matches": {

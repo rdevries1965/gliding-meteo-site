@@ -1,17 +1,17 @@
 {
   "release_version": "4.6A",
-  "generated_at": "2026-08-12T06:19:30.651127Z",
-  "forecast_date": "2026-08-12",
+  "generated_at": "2026-08-13T06:22:07.518977Z",
+  "forecast_date": "2026-08-13",
   "summary": {
     "forecast_stability": "LOW",
     "forecast_uncertainty": "MODERATE",
     "uncertainty_pct": 41,
-    "operational_volatility_pct": 36,
+    "operational_volatility_pct": 41,
     "operational_volatility": "MODERATE",
     "bust_risk_pct": 30,
     "bust_risk": "MODERATE",
-    "upside_surprise_pct": 58,
-    "upside_surprise": "HIGH"
+    "upside_surprise_pct": 46,
+    "upside_surprise": "MODERATE"
   },
   "xc_range_km": {
     "p20": 6,
@@ -27,16 +27,16 @@
     "high_case_km": 14
   },
   "drivers": {
-    "overall_model_agreement_pct": 75,
+    "overall_model_agreement_pct": 77,
     "task_confidence_pct": 77,
     "verification_score": 71.0,
     "distance_error_km": 300,
     "forecast_health": 90,
     "precip_pct": 0,
     "od_risk_pct": 10,
-    "wind_kmh": 13.7,
-    "cu_potential_pct": 85,
-    "street_probability_pct": 90,
+    "wind_kmh": 11.2,
+    "cu_potential_pct": 60,
+    "street_probability_pct": 30,
     "calibration_confidence_adjustment_pct": -10
   },
   "operational_guidance": {

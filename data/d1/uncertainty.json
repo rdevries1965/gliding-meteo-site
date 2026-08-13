@@ -1,7 +1,7 @@
 {
   "release_version": "4.6A",
-  "generated_at": "2026-08-12T06:19:51.747987Z",
-  "forecast_date": "2026-08-13",
+  "generated_at": "2026-08-13T06:22:29.359335Z",
+  "forecast_date": "2026-08-14",
   "summary": {
     "forecast_stability": "LOW",
     "forecast_uncertainty": "LOW",
@@ -29,12 +29,12 @@
   "drivers": {
     "overall_model_agreement_pct": 85,
     "task_confidence_pct": 67,
-    "verification_score": 43.0,
+    "verification_score": 35.0,
     "distance_error_km": 300,
     "forecast_health": 52,
     "precip_pct": 0,
     "od_risk_pct": 10,
-    "wind_kmh": 10.7,
+    "wind_kmh": 8.8,
     "cu_potential_pct": 60,
     "street_probability_pct": 30,
     "calibration_confidence_adjustment_pct": -7
