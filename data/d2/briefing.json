@@ -10,7 +10,7 @@
     "status": "NO GO",
     "status_definition": "Geen realistische overlanddag.",
     "reference_aircraft": "18m / Discus 2c performanceklasse",
-    "task": "Out-and-return circa 123 km of driehoek circa 106 km.",
+    "task": "Out-and-return circa 151 km of driehoek circa 130 km.",
     "flight_window": [
       {
         "time": "10:00",
@@ -69,27 +69,27 @@
     "risk_panel": [
       {
         "label": "Cloudbase",
-        "value": 888,
+        "value": 1062,
         "unit": " m",
         "level": "laag"
       },
       {
         "label": "Thermiek",
-        "value": 0.8,
+        "value": 0.9,
         "unit": " m/s",
         "level": "zwak"
       },
       {
         "label": "Neerslag",
-        "value": 36,
-        "unit": "%",
-        "level": "matig"
-      },
-      {
-        "label": "OD-risico",
         "value": 10,
         "unit": "%",
         "level": "laag"
+      },
+      {
+        "label": "OD-risico",
+        "value": 40,
+        "unit": "%",
+        "level": "matig"
       },
       {
         "label": "Model agreement",
@@ -113,7 +113,7 @@
         "description": "NOAA GFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/gfs",
         "response_ms": null,
-        "fetched_at_utc": "2026-08-13T06:21:23+00:00",
+        "fetched_at_utc": "2026-08-14T06:18:38+00:00",
         "fallback_used": true,
         "fallback_to": "ECMWF",
         "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=120)"
@@ -125,8 +125,8 @@
         "health": "GOOD",
         "description": "ECMWF IFS via Open-Meteo",
         "endpoint": "https://api.open-meteo.com/v1/ecmwf",
-        "response_ms": 786,
-        "fetched_at_utc": "2026-08-13T06:21:23+00:00",
+        "response_ms": 387,
+        "fetched_at_utc": "2026-08-14T06:18:38+00:00",
         "fallback_used": false,
         "fallback_to": null,
         "error": null
@@ -135,17 +135,17 @@
     "deep_dive_cards": [
       {
         "label": "Trigger temp",
-        "value": 27.6,
+        "value": 23.0,
         "unit": "°C"
       },
       {
         "label": "Boundary layer",
-        "value": 977,
+        "value": 956,
         "unit": " m"
       },
       {
         "label": "Cu-potentie",
-        "value": 50,
+        "value": 30,
         "unit": "%"
       },
       {
@@ -155,7 +155,7 @@
       },
       {
         "label": "OD-risico",
-        "value": 10,
+        "value": 40,
         "unit": "%"
       },
       {
@@ -170,10 +170,11 @@
       }
     ],
     "confidence_explanation": [
+      "hoge bewolking beperkt instraling en thermiekbetrouwbaarheid",
       "forecast source health is POOR (52%)",
       "1 bron(nen) gebruiken fallback",
       "modelovereenkomst is goed"
     ]
   },
-  "text": "## Samenvatting\nStatus: **NO GO**. Geen realistische overlanddag.\n\nXC-score: **4.4/10**. Operationele score: **1.2/10**. Betrouwbaarheid: **74%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **0.8 m/s**. Cloudbase circa **888 m AGL**.\n\n## Taakadvies\nBeste richting: **Z**. Indicatie: out-and-return circa **123 km** of driehoek circa **106 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **Beperkte wolkenbasis, Matige thermiek, Forecast source health: POOR**. Neerslagkans: **36%**. OD-risico: **10%**. Model agreement: **100% (hoog)**. Forecast health: **52% (POOR)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
+  "text": "## Samenvatting\nStatus: **NO GO**. Geen realistische overlanddag.\n\nXC-score: **5.4/10**. Operationele score: **2.8/10**. Betrouwbaarheid: **64%**.\n\n## Thermiek\nThermiek start naar verwachting rond **11:00-12:00 LT**, bruikbaar vanaf **12:00 LT** en loopt af rond **16:30-17:30 LT**. Geschatte gemiddelde thermieksterkte: **0.9 m/s**. Cloudbase circa **1062 m AGL**.\n\n## Taakadvies\nBeste richting: **Z**. Indicatie: out-and-return circa **151 km** of driehoek circa **130 km**, gebaseerd op 18m / Discus 2c performanceklasse.\n\n## Risico's\nWaarschuwingen: **Beperkte wolkenbasis, Matige thermiek, Forecast source health: POOR**. Neerslagkans: **10%**. OD-risico: **40%**. Model agreement: **100% (hoog)**. Forecast health: **52% (POOR)**.\n\n## Conclusie\nGebruik deze briefing conservatief. Officiële NOTAM- en meteo-check blijft verplicht. Deze tekst is automatisch gegenereerd via fallback omdat de AI-briefing tijdelijk niet beschikbaar was."
 }
