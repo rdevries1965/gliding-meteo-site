@@ -1,12 +1,12 @@
 {
   "release_version": "4.1A",
-  "generated_at": "2026-08-17T05:40:30.941967Z",
-  "forecast_date": "2026-08-17",
+  "generated_at": "2026-08-18T05:33:57.111861Z",
+  "forecast_date": "2026-08-18",
   "reality_source": "manual",
   "forecast_summary": {
-    "cloudbase_m": 712,
+    "cloudbase_m": 688,
     "thermal_ms": 0.6,
-    "wind_kmh": 15.6,
+    "wind_kmh": 21.2,
     "cu_expected": false,
     "od_expected": true,
     "xc_possible": false,
@@ -23,9 +23,9 @@
     "notes": "sterke cumulusdag"
   },
   "errors": {
-    "cloudbase_error_m": 738,
+    "cloudbase_error_m": 762,
     "thermal_error_ms": 1.3,
-    "wind_error_kmh": 6.4,
+    "wind_error_kmh": 0.8,
     "distance_error_km": 300
   },
   "matches": {
@@ -36,16 +36,16 @@
   "scores": {
     "cloudbase_score": 20,
     "thermal_score": 20,
-    "wind_score": 60,
+    "wind_score": 100,
     "distance_score": 20,
     "boolean_score": 0,
-    "overall_score": 23.0,
+    "overall_score": 29.0,
     "quality": "BAD"
   },
   "calibration_hints": {
     "thermal_bias": "forecast too pessimistic",
     "cloudbase_bias": "forecast too pessimistic",
-    "wind_bias": "forecast wind too weak"
+    "wind_bias": "wind forecast acceptable"
   },
   "notes": [
     "4.1A verification is still heuristic.",

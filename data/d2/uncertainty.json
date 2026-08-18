@@ -1,7 +1,7 @@
 {
   "release_version": "4.6A",
-  "generated_at": "2026-08-17T05:41:14.518506Z",
-  "forecast_date": "2026-08-19",
+  "generated_at": "2026-08-18T05:34:39.380644Z",
+  "forecast_date": "2026-08-20",
   "summary": {
     "forecast_stability": "LOW",
     "forecast_uncertainty": "LOW",
@@ -29,15 +29,15 @@
   "drivers": {
     "overall_model_agreement_pct": 92,
     "task_confidence_pct": 70,
-    "verification_score": 29.0,
+    "verification_score": 51.0,
     "distance_error_km": 300,
     "forecast_health": 52,
-    "precip_pct": 63,
+    "precip_pct": 93,
     "od_risk_pct": 45,
-    "wind_kmh": 17.7,
+    "wind_kmh": 17.4,
     "cu_potential_pct": 55,
     "street_probability_pct": 65,
-    "calibration_confidence_adjustment_pct": -12
+    "calibration_confidence_adjustment_pct": -10
   },
   "operational_guidance": {
     "if_conservative": "Plan alsof 6 km haalbaar is.",
