@@ -1,7 +1,7 @@
 {
   "release_version": "4.5B",
-  "generated_at": "2026-08-18T05:33:57.043764Z",
-  "forecast_date": "2026-08-18",
+  "generated_at": "2026-08-19T05:35:09.348304Z",
+  "forecast_date": "2026-08-19",
   "status": "LOCAL ONLY",
   "analysis_status": "NO GO",
   "task_quality": "POOR",
@@ -22,13 +22,13 @@
   "best_sector": {
     "direction": "NO",
     "degrees": 55,
-    "confidence": 31,
+    "confidence": 33,
     "reason": "beste sector volgens profiel en risico"
   },
   "alternative_sector": {
     "direction": "O",
     "degrees": 100,
-    "confidence": 26
+    "confidence": 28
   },
   "timing": {
     "launch_window": "11:30-13:00 LT",
@@ -80,7 +80,7 @@
       "label": "beste sector",
       "risk": "HIGH",
       "risk_score": 100,
-      "confidence": 31,
+      "confidence": 33,
       "distance_km": 10,
       "recommended": false,
       "street_alignment": {
@@ -99,7 +99,7 @@
       "label": "alternatief rechts",
       "risk": "HIGH",
       "risk_score": 100,
-      "confidence": 26,
+      "confidence": 28,
       "distance_km": 10,
       "recommended": false,
       "street_alignment": {
@@ -118,7 +118,7 @@
       "label": "alternatief links",
       "risk": "HIGH",
       "risk_score": 100,
-      "confidence": 16,
+      "confidence": 18,
       "distance_km": 10,
       "recommended": false,
       "street_alignment": {
@@ -152,9 +152,9 @@
     }
   ],
   "applied_calibration": {
-    "raw_confidence_pct": 46,
+    "raw_confidence_pct": 50,
     "confidence_adjustment_pct": -10,
-    "adjusted_confidence_pct": 48,
+    "adjusted_confidence_pct": 50,
     "cloudbase_bias": "TOO_PESSIMISTIC",
     "thermal_bias": "TOO_PESSIMISTIC",
     "wind_bias": "TOO_PESSIMISTIC"

@@ -1,38 +1,38 @@
 {
   "release_version": "4.5A",
-  "generated_at": "2026-08-18T05:34:18.148819Z",
-  "forecast_date": "2026-08-19",
+  "generated_at": "2026-08-19T05:35:30.911747Z",
+  "forecast_date": "2026-08-20",
   "models": {
     "ICON": {
-      "thermal_ms": 1.6,
-      "cloudbase_m": 984,
-      "wind_kmh": 17,
+      "thermal_ms": 0.9,
+      "cloudbase_m": 346,
+      "wind_kmh": 18,
       "confidence": 78
     },
     "GFS": {
-      "thermal_ms": 1.4,
-      "cloudbase_m": 926,
-      "wind_kmh": 22,
+      "thermal_ms": 0.8,
+      "cloudbase_m": 356,
+      "wind_kmh": 24,
       "confidence": 66
     },
     "HARMONIE": {
-      "thermal_ms": 1.6,
-      "cloudbase_m": 870,
-      "wind_kmh": 18,
+      "thermal_ms": 1.0,
+      "cloudbase_m": 270,
+      "wind_kmh": 20,
       "confidence": 74
     }
   },
   "consensus": {
     "thermal_consensus": "VERY STRONG",
     "cloudbase_consensus": "VERY STRONG",
-    "wind_consensus": "VERY STRONG",
+    "wind_consensus": "STRONG",
     "overall_consensus": "VERY STRONG",
-    "overall_agreement_pct": 92,
+    "overall_agreement_pct": 89,
     "thermal_agreement_pct": 90,
     "cloudbase_agreement_pct": 90,
-    "wind_agreement_pct": 90,
+    "wind_agreement_pct": 75,
     "forecast_uncertainty": "LOW",
-    "task_confidence_pct": 70,
+    "task_confidence_pct": 69,
     "xc_probability_pct": 67
   },
   "dominant_model": "ICON",
@@ -46,7 +46,7 @@
     "cu_potential_pct": 55,
     "street_probability_pct": 65,
     "od_risk_pct": 45,
-    "wind_direction_deg": 253
+    "wind_direction_deg": 227
   },
   "applied_calibration": {
     "cloudbase_bias": "TOO_PESSIMISTIC",
