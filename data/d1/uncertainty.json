@@ -1,22 +1,22 @@
 {
   "release_version": "4.6A",
-  "generated_at": "2026-08-19T05:35:30.937069Z",
-  "forecast_date": "2026-08-20",
+  "generated_at": "2026-08-20T05:35:53.245586Z",
+  "forecast_date": "2026-08-21",
   "summary": {
     "forecast_stability": "LOW",
     "forecast_uncertainty": "LOW",
     "uncertainty_pct": 50,
-    "operational_volatility_pct": 60,
-    "operational_volatility": "HIGH",
-    "bust_risk_pct": 55,
+    "operational_volatility_pct": 75,
+    "operational_volatility": "VERY HIGH",
+    "bust_risk_pct": 67,
     "bust_risk": "HIGH",
-    "upside_surprise_pct": 26,
-    "upside_surprise": "MODERATE"
+    "upside_surprise_pct": 14,
+    "upside_surprise": "LOW"
   },
   "xc_range_km": {
     "p20": 6,
     "p50": 10,
-    "p80": 12,
+    "p80": 13,
     "interpretation": "p20/p50/p80 represent low/median/high plausible XC distance range"
   },
   "confidence_cone": {
@@ -24,25 +24,25 @@
     "spread_km": 5,
     "low_case_km": 6,
     "median_case_km": 10,
-    "high_case_km": 12
+    "high_case_km": 13
   },
   "drivers": {
-    "overall_model_agreement_pct": 89,
-    "task_confidence_pct": 69,
-    "verification_score": 26.0,
+    "overall_model_agreement_pct": 92,
+    "task_confidence_pct": 70,
+    "verification_score": 41.0,
     "distance_error_km": 300,
     "forecast_health": 52,
-    "precip_pct": 100,
-    "od_risk_pct": 45,
-    "wind_kmh": 19.2,
-    "cu_potential_pct": 55,
-    "street_probability_pct": 65,
+    "precip_pct": 93,
+    "od_risk_pct": 75,
+    "wind_kmh": 13.1,
+    "cu_potential_pct": 30,
+    "street_probability_pct": 25,
     "calibration_confidence_adjustment_pct": -10
   },
   "operational_guidance": {
     "if_conservative": "Plan alsof 6 km haalbaar is.",
     "if_realistic": "Plan rond 10 km.",
-    "if_aggressive": "Alleen uitbreiden richting 12 km als straatbeeld en basis bevestigd worden.",
+    "if_aggressive": "Alleen uitbreiden richting 13 km als straatbeeld en basis bevestigd worden.",
     "risk_note": "Hoge bust-risk: taak compact houden en duidelijke afkortopties plannen."
   },
   "notes": [
