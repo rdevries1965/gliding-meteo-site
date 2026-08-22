@@ -1,15 +1,15 @@
 {
   "release_version": "4.1A",
-  "generated_at": "2026-08-21T05:37:52.206864Z",
-  "forecast_date": "2026-08-23",
+  "generated_at": "2026-08-22T05:32:26.279205Z",
+  "forecast_date": "2026-08-24",
   "reality_source": "manual",
   "forecast_summary": {
-    "cloudbase_m": 925,
-    "thermal_ms": 1.5,
-    "wind_kmh": 14.2,
+    "cloudbase_m": 1175,
+    "thermal_ms": 1.7,
+    "wind_kmh": 13.0,
     "cu_expected": true,
     "od_expected": false,
-    "xc_possible": false,
+    "xc_possible": true,
     "realistic_xc_km": 10
   },
   "reality_summary": {
@@ -23,24 +23,24 @@
     "notes": "sterke cumulusdag"
   },
   "errors": {
-    "cloudbase_error_m": 525,
-    "thermal_error_ms": 0.4,
-    "wind_error_kmh": 7.8,
+    "cloudbase_error_m": 275,
+    "thermal_error_ms": 0.2,
+    "wind_error_kmh": 9.0,
     "distance_error_km": 300
   },
   "matches": {
     "cu_match": true,
     "od_match": true,
-    "xc_quality_match": false
+    "xc_quality_match": true
   },
   "scores": {
-    "cloudbase_score": 20,
-    "thermal_score": 80,
+    "cloudbase_score": 60,
+    "thermal_score": 100,
     "wind_score": 60,
     "distance_score": 20,
-    "boolean_score": 67,
-    "overall_score": 48.0,
-    "quality": "POOR"
+    "boolean_score": 100,
+    "overall_score": 68.0,
+    "quality": "REASONABLE"
   },
   "calibration_hints": {
     "thermal_bias": "thermal forecast acceptable",
